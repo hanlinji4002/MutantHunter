@@ -1,0 +1,67 @@
+Y-tunnus
+Y-tunnus eli yritys- ja yhteisötunnus (ruots. företags- och organisationsnummer, FO-nummer) on
+Suomessa yrityksen tai yhteisön yksilöimiseen käytetty, viranomaisten myöntämä tunnus. Y-tunnuksia
+hallinnoidaan Patentti- ja rekisterihallituksen (PRH) ja verohallinnon yhteisesti ylläpitämässä Yritys- ja
+yhteisötietojärjestelmässä (YTJ).
+
+Y-tunnus on korvannut verohallinnon aiemmin antamat liike- ja yhteisötunnukset eli LY-tunnukset.
+
+Toisin kuin yksityishenkilöiden henkilötunnukset, Y-tunnukset ovat saatavilla täysin julkisesta YTJ:n
+tietopalvelusta.
+
+Y-tunnus koostuu kahdeksasta numerosta, joista viimeinen on tarkistenumero eli esimerkiksi 1234567-1.
+Tarkistenumero erotetaan yhdysmerkillä.
+
+Y-tunnuksen käytöstä ja myöntämisestä säädettiin valtioneuvoston asetuksella (SDK 288/2001) vuonna
+2001. Y-tunnus korvasi alun perin kaupparekisterinumeron (lyhenne krnro[1]), säätiörekisterinumeron ja
+LY-tunnuksen yhtenäisellä rekisterinumerolla. Asetuksen yhteydessä vanhojen yritysten Y-tunnukseksi
+tuli niiden vanha LY-tunnus. Lisäksi kaikki PRH:n yhdistysrekisteriin merkityt yhdistykset saivat Y-
+tunnuksen vuonna 2019 ja samalla luovuttiin yhdistysrekisterinumeron käytöstä. Rekisteröity yhdistys on
+voinut aiemminkin saada Y-tunnuksen, jos se on sitä erikseen pyytänyt.[2]
+
+Yritys tai yhteisö eli juridinen henkilö saa y-tunnuksen rekisteröityessään ensimmäistä kertaa joko PRH:n
+kauppa-, säätiö- tai yhdistysrekisteriin tai verottajan työnantaja-, ALV-velvollisten tai
+ennakkoperintärekisteriin. Yrityksellä tai yhteisöllä voi olla vain yksi Y-tunnus. Valtion laitoksilla on
+kuitenkin omat Y-tunnuksensa. Jos yrityksen yhtiömuoto muuttuu laissa määritellyllä tavalla, pysyy Y-
+tunnus ennallaan.
+
+Yksityiselle ihmiselle eli luonnolliselle henkilölle annetaan Y-tunnus, jos hän toimii yksityisenä
+elinkeinonharjoittajana. Tällöin Y-tunnus on henkilökohtainen. Se ei siirry myytäessä liiketoiminta
+toiselle tai yritysmuodon muuttuessa.
+
+Y-tunnus säilyy myös yritystoiminnan lakatessa sekä luonnollisilla että juridisilla henkilöillä.
+Yritystoiminnan käynnistyessä mahdollisesti uudelleen otetaan entinen Y-tunnus käyttöön.
+Konkurssipesälle annetaan kuitenkin oma tunnuksensa.
+
+Y-tunnuksella voidaan tarkistaa laskuissa, kuuluuko laskuttaja ennakkoperintärekisteriin eli täytyykö
+laskun maksajan pidättää ennakko maksamastaan laskusta.
+Kansainvälinen ALV-numero
+ALV-numero (engl. VAT identification number) on kansainvälinen vastine suomalaiselle Y-tunnukselle.
+Sitä tarvitaan Euroopan unionin jäsenmaiden välisessä kaupassa. Y-tunnuksesta saadaan ALV-numero
+lisäämällä alkuun kirjaimet FI ja jättämällä yhdysmerkki pois.
+
+
+
+Lähteet
+1. Lyhenneluettelo (http://www.kotus.fi/index.phtml?s=2149) 07.01.2013. Kotimaisten kielten
+   keskus. Arkistoitu (https://web.archive.org/web/20131012150547/http://www.kotus.fi/index.ph
+   tml?s=2149) 12.10.2013. Viitattu 9.4.2013.
+2. Yhdistysrekisteri uudistui 18.9.2019: yhdistyksille Y-tunnus ja uudet palvelut (https://www.pr
+   h.fi/fi/yhdistysrekisteri/yhdistysrekisteri_uudistuu.html) 18.9.2019. Patentti- ja rekisterihallitus.
+   Arkistoitu (https://web.archive.org/web/20190904013133/https://www.prh.fi/fi/yhdistysrekister
+   i/yhdistysrekisteri_uudistuu.html) 4.9.2019. Viitattu 19.9.2019.
+
+
+Aiheesta muualla
+    Tilastokeskus / Yrityshaku. (http://stat.fi/yty/)
+    Tilastokeskus / Toimialoittainen yritystietopalvelu. (https://stat.fi/tup/toimialoittainen-yritystiet
+    opalvelu/index.html)
+    Valtioneuvoston asetus yritys- ja yhteisötietojärjestelmästä (288/2001). (http://www.finlex.fi/fi/
+    laki/ajantasa/2001/20010288)
+    YTJ:n tietopalvelu. (http://www.ytj.fi/)
+    FO-nummer (https://www.uppslagsverket.fi/sv/sok/view-170045-FONummer) hakuteoksessa
+    Uppslagsverket Finland (2012). (ruotsiksi)
+
+
+Noudettu kohteesta ”https://fi.wikipedia.org/w/index.php?title=Y-tunnus&oldid=23648533”
+

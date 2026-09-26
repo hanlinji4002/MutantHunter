@@ -1,0 +1,104 @@
+SEDOL
+SEDOL stands for Stock Exchange Daily Official List, a list of security identifiers used in the United
+Kingdom and Ireland for clearing purposes. The numbers are assigned by the London Stock Exchange,
+on request by the security issuer. SEDOLs serve as the National Securities Identifying Number for all
+securities issued in the United Kingdom and are therefore part of the security's International Securities
+Identification Number (ISIN) as well. The SEDOL Masterfile (SMF) provides reference data on millions
+of global multi-asset securities each uniquely identified at the market level using a universal SEDOL
+code.
+
+
+
+Description
+SEDOLs are seven characters in length, consisting of two parts: a six-place alphanumeric code and a
+trailing check digit.[1] SEDOLs issued prior to January 26, 2004 were composed only of numbers. For
+older SEDOLs, those from Asia and Africa typically begin with 6. Those from the UK and Ireland (until
+Ireland joined the EU) typically begin with 0 or 3. Those from the rest of Europe typically began with 4,
+5, or 7. Those from the Americas began with 2.
+
+After January 26, 2004, SEDOLs were changed to be alpha-numeric and are issued sequentially,
+beginning with B000009. At each character position numbers precede letters and vowels are never used.
+All new SEDOLs, therefore, begin with a letter. Ranges beginning with 9 are reserved for end user
+allocation.
+
+The check digit for a SEDOL is chosen to make the total weighted sum of all seven characters a multiple
+of 10. The check digit is computed using a weighted sum of the first six characters. Letters have the value
+of 9 plus their alphabet position, such that B = 11 and Z = 35. While vowels are never used in SEDOLs,
+they are not ignored when computing this weighted sum (e.g. H = 17 and J = 19, even though I is not
+used), simplifying code to compute this sum. The resulting string of numbers is then multiplied by the
+weighting factor as follows:
+
+  +   First   1
+  +   Second 3
+  +   Third   1
+  +   Fourth 7
+  +   Fifth   3
+  +   Sixth   9
+  +   Seventh 1 (the check digit)
+
+
+The character values are multiplied by the weights. The check digit is chosen to make the total sum,
+including the check digit, a multiple of 10, which can be calculated from the weighted sum of the first six
+characters as (10−(weighted sum modulo 10)) modulo 10.
+
+For British securities, SEDOLs are converted to ISINs by padding the front with two zeros, then adding
+the country code on the front and the ISIN check digit at the end.[2]
+
+JavaScript code for validating SEDOLs Code:
+Modified from http://rosettacode.org/wiki/SEDOLs
+
+ function checkSedol(text) {
+     var weight = [1, 3, 1, 7, 3, 9, 1];
+     try {
+         var input = text.substr(0, 6);
+         var check_digit = sedol_check_digit(input);
+         return text == input + check_digit;
+     } catch(e) {
+         return false;
+     }
+     return false;
+
+      function sedol_check_digit(char6) {
+          if (char6.search(/^[0-9BCDFGHJKLMNPQRSTVWXYZ]{6}$/) == -1) {
+              throw "Invalid SEDOL number '" + char6 + "'";
+          }
+          var sum = 0;
+          for (var i = 0; i < char6.length; i++){
+              sum += weight[i] * parseInt(char6.charAt(i), 36);
+          }
+          var check = (10 - sum%10) % 10;
+          return check.toString();
+      }
+ }
+
+
+
+
+Example
+BAE Systems: 0263494
+
+The checksum can be calculated by multiplying the first six digits by their weightings:
+
+       (0×1, 2×3, 6×1, 3×7, 4×3, 9×9) = (0, 6, 6, 21, 12, 81)
+
+Then summing up the results:
+
+       0 + 6 + 6 + 21 + 12 + 81 = 126
+
+The check digit is then calculated by:
+
+       [10 − (126 modulo 10)] modulo 10 = (10 − 6) modulo 10 = 4 modulo 10 = 4
+
+
+References
+ 1. "SEDOL Masterfile - Service & Technical Guide" (https://www2.lseg.com/SEDOL-masterfile-
+    service-tech-guide-v8.6). London Stock Exchange Group. 2020.
+ 2. "Advanced Pattern Recognition Strategy With Clear Technical Analysis" (https://fxspire.co
+    m/). Retrieved 2024-11-16.
+
+
+External links
+     Official Website (https://www.sedol.co.uk) Archived (https://web.archive.org/web/200910150
+     73225/http://www.sedol.co.uk/) 2009-10-15 at the Wayback Machine (requires registration)
+Retrieved from "https://en.wikipedia.org/w/index.php?title=SEDOL&oldid=1318440105"
+

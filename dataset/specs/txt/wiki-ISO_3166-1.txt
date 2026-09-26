@@ -1,0 +1,1047 @@
+ISO 3166-1
+ISO 3166-1 (Codes for the representation of names of countries and their subdivisions – Part 1: Country code) is a
+standard defining codes for the names of countries, dependent territories, and special areas of geographical interest. It
+is the first part of the ISO 3166 standard published by the International Organization for Standardization.
+
+It defines three sets of country codes:[1]
+
+    ISO 3166-1 alpha-2 – two-letter country codes which are used most prominently for the Internet's
+    country code top-level domains (with a few exceptions).
+    ISO 3166-1 alpha-3 – three-letter country codes which allow a better visual association between the
+    codes and the country names than the alpha-2 codes.
+    ISO 3166-1 numeric – three-digit country codes which are identical to those developed and maintained
+    by the United Nations Statistics Division, with the advantage of script (writing system) independence,
+    and hence useful for people or systems using non-Latin scripts.
+The alphabetic country codes were first included in ISO 3166 in 1974, and the numeric country codes were first
+included in 1981. The country codes have been published as ISO 3166-1 since 1997, when ISO 3166 was expanded
+into three parts, with ISO 3166-2 defining codes for subdivisions and ISO 3166-3 defining codes for former
+countries.[1]
+
+As a widely used international standard, ISO 3166-1 is implemented in other standards and used by international
+organizations[1] to allow facilitation of the exchange of goods and information.[1] However, it is not the only standard
+for country codes. Other country codes used by many international organizations are partly or totally incompatible
+with ISO 3166-1,[1] although some of them closely correspond to ISO 3166-1 codes.
+
+
+                                                                                                  Find a country
+Criteria for inclusion
+                                                                                       Enter an ISO 3166-1 alpha-2 code
+                                                                                        to find the corresponding country
+Codes for 249 countries, territories, or areas of geographical interest are assigned                  article.
+in ISO 3166-1.[2] According to the ISO 3166 Maintenance Agency (ISO
+3166/MA), the only way to enter a new country name into ISO 3166-1 is to have
+it registered in one of the following two sources:[1]
+
+    United Nations Terminology Bulletin Country Names, or
+    Country and Region Codes for Statistical Use of the United Nations Statistics Division.
+To be listed in the bulletin Country Names, a country must be at least one of the following:[3]
+
+    A member state of the United Nations
+    A member of one of its specialized agencies
+    A party to the Statute of the International Court of Justice
+The list of names in Country and Region Codes for Statistical Use of the UN Statistics Division is based on the
+bulletin Country Names and other UN sources.
+
+Once a country name or territory name appears in either of these two sources, it will be added to ISO 3166-1 by
+default.
+
+The ISO 3166/MA may reserve code elements for other entities that do not qualify for inclusion based on the above
+criteria.[4] For example, because the European Union is not a country, it is not formally included in ISO 3166-1, but
+for practical reasons, the ISO 3166/MA has "reserved the two-letter combination EU for the purpose of identifying the
+European Union within the framework of ISO 3166-1".[5]
+Information included
+ISO 3166-1 is published officially in both English and French. Since the second edition of ISO 3166-1, the following
+columns are included for each entry:
+
+ 1. Country Name – English (or French) short name (all upper-case)
+ 2. English (or French) short name lower case (title case)
+ 3. English (or French) full name
+ 4. Alpha-2 code
+ 5. Alpha-3 code
+ 6. Numeric code
+ 7. Remarks
+ 8. Independent
+ 9. Additional information: Administrative language(s) alpha-2 code element(s)
+10. Additional information: Administrative language(s) alpha-3 code element(s)
+11. Additional information: Local short name(s)
+
+
+Naming and code construction
+
+Naming and disputes
+The country names used in ISO 3166-1 are taken from the two UN sources.
+Some country names used by the UN, and accordingly by ISO, are
+disputed:
+
+
+
+
+                                                                              The International Organization for
+                                                                              Standardization uses the country
+                                                                              names chosen by the United Nations,
+                                                                              some of which are disputed.
+                           Short name
+      Short name           lower case         Listed as                                                         Link to
+                                                                  Local
+      upper case           in ISO 3166      independent                                     Dispute               ISO
+                                                                short name
+      in ISO 3166                            in ISO 3166                                                        3166-2
+                            Full name
+                         Afghanistan
+                                                            Afghānistān (ps)        Under the unrecognized      ISO
+ AFGHANISTAN             the Islamic           Yes[6]                               government of the Islamic   3166-
+                         Republic of                        Afghānistān (fa)        Emirate of Afghanistan      2:AF
+                         Afghanistan
+                         China
+                                                                                                                ISO
+                                                                                    Disputed sovereignty with
+ CHINA                   the People's          Yes[7]       Zhongguo (zh)
+                                                                                    Taiwan
+                                                                                                                3166-
+                         Republic of                                                                            2:CN
+                         China
+                         Cyprus
+                                                            Kýpros (el)                                         ISO
+                                                                                    Disputed sovereignty with
+ CYPRUS
+                         the Republic of       Yes[8]                               Northern Cyprus
+                                                                                                                3166-
+                                                            Kıbrıs (tr)                                         2:CY
+                         Cyprus
+                         Falkland Islands                                                                       ISO
+ FALKLAND ISLANDS                                           Falkland Islands        Disputed sovereignty and
+ (MALVINAS)
+                         (the)                  No[9]       (the) [Malvinas] (en)   naming
+                                                                                                                3166-
+                         [Malvinas][a]                                                                          2:FK
+
+                         Palestine, State
+                         of                                                                                     ISO
+ PALESTINE,                                                                         Disputed sovereignty with
+ STATE OF                                      No[10]       Dawlat Filasţīn (ar)
+                                                                                    Israel
+                                                                                                                3166-
+                         the State of                                                                           2:PS
+                         Palestine
+                         Taiwan                                                                                 ISO
+ TAIWAN,                                                                            Disputed sovereignty and
+                         (Province of          No[11]       Taiwan (zh)                                         3166-
+ PROVINCE OF CHINA                                                                  naming[5]
+                         China)[a]                                                                              2:TW
+
+                                                                                                                ISO
+                         Western                            Aş Şaḩrā'               Disputed sovereignty with
+ WESTERN SAHARA                                No[12]                                                           3166-
+                         Sahara[a]                          al Gharbīyah (ar)       Morocco
+                                                                                                                2:EH
+
+
+
+Coding
+The codes are chosen, according to the ISO 3166/MA, "to reflect the significant, unique component of the country
+name in order to allow a visual association between country name and country code".[5] For this reason, common
+components of country names like "Republic", "Kingdom", "United", "Federal" or "Democratic" are normally not
+used for deriving the code elements. As a consequence, for example, the United Kingdom is officially assigned the
+alpha-2 code GB rather than UK, based on its official name "United Kingdom of Great Britain and Northern Ireland"
+(although UK is reserved on the request of the United Kingdom). The rule is not watertight: the United States of
+America is still assigned the US code for example. Some codes are chosen based on the native names of the countries.
+For example, Germany is assigned the alpha-2 code DE, based on its native name "Deutschland".
+
+
+
+Codes
+The complete ISO 3166-1 list of countries and their assigned codes,[13] listed in alphabetical order by the country's
+English short name used by the ISO 3166/MA:
+
+Each country's alpha-2 code is linked to more information about the assignment of its code elements.
+                                       ISO 3166-1 table
+                                            Alpha-   Alpha-
+                 English short name                           Numeric       Link to
+                  (using title case)
+                                               2        3
+                                                               code       ISO 3166-2    Independent[b]
+                                             code     code
+
+Afghanistan[c]                              AF       AFG      004       ISO 3166-2:AF        Yes
+
+Åland Islands                               AX       ALA      248       ISO 3166-2:AX        No
+
+Albania                                     AL       ALB      008       ISO 3166-2:AL        Yes
+
+Algeria                                     DZ       DZA      012       ISO 3166-2:DZ        Yes
+
+American Samoa                              AS       ASM      016       ISO 3166-2:AS        No
+
+Andorra                                     AD       AND      020       ISO 3166-2:AD        Yes
+
+Angola                                      AO       AGO      024       ISO 3166-2:AO        Yes
+
+Anguilla                                    AI       AIA      660       ISO 3166-2:AI        No
+
+Antarctica                                  AQ       ATA      010       ISO 3166-2:AQ        No
+
+Antigua and Barbuda                         AG       ATG      028       ISO 3166-2:AG        Yes
+
+Argentina                                   AR       ARG      032       ISO 3166-2:AR        Yes
+
+Armenia                                     AM       ARM      051       ISO 3166-2:AM        Yes
+Aruba                                       AW       ABW      533       ISO 3166-2:AW        No
+
+Australia                                   AU       AUS      036       ISO 3166-2:AU        Yes
+Austria                                     AT       AUT      040       ISO 3166-2:AT        Yes
+
+Azerbaijan                                  AZ       AZE      031       ISO 3166-2:AZ        Yes
+
+Bahamas                                     BS       BHS      044       ISO 3166-2:BS        Yes
+Bahrain                                     BH       BHR      048       ISO 3166-2:BH        Yes
+
+Bangladesh                                  BD       BGD      050       ISO 3166-2:BD        Yes
+
+Barbados                                    BB       BRB      052       ISO 3166-2:BB        Yes
+
+Belarus                                     BY       BLR      112       ISO 3166-2:BY        Yes
+
+Belgium                                     BE       BEL      056       ISO 3166-2:BE        Yes
+
+Belize                                      BZ       BLZ      084       ISO 3166-2:BZ        Yes
+
+Benin                                       BJ       BEN      204       ISO 3166-2:BJ        Yes
+
+Bermuda                                     BM       BMU      060       ISO 3166-2:BM        No
+
+Bhutan                                      BT       BTN      064       ISO 3166-2:BT        Yes
+
+Bolivia, Plurinational State of             BO       BOL      068       ISO 3166-2:BO        Yes
+
+Bonaire, Sint Eustatius and Saba[d]         BQ       BES      535       ISO 3166-2:BQ        No
+
+Bosnia and Herzegovina                      BA       BIH      070       ISO 3166-2:BA        Yes
+
+Botswana                                    BW       BWA      072       ISO 3166-2:BW        Yes
+
+Bouvet Island                               BV       BVT      074       ISO 3166-2:BV        No
+
+Brazil                                      BR       BRA      076       ISO 3166-2:BR        Yes
+
+British Indian Ocean Territory              IO       IOT      086       ISO 3166-2:IO        No
+
+Brunei Darussalam                           BN       BRN      096       ISO 3166-2:BN        Yes
+Bulgaria                                    BG       BGR      100       ISO 3166-2:BG        Yes
+Burkina Faso                                BF       BFA      854       ISO 3166-2:BF        Yes
+
+Burundi                                     BI       BDI      108       ISO 3166-2:BI        Yes
+Cabo Verde                          CV   CPV   132   ISO 3166-2:CV   Yes
+
+Cambodia                            KH   KHM   116   ISO 3166-2:KH   Yes
+
+Cameroon                            CM   CMR   120   ISO 3166-2:CM   Yes
+
+Canada                              CA   CAN   124   ISO 3166-2:CA   Yes
+
+Cayman Islands                      KY   CYM   136   ISO 3166-2:KY   No
+
+Central African Republic            CF   CAF   140   ISO 3166-2:CF   Yes
+
+Chad                                TD   TCD   148   ISO 3166-2:TD   Yes
+
+Chile                               CL   CHL   152   ISO 3166-2:CL   Yes
+
+China[c]                            CN   CHN   156   ISO 3166-2:CN   Yes
+
+Christmas Island                    CX   CXR   162   ISO 3166-2:CX   No
+Cocos (Keeling) Islands             CC   CCK   166   ISO 3166-2:CC   No
+
+Colombia                            CO   COL   170   ISO 3166-2:CO   Yes
+
+Comoros                             KM   COM   174   ISO 3166-2:KM   Yes
+
+Congo                               CG   COG   178   ISO 3166-2:CG   Yes
+
+Congo, Democratic Republic of the   CD   COD   180   ISO 3166-2:CD   Yes
+
+Cook Islands                        CK   COK   184   ISO 3166-2:CK   No
+
+Costa Rica                          CR   CRI   188   ISO 3166-2:CR   Yes
+
+Côte d'Ivoire                       CI   CIV   384   ISO 3166-2:CI   Yes
+
+Croatia                             HR   HRV   191   ISO 3166-2:HR   Yes
+
+Cuba                                CU   CUB   192   ISO 3166-2:CU   Yes
+
+Curaçao                             CW   CUW   531   ISO 3166-2:CW   No
+
+Cyprus[c]                           CY   CYP   196   ISO 3166-2:CY   Yes
+
+Czechia                             CZ   CZE   203   ISO 3166-2:CZ   Yes
+
+Denmark                             DK   DNK   208   ISO 3166-2:DK   Yes
+
+Djibouti                            DJ   DJI   262   ISO 3166-2:DJ   Yes
+
+Dominica                            DM   DMA   212   ISO 3166-2:DM   Yes
+
+Dominican Republic                  DO   DOM   214   ISO 3166-2:DO   Yes
+
+Ecuador                             EC   ECU   218   ISO 3166-2:EC   Yes
+
+Egypt                               EG   EGY   818   ISO 3166-2:EG   Yes
+
+El Salvador                         SV   SLV   222   ISO 3166-2:SV   Yes
+
+Equatorial Guinea                   GQ   GNQ   226   ISO 3166-2:GQ   Yes
+
+Eritrea                             ER   ERI   232   ISO 3166-2:ER   Yes
+
+Estonia                             EE   EST   233   ISO 3166-2:EE   Yes
+
+Eswatini                            SZ   SWZ   748   ISO 3166-2:SZ   Yes
+
+Ethiopia                            ET   ETH   231   ISO 3166-2:ET   Yes
+
+Falkland Islands (Malvinas)[c]      FK   FLK   238   ISO 3166-2:FK   No
+
+Faroe Islands                       FO   FRO   234   ISO 3166-2:FO   No
+
+Fiji                                FJ   FJI   242   ISO 3166-2:FJ   Yes
+Finland                             FI   FIN   246   ISO 3166-2:FI   Yes
+
+France                              FR   FRA   250   ISO 3166-2:FR   Yes
+ French Guiana                       GF   GUF   254   ISO 3166-2:GF   No
+
+ French Polynesia                    PF   PYF   258   ISO 3166-2:PF   No
+
+ French Southern Territories         TF   ATF   260   ISO 3166-2:TF   No
+
+Gabon                                GA   GAB   266   ISO 3166-2:GA   Yes
+
+ Gambia                              GM   GMB   270   ISO 3166-2:GM   Yes
+
+ Georgia                             GE   GEO   268   ISO 3166-2:GE   Yes
+
+ Germany                             DE   DEU   276   ISO 3166-2:DE   Yes
+
+ Ghana                               GH   GHA   288   ISO 3166-2:GH   Yes
+
+ Gibraltar                           GI   GIB   292   ISO 3166-2:GI   No
+
+ Greece                              GR   GRC   300   ISO 3166-2:GR   Yes
+
+ Greenland                           GL   GRL   304   ISO 3166-2:GL   No
+
+ Grenada                             GD   GRD   308   ISO 3166-2:GD   Yes
+
+ Guadeloupe                          GP   GLP   312   ISO 3166-2:GP   No
+
+ Guam                                GU   GUM   316   ISO 3166-2:GU   No
+
+ Guatemala                           GT   GTM   320   ISO 3166-2:GT   Yes
+
+ Guernsey                            GG   GGY   831   ISO 3166-2:GG   No
+
+ Guinea                              GN   GIN   324   ISO 3166-2:GN   Yes
+
+ Guinea-Bissau                       GW   GNB   624   ISO 3166-2:GW   Yes
+
+ Guyana                              GY   GUY   328   ISO 3166-2:GY   Yes
+
+ Haiti                               HT   HTI   332   ISO 3166-2:HT   Yes
+
+ Heard Island and McDonald Islands   HM   HMD   334   ISO 3166-2:HM   No
+
+Holy See                             VA   VAT   336   ISO 3166-2:VA   Yes
+
+ Honduras                            HN   HND   340   ISO 3166-2:HN   Yes
+
+ Hong Kong                           HK   HKG   344   ISO 3166-2:HK   No
+
+ Hungary                             HU   HUN   348   ISO 3166-2:HU   Yes
+
+Iceland                              IS   ISL   352   ISO 3166-2:IS   Yes
+
+ India                               IN   IND   356   ISO 3166-2:IN   Yes
+
+ Indonesia                           ID   IDN   360   ISO 3166-2:ID   Yes
+
+ Iran, Islamic Republic of           IR   IRN   364   ISO 3166-2:IR   Yes
+
+ Iraq                                IQ   IRQ   368   ISO 3166-2:IQ   Yes
+
+ Ireland                             IE   IRL   372   ISO 3166-2:IE   Yes
+
+ Isle of Man                         IM   IMN   833   ISO 3166-2:IM   No
+Israel                               IL   ISR   376   ISO 3166-2:IL   Yes
+
+ Italy                               IT   ITA   380   ISO 3166-2:IT   Yes
+
+ Jamaica                             JM   JAM   388   ISO 3166-2:JM   Yes
+ Japan                               JP   JPN   392   ISO 3166-2:JP   Yes
+
+ Jersey                              JE   JEY   832   ISO 3166-2:JE   No
+
+ Jordan                              JO   JOR   400   ISO 3166-2:JO   Yes
+
+ Kazakhstan                          KZ   KAZ   398   ISO 3166-2:KZ   Yes
+
+ Kenya                               KE   KEN   404   ISO 3166-2:KE   Yes
+ Kiribati                                 KI   KIR   296   ISO 3166-2:KI   Yes
+ Korea, Democratic People's Republic of   KP   PRK   408   ISO 3166-2:KP   Yes
+
+ Korea, Republic of                       KR   KOR   410   ISO 3166-2:KR   Yes
+
+ Kuwait                                   KW   KWT   414   ISO 3166-2:KW   Yes
+ Kyrgyzstan                               KG   KGZ   417   ISO 3166-2:KG   Yes
+
+ Lao People's Democratic Republic         LA   LAO   418   ISO 3166-2:LA   Yes
+
+ Latvia                                   LV   LVA   428   ISO 3166-2:LV   Yes
+
+ Lebanon                                  LB   LBN   422   ISO 3166-2:LB   Yes
+
+ Lesotho                                  LS   LSO   426   ISO 3166-2:LS   Yes
+
+ Liberia                                  LR   LBR   430   ISO 3166-2:LR   Yes
+
+ Libya                                    LY   LBY   434   ISO 3166-2:LY   Yes
+ Liechtenstein                            LI   LIE   438   ISO 3166-2:LI   Yes
+
+ Lithuania                                LT   LTU   440   ISO 3166-2:LT   Yes
+
+ Luxembourg                               LU   LUX   442   ISO 3166-2:LU   Yes
+
+ Macao                                    MO   MAC   446   ISO 3166-2:MO   No
+
+ Madagascar                               MG   MDG   450   ISO 3166-2:MG   Yes
+
+ Malawi                                   MW   MWI   454   ISO 3166-2:MW   Yes
+
+ Malaysia                                 MY   MYS   458   ISO 3166-2:MY   Yes
+ Maldives                                 MV   MDV   462   ISO 3166-2:MV   Yes
+
+ Mali                                     ML   MLI   466   ISO 3166-2:ML   Yes
+
+ Malta                                    MT   MLT   470   ISO 3166-2:MT   Yes
+
+ Marshall Islands                         MH   MHL   584   ISO 3166-2:MH   Yes
+
+ Martinique                               MQ   MTQ   474   ISO 3166-2:MQ   No
+
+ Mauritania                               MR   MRT   478   ISO 3166-2:MR   Yes
+
+ Mauritius                                MU   MUS   480   ISO 3166-2:MU   Yes
+
+ Mayotte                                  YT   MYT   175   ISO 3166-2:YT   No
+
+ Mexico                                   MX   MEX   484   ISO 3166-2:MX   Yes
+ Micronesia, Federated States of          FM   FSM   583   ISO 3166-2:FM   Yes
+
+ Moldova, Republic of                     MD   MDA   498   ISO 3166-2:MD   Yes
+
+Monaco                                    MC   MCO   492   ISO 3166-2:MC   Yes
+
+ Mongolia                                 MN   MNG   496   ISO 3166-2:MN   Yes
+
+ Montenegro                               ME   MNE   499   ISO 3166-2:ME   Yes
+
+ Montserrat                               MS   MSR   500   ISO 3166-2:MS   No
+ Morocco                                  MA   MAR   504   ISO 3166-2:MA   Yes
+
+ Mozambique                               MZ   MOZ   508   ISO 3166-2:MZ   Yes
+
+ Myanmar                                  MM   MMR   104   ISO 3166-2:MM   Yes
+
+ Namibia                                  NA   NAM   516   ISO 3166-2:NA   Yes
+
+ Naoero                                   NR   NRU   520   ISO 3166-2:NR   Yes
+
+Nepal                                     NP   NPL   524   ISO 3166-2:NP   Yes
+
+ Netherlands, Kingdom of the              NL   NLD   528   ISO 3166-2:NL   Yes
+   New Caledonia                                  NC   NCL   540   ISO 3166-2:NC   No
+New Zealand                                       NZ   NZL   554   ISO 3166-2:NZ   Yes
+
+Nicaragua                                         NI   NIC   558   ISO 3166-2:NI   Yes
+
+Niger                                             NE   NER   562   ISO 3166-2:NE   Yes
+
+Nigeria                                           NG   NGA   566   ISO 3166-2:NG   Yes
+
+Niue                                              NU   NIU   570   ISO 3166-2:NU   No
+Norfolk Island                                    NF   NFK   574   ISO 3166-2:NF   No
+
+North Macedonia                                   MK   MKD   807   ISO 3166-2:MK   Yes
+
+Northern Mariana Islands                          MP   MNP   580   ISO 3166-2:MP   No
+Norway                                            NO   NOR   578   ISO 3166-2:NO   Yes
+
+Oman                                              OM   OMN   512   ISO 3166-2:OM   Yes
+
+Pakistan                                          PK   PAK   586   ISO 3166-2:PK   Yes
+
+Palau                                             PW   PLW   585   ISO 3166-2:PW   Yes
+
+Palestine, State of[c]                            PS   PSE   275   ISO 3166-2:PS   No
+
+Panama                                            PA   PAN   591   ISO 3166-2:PA   Yes
+
+Papua New Guinea                                  PG   PNG   598   ISO 3166-2:PG   Yes
+
+Paraguay                                          PY   PRY   600   ISO 3166-2:PY   Yes
+Peru                                              PE   PER   604   ISO 3166-2:PE   Yes
+
+Philippines                                       PH   PHL   608   ISO 3166-2:PH   Yes
+
+Pitcairn                                          PN   PCN   612   ISO 3166-2:PN   No
+Poland                                            PL   POL   616   ISO 3166-2:PL   Yes
+Portugal                                          PT   PRT   620   ISO 3166-2:PT   Yes
+
+Puerto Rico                                       PR   PRI   630   ISO 3166-2:PR   No
+
+Qatar                                             QA   QAT   634   ISO 3166-2:QA   Yes
+Réunion                                           RE   REU   638   ISO 3166-2:RE   No
+
+Romania                                           RO   ROU   642   ISO 3166-2:RO   Yes
+
+Russian Federation                                RU   RUS   643   ISO 3166-2:RU   Yes
+
+Rwanda                                            RW   RWA   646   ISO 3166-2:RW   Yes
+
+Saint Barthélemy                                  BL   BLM   652   ISO 3166-2:BL   No
+
+Saint Helena, Ascension and Tristan da Cunha[e]   SH   SHN   654   ISO 3166-2:SH   No
+
+Saint Kitts and Nevis                             KN   KNA   659   ISO 3166-2:KN   Yes
+
+Saint Lucia                                       LC   LCA   662   ISO 3166-2:LC   Yes
+
+Saint Martin (French part)                        MF   MAF   663   ISO 3166-2:MF   No
+
+Saint Pierre and Miquelon                         PM   SPM   666   ISO 3166-2:PM   No
+
+Saint Vincent and the Grenadines                  VC   VCT   670   ISO 3166-2:VC   Yes
+
+Samoa                                             WS   WSM   882   ISO 3166-2:WS   Yes
+
+San Marino                                        SM   SMR   674   ISO 3166-2:SM   Yes
+
+Sao Tome and Principe                             ST   STP   678   ISO 3166-2:ST   Yes
+
+Saudi Arabia                                      SA   SAU   682   ISO 3166-2:SA   Yes
+
+Senegal                                           SN   SEN   686   ISO 3166-2:SN   Yes
+ Serbia                                                 RS   SRB   688   ISO 3166-2:RS   Yes
+
+ Seychelles                                             SC   SYC   690   ISO 3166-2:SC   Yes
+
+ Sierra Leone                                           SL   SLE   694   ISO 3166-2:SL   Yes
+
+ Singapore                                              SG   SGP   702   ISO 3166-2:SG   Yes
+
+ Sint Maarten (Dutch part)                              SX   SXM   534   ISO 3166-2:SX   No
+
+ Slovakia                                               SK   SVK   703   ISO 3166-2:SK   Yes
+
+ Slovenia                                               SI   SVN   705   ISO 3166-2:SI   Yes
+ Solomon Islands                                        SB   SLB   090   ISO 3166-2:SB   Yes
+
+ Somalia                                                SO   SOM   706   ISO 3166-2:SO   Yes
+
+ South Africa                                           ZA   ZAF   710   ISO 3166-2:ZA   Yes
+
+ South Georgia and the South Sandwich Islands           GS   SGS   239   ISO 3166-2:GS   No
+
+ South Sudan                                            SS   SSD   728   ISO 3166-2:SS   Yes
+
+ Spain                                                  ES   ESP   724   ISO 3166-2:ES   Yes
+
+ Sri Lanka                                              LK   LKA   144   ISO 3166-2:LK   Yes
+
+ Sudan                                                  SD   SDN   729   ISO 3166-2:SD   Yes
+
+ Suriname                                               SR   SUR   740   ISO 3166-2:SR   Yes
+
+Svalbard and Jan Mayen[f]                               SJ   SJM   744   ISO 3166-2:SJ   No
+
+ Sweden                                                 SE   SWE   752   ISO 3166-2:SE   Yes
+Switzerland                                             CH   CHE   756   ISO 3166-2:CH   Yes
+
+ Syrian Arab Republic                                   SY   SYR   760   ISO 3166-2:SY   Yes
+
+ Taiwan, Province of China[c]                           TW   TWN   158   ISO 3166-2:TW   No
+
+ Tajikistan                                             TJ   TJK   762   ISO 3166-2:TJ   Yes
+
+ Tanzania, United Republic of                           TZ   TZA   834   ISO 3166-2:TZ   Yes
+
+ Thailand                                               TH   THA   764   ISO 3166-2:TH   Yes
+
+ Timor-Leste                                            TL   TLS   626   ISO 3166-2:TL   Yes
+
+ Togo                                                   TG   TGO   768   ISO 3166-2:TG   Yes
+
+ Tokelau                                                TK   TKL   772   ISO 3166-2:TK   No
+ Tonga                                                  TO   TON   776   ISO 3166-2:TO   Yes
+
+ Trinidad and Tobago                                    TT   TTO   780   ISO 3166-2:TT   Yes
+
+ Tunisia                                                TN   TUN   788   ISO 3166-2:TN   Yes
+
+ Türkiye                                                TR   TUR   792   ISO 3166-2:TR   Yes
+
+ Turkmenistan                                           TM   TKM   795   ISO 3166-2:TM   Yes
+
+ Turks and Caicos Islands                               TC   TCA   796   ISO 3166-2:TC   No
+
+ Tuvalu                                                 TV   TUV   798   ISO 3166-2:TV   Yes
+ Uganda                                                 UG   UGA   800   ISO 3166-2:UG   Yes
+
+ Ukraine                                                UA   UKR   804   ISO 3166-2:UA   Yes
+
+ United Arab Emirates                                   AE   ARE   784   ISO 3166-2:AE   Yes
+
+ United Kingdom of Great Britain and Northern Ireland   GB   GBR   826   ISO 3166-2:GB   Yes
+
+ United States of America                               US   USA   840   ISO 3166-2:US   Yes
+
+ United States Minor Outlying Islands[g]                UM   UMI   581   ISO 3166-2:UM   No
+     Uruguay                                              UY       URY      858        ISO 3166-2:UY           Yes
+
+     Uzbekistan                                           UZ       UZB      860        ISO 3166-2:UZ           Yes
+
+     Vanuatu                                              VU       VUT      548        ISO 3166-2:VU           Yes
+
+     Venezuela, Bolivarian Republic of                    VE       VEN      862        ISO 3166-2:VE           Yes
+
+     Viet Nam                                             VN       VNM      704        ISO 3166-2:VN           Yes
+
+     Virgin Islands (British)                             VG       VGB      092        ISO 3166-2:VG           No
+     Virgin Islands (U.S.)                                VI       VIR      850        ISO 3166-2:VI           No
+
+     Wallis and Futuna                                    WF       WLF      876        ISO 3166-2:WF           No
+
+     Western Sahara[c]                                    EH       ESH      732        ISO 3166-2:EH           No
+
+     Yemen                                                YE       YEM      887        ISO 3166-2:YE           Yes
+
+     Zambia                                               ZM       ZMB      894        ISO 3166-2:ZM           Yes
+
+     Zimbabwe                                             ZW       ZWE      716        ISO 3166-2:ZW           Yes
+
+
+
+Reserved and user-assigned code elements
+The officially assigned code elements may be expanded by using either reserved codes or user-assigned codes.[1]
+
+Reserved code elements are codes which have become obsolete, are used in other coding systems such as WIPO ST.3,
+or are required in order to enable a particular user application of the standard but do not qualify for inclusion in ISO
+3166-1. To avoid transitional application problems and to aid users who require specific additional code elements for
+the functioning of their coding systems, the ISO 3166/MA, when justified, reserves these codes for a certain use for a
+limited or indeterminate period of time. Codes are usually reserved for former countries, overseas territories,
+international organizations, and special nationality status. The reserved alpha-2 and alpha-3 codes can be divided into
+three categories:
+(follow the links for the reserved codes of each category)
+
+    Alpha-2: exceptional reservations, transitional reservations, and indeterminate reservations
+    Alpha-3: exceptional reservations, transitional reservations, and indeterminate reservations
+    Numeric: no reserved codes
+User-assigned code elements are codes at the disposal of users who need to add further names of countries, territories,
+or other geographical entities to their in-house application of ISO 3166-1, and the ISO 3166/MA will never use these
+codes when updating the standard. These codes can be user-assigned:[14]
+
+    Alpha-2: AA, QM to QZ, XA to XZ, and ZZ
+    Alpha-3: AAA to AAZ, QMA to QZZ, XAA to XZZ, and ZZA to ZZZ
+    Numeric: 900 to 999
+
+
+User-assigned codes in wide use
+
+    XI: Used to denote Northern Ireland for the purposes of VAT collection in trade between it and the
+    European Union.[15]
+    XK: Used to denote Kosovo- see XK (user assigned code).
+
+
+Changes
+The ISO 3166/MA updates ISO 3166-1 when necessary. A country is normally assigned new ISO 3166-1 codes if it
+changes its name or its territorial boundaries. In general, new alphabetic codes are assigned if a country changes a
+significant part of its name, while a new numeric code is assigned if a country changes its territorial boundaries.
+Codes for country names that have been deleted from ISO 3166-1 are published in ISO 3166-3.
+
+ISO formerly announced changes in newsletters which updated the standard, and periodically released new editions
+which consolidated the newsletter changes. As of July 2013, changes are published in the online catalogue of ISO
+only, and newsletters are no longer published. Past newsletters remain available via the search option on the ISO
+website.[16]
+                                                                    Date
+                    Edition/Newsletter                                                            Contents
+                                                                   issued
+
+ISO 3166:1974                                                    1974         First edition of ISO 3166
+
+ISO 3166:1981                                                    1981         Second edition of ISO 3166
+ISO 3166:1988                                                    1988-08-15   Third edition of ISO 3166
+
+ISO 3166:1994                                                    1994-02-10   Fourth edition of ISO 3166
+
+                                                                              First edition of ISO 3166-1 (ISO 3166 expanded
+ISO 3166-1:1997                                                  1997-09-25
+                                                                              into three parts)
+Newsletter V-1 (https://www.iso.org/files/live/sites/isoorg/f
+iles/archive/pdf/en/newsletter_v-1_samoa.pdf) Archived
+(https://web.archive.org/web/20181207045726/https://w
+                                                                 1998-02-05   Change of official name (Samoa)
+ww.iso.org/files/live/sites/isoorg/files/archive/pdf/en/news
+letter_v-1_samoa.pdf) 2018-12-07 at the Wayback
+Machine
+
+Newsletter V-2 (https://www.iso.org/files/live/sites/isoorg/f
+iles/archive/pdf/en/newsletter_v-2_palestinian_territory_o
+ccupied.pdf) Archived (https://web.archive.org/web/2011                       Inclusion of new country name and code elements
+                                                                 1999-10-01
+0722001642/http://www.iso.org/iso/newsletter_v-2_pales                        (Palestinian Territory, Occupied)
+tinian_territory_occupied.pdf) 2011-07-22 at the
+Wayback Machine
+
+Newsletter V-3 (https://web.archive.org/web/2011072200
+                                                                 2002-02-01   Change of alpha-3 Code Element (Romania)
+1502/http://www.iso.org/iso/newsletter_v-3_romania.pdf)
+Newsletter V-4 (https://www.iso.org/files/live/sites/isoorg/f
+iles/archive/pdf/en/newsletter_v-4_name_changes.pdf)                          Name changes (Afghanistan, Azerbaijan, Bahrain,
+Archived (https://web.archive.org/web/20181207102813/                         Bosnia and Herzegovina, Fiji, Hong Kong,
+                                                                 2002-05-20
+https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/                Kazakhstan, Kiribati, Macao, Niue, Somalia,
+en/newsletter_v-4_name_changes.pdf) 2018-12-07 at                             Venezuela)
+the Wayback Machine
+
+Newsletter V-5 (https://www.iso.org/files/live/sites/isoorg/f
+iles/archive/pdf/en/newsletter_v-5_east_timor.pdf)
+Archived (https://web.archive.org/web/20181207102801/                         Change of names and alphabetical code elements
+                                                                 2002-05-20
+https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/                of East Timor
+en/newsletter_v-5_east_timor.pdf) 2018-12-07 at the
+Wayback Machine
+
+Newsletter V-6 (https://web.archive.org/web/2011072200
+1711/http://www.iso.org/iso/newsletter_v-6_timor_leste.p         2002-11-15   Change of names of East Timor
+df)
+Newsletter V-7 (https://www.iso.org/files/live/sites/isoorg/f
+iles/archive/pdf/en/newsletter_v-7_comoros.pdf)
+Archived (https://web.archive.org/web/20181207102735/
+                                                                 2003-01-14   Change of official name of Comoros
+https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/
+en/newsletter_v-7_comoros.pdf) 2018-12-07 at the
+Wayback Machine
+
+Newsletter V-8 (https://web.archive.org/web/2011072200
+                                                                              Deletion of "Yugoslavia"; inclusion of "Serbia and
+1734/http://www.iso.org/iso/newsletter_v-8_serbia_and_           2003-07-23
+                                                                              Montenegro" with new alphabetical code elements
+montenegro.pdf)
+
+Newsletter V-9 (https://www.iso.org/files/live/sites/isoorg/f
+iles/archive/pdf/en/newsletter_v-9_aland_islands.pdf)
+Archived (https://web.archive.org/web/20160303215059/            2004-02-13   Inclusion of an entry for Åland Islands
+http://www.iso.org/iso/newsletter_v-9_aland_islands.pdf)
+2016-03-03 at the Wayback Machine
+Newsletter V-10 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/newsletter_v-10_name_changes.p
+df) Archived (https://web.archive.org/web/201812071029
+                                                                 2004-04-26   Name changes (Afghanistan, Åland Islands)
+11/https://www.iso.org/files/live/sites/isoorg/files/archive/
+pdf/en/newsletter_v-10_name_changes.pdf) 2018-12-07
+at the Wayback Machine
+
+Newsletter V-11 (https://www.iso.org/files/live/sites/isoor      2006-03-29   Inclusion of an entry for Jersey, Guernsey and Isle
+g/files/archive/pdf/en/newsletter_v-11_jersey_guernsey_i                      of Man. Change of remark for the United Kingdom
+sle_of_man.pdf) Archived (https://web.archive.org/web/2
+0181207102850/https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/newsletter_v-11_jersey_guernsey_i
+sle_of_man.pdf) 2018-12-07 at the Wayback Machine
+
+Newsletter V-12 (https://web.archive.org/web/201107211
+                                                                              Inclusion of the new entries for "Serbia" and
+91046/http://www.iso.org/iso/newsletter_v-12_serbia_mo           2006-09-26
+                                                                              "Montenegro" (replacing Serbia and Montenegro)
+ntenegro.pdf)
+ISO 3166-1:2006 (http://www.iso.org/iso/iso_catalogue/c
+atalogue_tc/catalogue_detail.htm?csnumber=39719)
+Archived (https://web.archive.org/web/20090707024046/
+                                                                 2006-11-20   Second edition of ISO 3166-1
+http://www.iso.org/iso/iso_catalogue/catalogue_tc/catalo
+gue_detail.htm?csnumber=39719) 2009-07-07 at the
+Wayback Machine
+
+ISO 3166-1:2006/
+Cor 1:2007 (http://www.iso.org/iso/iso_catalogue/catalog
+ue_tc/catalogue_detail.htm?csnumber=46123) Archived
+(https://web.archive.org/web/20110606055741/http://ww            2007-07-15   First Technical Corrigendum to ISO 3166-1:2006
+w.iso.org/iso/iso_catalogue/catalogue_tc/catalogue_detai
+l.htm?csnumber=46123) 2011-06-06 at the Wayback
+Machine
+
+Newsletter VI-1 (https://www.iso.org/files/live/sites/isoor                   Assignment of code elements for Saint
+g/files/archive/pdf/en/newsletter_vi-1.pdf) Archived (http                    Barthélemy and Saint Martin and update of
+s://web.archive.org/web/20180910200804/https://www.is            2007-09-21   France and other French Territories (French
+o.org/files/live/sites/isoorg/files/archive/pdf/en/newsletter                 Polynesia, French Southern Territories,
+_vi-1.pdf) 2018-09-10 at the Wayback Machine                                  Guadeloupe, Réunion)
+Newsletter VI-2 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/iso3166-1_newsletter_vi-2.pdf)
+                                                                              Name changes for Moldova, Montenegro and
+Archived (https://web.archive.org/web/20180726072613/
+                                                                 2008-03-31   other minor corrections (Madagascar, Palestinian
+https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/
+                                                                              Territory, Occupied, Saint Barthélemy)
+en/iso3166-1_newsletter_vi-2.pdf) 2018-07-26 at the
+Wayback Machine
+
+Newsletter VI-3 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/n567_newsletter.pdf) Archived (http                    Name change for Nepal and other minor
+s://web.archive.org/web/20180725115404/https://www.is            2008-09-09   corrections (Greenland, Guernsey, Moldova,
+o.org/files/live/sites/isoorg/files/archive/pdf/en/n567_new                   Nigeria)
+sletter.pdf) 2018-07-25 at the Wayback Machine
+
+Newsletter VI-4 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/newsletter_vi-4_name_change_for
+_republic_of_moldova_and_other_minor_corrections_e_
+                                                                              Name change for the Republic of Moldova and
+-4.pdf) Archived (https://web.archive.org/web/201807251
+                                                                 2009-01-07   other minor corrections (Central African Republic,
+20616/https://www.iso.org/files/live/sites/isoorg/files/archi
+                                                                              Comoros)
+ve/pdf/en/newsletter_vi-4_name_change_for_republic_of
+_moldova_and_other_minor_corrections_e_-4.pdf)
+2018-07-25 at the Wayback Machine
+Newsletter VI-5 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/newsletter_vi-5.pdf) Archived (http                    Name change for Bolivarian Republic of
+s://web.archive.org/web/20180726072605/https://www.is            2009-03-03   Venezuela and other minor corrections (Kiribati,
+o.org/files/live/sites/isoorg/files/archive/pdf/en/newsletter                 Tuvalu)
+_vi-5.pdf) 2018-07-26 at the Wayback Machine
+
+Newsletter VI-6 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/newsletter_vi-6_name_change_plu
+rinational_state_of_bolivia.pdf) Archived (https://web.arc
+hive.org/web/20180725121114/https://www.iso.org/files/li         2009-05-08   Name change for Plurinational State of Bolivia
+ve/sites/isoorg/files/archive/pdf/en/newsletter_vi-6_name
+_change_plurinational_state_of_bolivia.pdf) 2018-07-25
+at the Wayback Machine
+
+Newsletter VI-7 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/iso_3166-1_newsletter_vi-7_2010-
+02-22.pdf) Archived (https://web.archive.org/web/201807                       Name change for Saint Helena, Ascension and
+                                                                 2010-02-22
+20105405/https://www.iso.org/files/live/sites/isoorg/files/a                  Tristan da Cunha
+rchive/pdf/en/iso_3166-1_newsletter_vi-7_2010-02-22.p
+df) 2018-07-20 at the Wayback Machine
+Newsletter VI-8 (https://www.iso.org/files/live/sites/isoor      2010-12-15   Code elements for Bonaire, Saint Eustatius and
+g/files/archive/pdf/en/iso_3166-1_newsletter_vi-8_split_o                     Saba, Curaçao and Sint Maarten (Dutch part),
+f_the_dutch_antilles_final-en.pdf) Archived (https://web.a                    update of other territories (Netherlands,
+rchive.org/web/20190809163925/https://www.iso.org/file                        Netherlands Antilles) and minor corrections
+s/live/sites/isoorg/files/archive/pdf/en/iso_3166-1_newsle                    (Bosnia and Herzegovina, Croatia)
+tter_vi-8_split_of_the_dutch_antilles_final-en.pdf) 2019-
+08-09 at the Wayback Machine
+
+Newsletter VI-9 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/newsletter_vi-9_fiji-myanmar_and_
+                                                                               Name changes for Fiji and Myanmar as well as
+other_minor_corrections-incl_bulgaria.pdf) Archived (http        2011-06-12
+                                                                               other minor corrections (Åland Islands, Bonaire,
+s://web.archive.org/web/20190618232219/https://www.is            (corrected
+                                                                               Sint Eustatius and Saba, Bulgaria, Netherlands,
+o.org/files/live/sites/isoorg/files/archive/pdf/en/newsletter    2011-07-14)
+                                                                               Niue)
+_vi-9_fiji-myanmar_and_other_minor_corrections-incl_bu
+lgaria.pdf) 2019-06-18 at the Wayback Machine
+Newsletter VI-10 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/nl_vi-10_south_sudan.pdf)
+Archived (https://web.archive.org/web/20180724110125/                          Code elements for South Sudan (and new
+                                                                 2011-08-09
+https://www.iso.org/files/live/sites/isoorg/files/archive/pdf/                 numeric code for Sudan)
+en/nl_vi-10_south_sudan.pdf) 2018-07-24 at the
+Wayback Machine
+
+Newsletter VI-11 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/nl_vi-11_name_change_for_libya.p
+df) Archived (https://web.archive.org/web/201905230312
+                                                                 2011-11-08    Name change for Libya
+08/https://www.iso.org/files/live/sites/isoorg/files/archive/
+pdf/en/nl_vi-11_name_change_for_libya.pdf) 2019-05-23
+at the Wayback Machine
+
+Newsletter VI-12 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/iso_3166-1_nl_vi-12_name_chang
+                                                                               Name change for Hungary and other minor
+e_for_hungary.pdf) Archived (https://web.archive.org/we
+                                                                               corrections (Bangladesh, Bonaire, Sint Eustatius
+b/20190523031230/https://www.iso.org/files/live/sites/iso        2012-02-15
+                                                                               and Saba, Central African Republic, Equatorial
+org/files/archive/pdf/en/iso_3166-1_nl_vi-12_name_chan
+                                                                               Guinea, Eritrea, Germany)
+ge_for_hungary.pdf) 2019-05-23 at the Wayback
+Machine
+Newsletter VI-13 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/nl_vi-13_name_change_for_eritrea.
+pdf) Archived (https://web.archive.org/web/20190412083                         Name change for Eritrea and other minor
+                                                                 2012-08-02
+054/https://www.iso.org/files/live/sites/isoorg/files/archiv                   corrections (Germany, Sri Lanka)
+e/pdf/en/nl_vi-13_name_change_for_eritrea.pdf) 2019-
+04-12 at the Wayback Machine
+
+Newsletter VI-14 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/iso_3166-1_newsletter_vi-14_nam                         Name change for State of Palestine and other
+e_change_state_of_palestine.pdf) Archived (https://web.                        minor corrections (Bulgaria, Bouvet Island,
+                                                                 2013-02-06
+archive.org/web/20131103041628/http://www.iso.org/iso/                         Jersey, Saint Martin (French part), Seychelles,
+iso_3166-1_newsletter_vi-14_name_change_state_of_p                             Sint Maarten (Dutch part), Viet Nam)
+alestine.pdf) 2013-11-03 at the Wayback Machine
+
+Newsletter VI-15 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/iso_3166-1_newsletter__vi-15_na
+me_change_for_papua_new_guinea.pdf) Archived (http
+s://web.archive.org/web/20180725121048/https://www.is            2013-05-10    Name change for Papua New Guinea
+o.org/files/live/sites/isoorg/files/archive/pdf/en/iso_3166-
+1_newsletter__vi-15_name_change_for_papua_new_gui
+nea.pdf) 2018-07-25 at the Wayback Machine
+Newsletter VI-16 (https://www.iso.org/files/live/sites/isoor
+g/files/archive/pdf/en/iso_3166-1_newsletter__vi-16_na
+me_change_for_somalia_en.pdf) Archived (https://web.a
+rchive.org/web/20180724110014/https://www.iso.org/file           2013-07-11    Name change for Somalia
+s/live/sites/isoorg/files/archive/pdf/en/iso_3166-1_newsle
+tter__vi-16_name_change_for_somalia_en.pdf) 2018-
+07-24 at the Wayback Machine
+
+                                                                               Third edition of ISO 3166-1 (changes are
+                                                                               published in the online catalogue (https://isotc.iso.
+ISO 3166-1:2013 (http://www.iso.org/iso/catalogue_detai                        org/livelink/livelink?func=ll&objId=16944257&objA
+l.htm?csnumber=63545) Archived (https://web.archive.or                         ction=browse&viewType=1) of ISO only and no
+g/web/20140304175136/http://www.iso.org/iso/catalogue            2013-11-19    newsletters are published anymore). Archived (htt
+_detail.htm?csnumber=63545) 2014-03-04 at the                                  ps://web.archive.org/web/20221021172049/http
+Wayback Machine                                                                s://isotc.iso.org/livelink/livelink?func=ll&objId=169
+                                                                               44257&objAction=browse&viewType=1) 2022-10-
+                                                                               21 at the Wayback Machine
+
+ISO 3166-1:2020 (https://www.iso.org/standard/72482.ht           2020-08       Fourth edition of ISO 3166-1
+ml) Archived (https://web.archive.org/web/202012301600
+26/https://www.iso.org/standard/72482.html) 2020-12-30
+at the Wayback Machine
+
+
+
+
+See also
+  Country code
+                                                                                        Geography portal
+      International Organization for Standardization
+           ISO 3166
+               ISO 3166-1
+               ISO 3166-2
+               ISO 3166-3
+           List of ISO 3166 country codes
+      International vehicle registration code
+      Country code top-level domain
+           List of Internet top-level domains
+  ISO 639 – Codes for the representation of names of languages
+  Lists of countries and territories
+      Sovereign state
+           List of sovereign states
+           List of states with limited recognition
+     Dependent territory
+     Timeline of historical geopolitical changes
+  United Nations
+      Member states of the United Nations
+      United Nations list of non-self-governing territories
+
+  List of IOC country codes
+  List of CGF country codes
+
+
+Notes
+a. No full name in ISO 3166.
+b. See also the List of ISO 3166 country codes § Current ISO 3166 country codes regarding the
+    sovereignty of the countries and areas.
+c. See also the table in § Naming and disputes above.
+d. Comprising       Bonaire,     Sint Eustatius, and     Saba.
+e. Comprising       Saint Helena,      Ascension Island, and   Tristan da Cunha.
+ f. Comprising      Svalbard and      Jan Mayen.
+g. Comprising Baker Island, Howland Island, Jarvis Island, Johnston Atoll, Kingman Reef, Midway Atoll,
+    Navassa Island, Palmyra Atoll, and      Wake Island.
+
+
+References
+1. "Country Codes – ISO 3166" (https://www.iso.org/iso-3166-country-codes.html). International
+   Organization for Standardization (ISO). Archived (https://web.archive.org/web/20170123191048/http://
+   www.iso.org/iso/iso-3166-1_decoding_table) from the original on 2017-01-23. Retrieved 2018-05-09.
+ 2. "Country names and code elements" (https://www.iso.org/obp/ui/#search/code/). ISO. Archived (https://
+    web.archive.org/web/20160617031837/https://www.iso.org/obp/ui/#search/code/) from the original on
+    2016-06-17. Retrieved 2020-09-07. "Officially assigned codes 249"
+ 3. "Qualifying top-level domain strings: Eligible categories of top-level domains" (https://www.iana.org/hel
+    p/eligible-tlds). Internet Assigned Numbers Authority. Archived (https://web.archive.org/web/201402281
+    81535/https://www.iana.org/help/eligible-tlds) from the original on 2014-02-28. Retrieved 2014-02-25.
+ 4. "ISO 3166 – FAQs – General Questions" (https://web.archive.org/web/20070306080355/http://www.iso.
+    org/iso/en/prods-services/iso3166ma/10faq/frequently-asked-questions.html#Q07). ISO. 29 September
+    2006. Archived from the original (http://www.iso.org/iso/en/prods-services/iso3166ma/10faq/frequently-
+    asked-questions.html#Q07) on 2007-03-06.
+ 5. "ISO 3166 – FAQs – Specific" (https://web.archive.org/web/20120616044022/http://www.iso.org/iso/cou
+    ntry_codes/iso_3166-faqs/iso_3166_faqs_specific.htm). ISO. Archived from the original (http://www.iso.
+    org/iso/country_codes/iso_3166-faqs/iso_3166_faqs_specific.htm) on 2012-06-16.
+ 6. "ISO 3166 information for AF" (https://www.iso.org/obp/ui/#iso:code:3166:AF). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:AF) from the original on 2016-06-17. Retrieved 2022-02-18.
+ 7. "ISO 3166 information for CN" (https://www.iso.org/obp/ui/#iso:code:3166:CN). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:CN) from the original on 2016-06-17. Retrieved 2021-09-27.
+ 8. "ISO 3166 information for CY" (https://www.iso.org/obp/ui/#iso:code:3166:CY). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:CY) from the original on 2016-06-17. Retrieved 2021-09-27.
+ 9. "ISO 3166 information for FK" (https://www.iso.org/obp/ui/#iso:code:3166:FK). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:FK) from the original on 2016-06-17. Retrieved 2021-09-27.
+10. "ISO 3166 information for PS" (https://www.iso.org/obp/ui/#iso:code:3166:PS). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:PS) from the original on 2016-06-17. Retrieved 2021-09-27. "Remark:
+    Conventional names."
+11. "ISO 3166 information for TW" (https://www.iso.org/obp/ui/#iso:code:3166:TW). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:TW) from the original on 2016-06-17. Retrieved 2021-09-27.
+12. "ISO 3166 information for EH" (https://www.iso.org/obp/ui/#iso:code:3166:EH). International
+    Organization for Standardization. Archived (https://web.archive.org/web/20160617031837/https://www.i
+    so.org/obp/ui/#iso:code:3166:EH) from the original on 2016-06-17. Retrieved 2021-09-27. "Remark:
+    Provisional name"
+13. "Country names and code elements" (https://www.iso.org/obp/ui/#search/code/). ISO. Archived (https://
+    web.archive.org/web/20160617031837/https://www.iso.org/obp/ui/#search/code/) from the original on
+    2016-06-17. Retrieved 2014-02-25.
+14. "Glossary for ISO 3166 - Codes for countries and their subdivisions" (https://www.iso.org/glossary-for-is
+    o-3166.html). ISO. Archived (https://web.archive.org/web/20180728035756/https://www.iso.org/glossar
+    y-for-iso-3166.html) from the original on 2018-07-28. Retrieved 2018-11-13.
+15. "Check if you're trading under the Northern Ireland protocol and what to do" (https://www.gov.uk/govern
+    ment/publications/accounting-for-vat-on-goods-moving-between-great-britain-and-northern-ireland-from
+    -1-january-2021/check-when-you-are-trading-under-the-northern-ireland-protocol-if-you-are-vat-register
+    ed-business). HM Revenue & Customs, UK. 2020-12-07. Archived (https://web.archive.org/web/202101
+    09220340/https://www.gov.uk/government/publications/accounting-for-vat-on-goods-moving-between-g
+    reat-britain-and-northern-ireland-from-1-january-2021/check-when-you-are-trading-under-the-northern-i
+    reland-protocol-if-you-are-vat-registered-business) from the original on 2021-01-09. Retrieved
+    2021-01-08.
+16. "ISO 3166-1 - New access" (https://www.iso.org/iso-3166-1-new-access.html). ISO. Archived (https://w
+    eb.archive.org/web/20210509094130/https://www.iso.org/iso-3166-country-codes.html) from the
+    original on 2021-05-09. Retrieved 2017-07-19.
+Sources and external links
+    ISO 3166 Maintenance Agency (https://www.iso.org/iso-3166-country-codes.html), International
+    Organization for Standardization (ISO). Archived (https://web.archive.org/web/20170123191048/http://
+    www.iso.org/iso/iso-3166-1_decoding_table) 2017-01-23 at the Wayback Machine.
+        Country names and code elements (https://www.iso.org/obp/ui/#search/code/) — list of alpha-2
+        codes. Archived (https://web.archive.org/web/20160617031837/https://www.iso.org/obp/ui/#search/
+        code/) 2016-06-17 at the Wayback Machine.
+    Standard Country or Area Codes for Statistical Use (https://unstats.un.org/unsd/methods/m49/m49.ht
+    m), United Nations Statistics Division. Archived (https://web.archive.org/web/20200417090346/https://u
+    nstats.un.org/unsd/methods/m49/m49.htm) 2020-04-17 at the Wayback Machine.
+       Countries or areas, codes and abbreviations (http://unstats.un.org/unsd/methods/m49/m49alpha.ht
+       m) — list of alpha-3 and numeric codes (a few territories officially assigned codes in ISO 3166-1 are
+       not included in this list). Archived (https://web.archive.org/web/20140628144412/http://unstats.un.or
+       g/unsd/methods/m49/m49alpha.htm) 2014-06-28 at the Wayback Machine.
+    The World Factbook (public domain), Central Intelligence Agency
+        Appendix D – Country Data Codes (https://web.archive.org/web/20210117225445/https://www.cia.g
+        ov/the-world-factbook/references/country-data-codes/) — comparison of GEC (formerly FIPS 10-4),
+        ISO 3166, and STANAG 1059 country codes. Archived (https://web.archive.org/web/202112240501
+        56/https://www.cia.gov/the-world-factbook/references/country-data-codes/) 2021-12-24 at the
+        Wayback Machine.
+
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=ISO_3166-1&oldid=1375119575"
+

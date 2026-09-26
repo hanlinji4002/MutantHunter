@@ -1,0 +1,282 @@
+Henkilötunnus
+Henkilötunnus on valtion antama, ihmisen yksilöivä tunniste.
+Henkilötunnusta käytetään muun muassa viranomaisten kanssa
+asioitaessa, henkilön yksilöimisessä ja henkilöä koskevissa
+virallisissa asiakirjoissa. Henkilötunnusta käytetään myös edelleen
+henkilön tunnistamiseen esimerkiksi puhelimessa, vaikka se on
+esimerkiksi Suomessa nimenomaisesti kielletty tietosuojalain 29
+§:ssä.
+                                                                         Itävaltalainen henkilökortti.
+
+
+
+Henkilötunnus Suomessa
+
+Yleistä
+Suomessa henkilötunnus (hetu[1]) annetaan Suomen kansalaisille sekä Suomessa pysyvästi tai
+pitkäaikaisesti (vähintään vuoden) oleskeleville ulkomaalaisille. Suomessa sairaalassa syntyvä lapsi saa
+henkilötunnuksen automaattisesti, sillä sairaala ilmoittaa lapsesta väestötietojärjestelmään.[2] Tunnus
+voidaan anomuksesta myöntää myös tilapäisesti oleskeleville henkilöille. Tunnuksen myöntää joko Digi-
+ja väestötietovirasto tai Ahvenanmaan valtionvirasto.[3]
+
+Suomessa henkilötunnus ei juridisesti ole enää nykyään salassa pidettävä tieto. Henkilötunnuksen voi
+nykyisin vaihtaa vain henkilötunnuksen väärinkäytön tai sukupuolenkorjauksen takia. Esimerkiksi
+väärinkäytöksiä on pitänyt tapahtua useita ja niiden pitää olla vakavia[2].
+
+Henkilötunnuksen alkuosa muodostuu henkilön syntymäajasta. Välimerkki kertoo, millä vuosisadalla
+henkilö on syntynyt. Välimerkin jälkeen on kolminumeroinen juokseva järjestysnumero ja lopuksi
+tarkistusmerkki.
+
+Henkilötunnuksen algoritmin kehitti Erkki Pale, joka oli toiminut toisessa maailmansodassa
+salakieliasiantuntijana.
+
+Aluksi henkilötunnuksissa ei ollut miinusta eikä plussaa vaan kaikissa yhdysmerkki ja 1800-luvulla
+syntyneet erotettiin 1900-luvulla syntyneistä tunnuksen alussa olevalla asteriskilla.[4]
+
+
+Tunnuksen käyttöönotto Suomessa
+Ensimmäinen henkilön yksikäsitteinen tunnus oli työeläkekortin numero ja sen antoi vuosina 1962–1970
+Eläketurvakeskus (ETK). Myöhemmin, vuosina 1964–1970 Kansaneläkelaitos (Kela) ryhtyi jakamaan
+omia sosiaaliturvatunnukseksi (sotu) kutsuttuja tunnuksiaan, joiden tiedot perustuivat
+väestörekisteritietoihin. Vuoden 1971 alusta, kun Väestörekisterikeskus (VRK) otti käyttöön digitaalisen
+väestörekisterin, työeläkekortin numerosta ja sotusta luovuttiin. Henkilön yksilöivän tunnuksen nimeksi
+tuli henkilötunnus. Väestörekisterikeskus oli ainoa henkilötunnuksia myöntävä taho vuoteen 2019 asti.
+
+
+Tunnuksen muoto
+Suomalaisen henkilötunnuksen muodosta säädetään väestötietojärjestelmästä annetussa valtioneuvoston
+asetuksessa (128/2010).[5] Tunnus koostuu 11 merkistä ja on muotoa ppkkvvynnnt, jossa
+
+     ppkkvv on henkilön syntymäaika kaksinumeroisina lukuina päivä, kuukausi ja vuosi;
+     esimerkiksi 010180
+     y on välimerkki, joka osoittaa sen vuosisadan, jolloin henkilö on syntynyt.
+        1800-luku: +
+        1900-luku: pääosin -, mahdollisesti myös Y, X, W, V tai U
+        2000-luku: pääosin A, mahdollisesti myös B, C, D, E tai F
+     nnn on yksilönumero, jolla samana päivänä syntyneet yksilöidään. Luku on naisilla
+     parillinen ja miehillä pariton.[6] Yksilönumero on välillä 002–899. Numeroita 900–999
+     käytetään tilapäisissä henkilötunnuksissa, esimerkiksi sairaaloissa, kun virallista
+     henkilötunnusta ei tiedetä tai sitä ei ole vielä syntyneelle lapselle annettu. Tilapäisiä
+     tunnuksia ei kirjata väestötietojärjestelmään.
+     t on tarkistusmerkki (eli eräänlainen tiiviste). Se saadaan jakamalla syntymäajan ja
+     yksilönumeron muodostama 9-numeroinen luku (ppkkvvnnn) 31:llä.[7] Jakojäännös, joka on
+     tällöin kokonaisluku väliltä 0–30, muunnetaan tarkistusmerkiksi alla olevan taulukon
+     mukaisesti[7]. Vuosisadan tunnus (y) ei siis vaikuta tarkistusmerkkiin. Kirjaimia G, I, O, Q, ja
+     Z ei käytetä.
+
+                         Taulukko
+Jakojäännös Tarkistusmerkki Jakojäännös Tarkistusmerkki
+0             0               16           H
+1             1               17           J
+2             2               18           K
+3             3               19           L
+4             4               20           M
+5             5               21           N
+6             6               22           P
+7             7               23           R
+8             8               24           S
+9             9               25           T
+10            A               26           U
+11            B               27           V
+12            C               28           W
+13            D               29           X
+14            E               30           Y
+15            F
+Uudet välimerkit vuodesta 2023 alkaen
+Henkilötunnukseen otettiin vuoden 2023 alusta lähtien käyttöön uusia välimerkkejä, jotka osoittavat
+vuosisadan. Jo käytössä olevat henkilötunnukset eivät uudistuksen vuoksi muutu. Esimerkiksi Suomeen
+työn johdosta muuttaville ulkomaalaisille annettavissa henkilötunnuksissa voidaan ottaa uusia
+välimerkkejä käyttöön. Valtioneuvosto antoi uusia välimerkkejä koskevan asetuksen 7.7.2022. Uusia
+välimerkkejä sisältäviä henkilötunnuksia on alettu jakaa alkaen 19.12.2023. [8]
+
+2000-luvulla syntyneillä otetaan nykyisen A-kirjaimen lisäksi käyttöön kirjaimet B, C, D, E ja F. 1900-
+luvulla syntyneillä otetaan nykyisen yhdysmerkin (-) lisäksi käyttöön kirjaimet Y, X, W, V ja U. Jatkossa
+uuden välimerkin sisältäviä henkilötunnuksia annetaan, kun kyseiselle syntymäpäivälle ei ole enää
+annettavissa nykyisin käytössä olevia välimerkkejä +, - tai A. [9]
+
+
+Henkilötunnuksen käsittely
+Tietosuojalain (1050/2018) 29 §:ssä säädetään rajoituksista sille, millä ehdoilla henkilötunnusta saa
+käsitellä. Lain mukaan henkilötunnusta saa käsitellä rekisteröidyn yksiselitteisesti antamalla
+suostumuksella sekä sellaisissa tapauksissa, joissa sen käsittelystä on säädetty laissa. Lisäksi
+henkilötunnusta saa käsitellä, jos rekisteröidyn yksiselitteinen yksilöiminen on tärkeää:
+
+    laissa säädetyn tehtävän suorittamiseksi;
+    rekisteröidyn tai rekisterinpitäjän oikeuksien ja velvollisuuksien toteuttamiseksi; tai
+    historiallista tai tieteellistä tutkimusta taikka tilastointia varten.
+Henkilötunnusta saa käsitellä myös luotonannossa tai saatavan perimisessä, vakuutus-, luottolaitos-,
+maksupalvelu-, vuokraus- ja lainaustoiminnassa, luottotietotoiminnassa, terveydenhuollossa,
+sosiaalihuollossa ja muun sosiaaliturvan toteuttamisessa tai virka-, työ- ja muita palvelussuhteita ja niihin
+liittyviä etuja koskevissa asioissa.
+
+Lisäksi henkilötunnuksen saa luovuttaa osoitetietojen päivittämiseksi tai moninkertaisten postilähetysten
+välttämiseksi suoritettavaa tietojenkäsittelyä varten, jos henkilötunnus jo on luovutuksensaajan
+käytettävissä.
+
+Rekisterinpitäjän on huolehdittava siitä, että henkilötunnusta ei merkitä tarpeettomasti henkilörekisterin
+perusteella tulostettuihin tai laadittuihin asiakirjoihin.
+
+1.1.2024 voimaan astunut tietosuojalain (1050/2018) 29 §:n muutos kieltää henkilön tunnistamisen
+pelkän henkilötunnuksen tai henkilötunnuksen ja nimen perusteella.[10]
+
+
+Uuden henkilötunnuksen suunnittelu
+Valtiovarainministeriö asetti vuonna 2017 työryhmän valmistelemaan henkilötunnuksen uudistamista.
+Uudistuksen tavoitteena oli luoda henkilön yksilöivä tunnus ja siihen liittyvät tiedot voidaan hallita
+erillisinä. Muita tavoitteita oli estää identiteettivarkauksia, edistää henkilötietojen hajautettua hallintaa
+sekä yksilön päätösvaltaa siitä, mitä tietoja henkilötunnusta käyttäville tahoille näkyy.[11]
+
+Uudistuksen taustalla oli, että henkilötunnuksen muodostamistavan vuoksi niitä on ainoastaan rajallinen
+määrä käytettävissä yksittäiselle päivälle. Etenkin tammikuun ensimmäisen päivän henkilötunnukset
+uhkaavat loppua, sillä henkilöille, joiden tarkkaa syntymäpäivää ei tiedetä, syntymäpäiväksi merkitään
+useimmiten kunkin vuoden ensimmäinen päivä.[12] Tunnus myös sisältää syntymäpäivän ja sukupuolen.
+Tiedot ovat usein tarpeettomia ja tietojen sisältyminen henkilötunnukseen aiheuttaa myös sen, että näiden
+tietojen muuttuessa pitää myös henkilötunnusta muuttaa. Tunnusten määrän rajallisuus ja henkilön
+tunnistamisvaatimukset aiheuttavat myös sen, ettei kaikille Suomeen muuttaville ole mahdollisuutta
+myöntää henkilötunnusta. Henkilötunnuksen puuttuminen puolestaan aiheuttaa ongelmia henkilön
+yksilöimisessä eri järjestelmien välillä. Henkilötunnuksettomalla henkilöllä ei ole myöskään
+mahdollisuutta käyttää sähköisiä viranomaispalveluita, koska hänellä ei ole mahdollisuutta saada
+pankkitunnistetta, mobiilivarmennetta tai henkilökorttiin sisältyvää kansalaisvarmennetta, joka toimisi
+tunnistusvälineenä.[11]
+
+Henkilötunnusta käytetään merkittävässä määrin virheellisesti myös henkilön yksilöimisen lisäksi hänen
+tunnistamiseensa. Tämä johtaa siihen, että sitä käytetään yhdessä muiden julkisten henkilötietojen kanssa
+identiteettikaappauksiin ja petoksiin. Rikosten kohteeksi joutuneiden henkilötunnusten käyttöä ei ole
+onnistuttu estämään sulkulista- tai vastaavilla menettelyillä.[13] Muuttumattomaksi ajateltujen
+henkilötunnusten vaihtaminen tapahtuu käsityönä, mikä on virhealtista ja tunnuksen muuttuminen
+aiheuttaa ongelmia henkilön yksilöimisessä järjestelmien välillä.[14]
+
+Vuonna 2020 työryhmä esitti loppuraporttinsa ja ehdotti ettei uudesta henkilötunnuksesta ei enää kävisi
+ilmi henkilön ikä, syntymäaika, sukupuoli tai muuta henkilöön liittyvää tietoa.[15] Muutosehdotus aiheutti
+paljon keskustelua.[16] Henkilötunnuksen uudistusta vastustettiin kansalaisaloitteella.[17] Sosiaali- ja
+terveysministeriö piti tavoitteita hyvinä mutta esitystä perustelemattomana ja näki uudistuksen
+mahdollisesti tuottavan uusia ongelmia. Oikeusministeriön lausuman mukaan nykyinen henkilötunnus
+toimii     ydintehtävässään,       mutta     uudistuksella    olisi   merkittävä     yhdenvertaisuusvaikutus.
+Puolustusministeriö näki uudistuksen esteeksi sen kalleuden. Työ- ja elinkeinoministeriö piti uudistusta
+kalliina ja näki, että se ei poistaisi väärinkäytösriskejä sähköisessä asioinnissa. Syrjintää olisi sen mielestä
+vähemmän, jos henkilötunnuksen saisi helpommin esimerkiksi oleskelulupaa odottaessa.
+Elinkeinoelämän keskusliitto ja Suomen Asiakastieto vastustivat uudistusta, kun taas Suomen Yrittäjät
+kannatti sitä. Ihmisoikeusliitto ja Seta kannattivat uudistusta erityisesti sukupuoli- ja ikäneutraaliuden
+vuoksi.[18]
+
+Saatujen lausuntojen ja virkamiesten jatkotyön perusteella työryhmän ehdotusta ei pidetty
+toteuttamiskelpoisena sellaisenaan. Henkilötunnuksen uudistamista jatkettiin rajatumpana siten, että sen
+muoto pääpiirteissään säilyisi. Henkilötunnusten riittävyys ratkaistiin siten, että syntymäpäivän ja
+yksilönumeron välinen erotinmerkki muutettiin 2021 merkitseväksi ja otettiin käyttöön 10 uutta
+erotinmerkkiä. Yksilönumeron on tarkoitus muuttua sukupuolineutraaliksi 2027 mennessä.[19] Toinen
+merkittävä henkilötunnuksen uudistamiseen vaikuttanut seikka oli lokakuussa 2020 julkisuuteen tullut
+psykoterapiakeskus Vastaamon tietomurto, jossa kymmenien tuhansien ihmisen terveystiedot joutuivat
+rikollisten käsiin, niillä yritettiin kiristää identiteetin haltijoita ja tietoja on käytetty petoksiin. [20][21]
+Tämän seurauksena selvitettiin keinoja, joilla henkilötunnuksen voisi vaihtaa matalammalla
+kynnyksellä.[21]
+
+Kesäkuussa 2022 oikeusministeriö on esittänyt lainmuutosta, joka kieltäisi henkilötunnuksen käytön
+henkilöiden tunnistautumisen välineenä.[22]
+
+1.1.2024 voimaan astunut tietosuojalain (1050/2018) 29 §:n muutos kieltää henkilön tunnistamisen
+pelkän henkilötunnuksen tai henkilötunnuksen ja nimen perusteella.[10]
+Muut maat
+Muualla vastaavanlaista henkilötunnusta käytetään muun muassa Ruotsissa (personnummer), Norjassa
+(fødselsnummer), Tanskassa (personnummer tai CPR-nummer), Islannissa (kennitala), Virossa
+(isikukood), Alankomaissa (burgerservicenummer), Belgiassa (rijksregisternummer), Ranskassa (code
+INSEE), Itävallassa (Sozialversicherungsnummer), Sveitsissä (AHV-Nummer), Liettuassa (asmens kodas)
+ja Chilessä (Rol Único Nacional tai RUN).
+
+Saksassa henkilötunnusten luominen ja käyttö on kielletty, sillä niitä pidetään yksilönvapauden
+rajoittamisena ja totalitaarisen valtion merkkinä. DDR:ssä henkilötunnusta käytettiin 1970-luvun alusta
+lähtien. Saksan jälleenyhdistymisen jälkeen DDR:n antamia henkilötunnuksia poistettiin viranomaisten
+rekistereistä ja vanhoja tunnuksia sai käyttää enää tietyissä erikoistapauksissa. Vuodesta 2008 tuli
+käyttöön henkilökohtainen veronumero. Vaikka sen käyttö on rajoitettu verottajaan, sen on kritisoitu
+loukkaavan henkilötunnusten kieltoa.
+
+Yhdysvalloissa on samankaltainen järjestelmä (social security number, SSN), vaikka sitä ei alun perin
+luotukaan samanlaiseen tarkoitukseen. SSN:ia ei anneta ihmiselle jo syntymästä, joten on mahdollista
+elää Yhdysvalloissa ilman sellaista, joskin sen puute vaikeuttaa käytännön asioiden hoitamista.
+
+Yhdistyneessä kuningaskunnassa on käytössä National Insurance -numero, jolla ohjataan esimerkiksi
+työntekijän tai yrittäjän tulovero ja sosiaaliturvamaksut verottajan järjestelmässä oikealle yksilölle. Sitä
+käytetään myös joissain tapauksissa esimerkiksi todistamaan oikeus työntekoon tai rekisteröitymään
+äänestäjäksi.
+
+
+
+Lähteet
+    Digi- ja väestötietoviraston palvelut henkilöasiakkaille (https://dvv.fi/henkiloasiakkaat) Digi- ja
+    väestötietovirasto. Viitattu 4.6.2020.
+
+
+Viitteet
+1. Lyhenneluettelo: H (https://kielitoimistonohjepankki.fi/ohje/437) 4.6.2020. Kotimaisten kielten
+   keskus. Viitattu 23.2.2013.
+2. Henkilötunnus (https://dvv.fi/fi/henkilotunnus) Digi- ja väestötietovirasto. Viitattu 22.11.2016.
+3. 25.2.2010/128 – Valtioneuvoston asetus väestötietojärjestelmästä – 15 § (19.12.2019/1330)
+   Rekisteriviranomaista koskeva tieto (https://www.finlex.fi/fi/laki/ajantasa/2010/20100128#L1P
+   15) Finlex. 25.2.2010. Oikeusministeriö. Viitattu 14.4.2020.
+4. Uusi Pikkujättiläinen vuodelta 1985, sivu 397
+5. 25.2.2010/128 – Valtioneuvoston asetus väestötietojärjestelmästä (https://www.finlex.fi/fi/lak
+   i/ajantasa/2010/20100128) Finlex. 25.2.2010. Oikeusministeriö. Viitattu 4.6.2020.
+6. Sinun henkilötunnuksesi voi vaihtua: katso tästä, miltä uusi hetu näyttää ja lue parhaat
+   perustelut uudistuksen puolesta ja vastaan (https://yle.fi/uutiset/3-11568323) Yle Uutiset.
+   Viitattu 9.10.2020.
+7. Väestötieteen perusteet. Mitä henkilötunnuksesi kertoo? (https://tilastokoulu.stat.fi/verkkokou
+   lu_v2.xql?page_type=esim&course_id=tkoulu_vaesto&lesson_id=4&subject_id=11&example
+   _id=1) Tilastokoulu, Tilastokeskus. Viitattu 20.11.2014.
+ 8. Uudet välimerkit takaavat henkilötunnusten riittävyyden – ensimmäinen uudenlainen
+    henkilötunnus myönnettiin tällä viikolla | Digi- ja väestötietovirasto (https://www.sttinfo.fi/tiedo
+    te/70077511/uudet-valimerkit-takaavat-henkilotunnusten-riittavyyden-ensimmainen-uudenlai
+    nen-henkilotunnus-myonnettiin-talla-viikolla?publisherId=3777) www.sttinfo.fi. Viitattu
+    21.12.2023.
+ 9. Henkilötunnuksen uudistaminen (https://dvv.fi/hetu-uudistus) Digi- ja väestötietovirasto.
+    Viitattu 19.12.2023.
+10. 5.12.2018/1050 – Tietosuojalaki – 29 § Henkilötunnuksen käsittely (https://www.finlex.fi/fi/lak
+    i/ajantasa/2018/20181050#L5P29) Finlex. 5.12.2018. Oikeusministeriö. Viitattu 8.3.2024.
+11. Henkilötunnuksen uudistamista ja valtion takaaman identiteetin hallinnoimista koskeva
+    työryhmä (HETU-työryhmä) (https://vm.fi/hanke?tunnus=VM068:00/2017)
+    Valtiovarainministeriö. Viitattu 18.2.2022.
+12. Maistraatti joutuu keksimään syntymäpäiviä (https://yle.fi/uutiset/3-5346623) yle.fi.
+    20.4.2011. Yleisradio. Viitattu 27.7.2022.
+13. HETU-uudistuksen loppuraportti (https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/1
+    62162/VM_2020_20.pdf?sequence=1&isAllowed=y) 6.4.2020. s. 29. Arkistoitu (https://web.a
+    rchive.org/web/20220218140906/https://julkaisut.valtioneuvosto.fi/bitstream/handle/10024/1
+    62162/VM_2020_20.pdf?sequence=1&isAllowed=y) 18.2.2022. Viitattu 18.2.2022.
+14. Henkilötunnuksen vaihtamisen helpottaminen saa täystyrmäyksen terveysviranomaisilta –
+    ”Potilasturvallisuus vaarantuu” (https://www.is.fi/politiikka/art-2000007739915.html) Ilta-
+    Sanomat. 14.1.2021. Viitattu 18.2.2022.
+15. Henkilötunnuksesta ei enää jatkossa selviäisi ikä, syntymäaika tai sukupuoli (https://www.hs.
+    fi/kotimaa/art-2000006468860.html) Helsingin Sanomat. 8.4.2020. Viitattu 9.4.2020.
+16. Henkilötunnukset uhkaavat loppua kesken jo tällä vuosikymmenellä – 7 olennaista
+    kysymystä hetu-uudistuksesta (https://yle.fi/uutiset/3-11582951) Yle Uutiset. Viitattu
+    9.10.2020.
+17. Henkilötunnuksen uudistamista vastustava kansalaisaloite etenee eduskuntaan (https://yle.f
+    i/uutiset/3-11559086) Yle Uutiset. Viitattu 9.10.2020.
+18. Ikä- ja sukupuolineutraaliuteen pyrkivä hetu-uudistus jakaa mielipiteitä – tavoitteet nähdään
+    jaloina, mutta mistä rahat ja aika? (https://yle.fi/uutiset/3-11381983) Yle Uutiset. Viitattu
+    9.10.2020.
+19. Hallituksen esitys eduskunnalle laeiksi väestötietojärjestelmästä ja Digi- ja
+    väestötietoviraston varmennepalveluista annetun lain sekä eräiden muiden lakien
+    muuttamisesta (https://api.hankeikkuna.fi/asiakirjat/e4e7c20c-ab47-480e-b3da-353452c53a
+    1a/28e61bf5-aab1-4579-b1b2-36f1d8213688/LAUSUNTOPYYNTO_20220107131143.PDF)
+    api.hankeikkuna.fi. 2021.
+20. Tietomurto | Vastaamon tietomurron uhrien henkilötietoja on alettu hyödyntää
+    tilauspetoksissa – Poliisi: ”Uusi, huolestuttava ilmiö” (https://www.hs.fi/kotimaa/art-20000086
+    06428.html) Helsingin Sanomat. 11.2.2022. Viitattu 18.2.2022.
+21. Arviomuistio henkilötunnuksen muuttamiskysymyksen madaltamisesta (https://api.hankeikku
+    na.fi/asiakirjat/e4e7c20c-ab47-480e-b3da-353452c53a1a/eca9d1ca-cb71-47b9-a2a4-02fe51
+    382fa2/LAUSUNTOPYYNTO_20220107082400.PDF) 24.11.2021. Valtionvarainministeriö.
+22. Henkilötunnuksen käyttö kielletään Suomessa tunnistautumiskäytössä (https://fin.afterdawn.
+    com/uutiset/artikkeli.cfm/2022/06/15/henkilotunnuksen-kaytto-kielletaan-suomessa-tunnistau
+    tumiskaytossa) AfterDawn. Viitattu 16.6.2022.
+
+
+Aiheesta muualla
+    Vuori, Teppo: Tarkistusmerkkien laskentamenetelmiä 12.10.2017. Teppo Vuori. Arkistoitu (htt
+    ps://web.archive.org/web/20181111045119/http://tarkistusmerkit.teppovuori.fi/tarkmerk.htm)
+    11.11.2018. Viitattu 10.12.2009.
+    Salste, Tuomas : Henkilötunnus – ihmisten koodaaja (https://www.tuomas.salste.net/doc/he
+    tu/tunnus.html) Tuomas.salste.com . Viitattu 4.6.2020.
+    Henkilötunnusgeneraattori (http://www.lintukoto.net/muut/henkilotunnus/index.php)
+    Lintukoto / Muut / Henkilötunnuksen teko . Viitattu 4.6.2020.
+
+
+Noudettu kohteesta ”https://fi.wikipedia.org/w/index.php?title=Henkilötunnus&oldid=24072642”
+

@@ -1,0 +1,22 @@
+sha,date,module,set,human_tests_at_HEAD,bug_attributable_tests,subject,note
+402b351,2025-07-18,mac_address,extra,MISS,0,fix: reject MAC addresses with mixed separators,parent accepts mixed ':' and '-' separators
+7c97eca,2025-04-26,i18n/es,reference,catch,3,Fix: Allow Special DOI Cases Used in Public Administration Tests (#415),
+25fcef0,2025-03-29,email,main,catch,3,Fix email regex issue 140 (#411),
+1231f6a,2024-10-06,url,main,MISS,0,fix(url): add hashtag to allowed fragment characters,"spec-ambiguous: RFC 3986 forbids '#' in fragment, WHATWG/browsers allow it (issue #403)"
+0a791b6,2024-09-15,domain,main,catch,1,fix(domain): accept .onion as a valid TLD,
+7c0e605,2024-05-08,ip_address,main,catch,3,fix(ip_address): properly handle private is false,
+181f6dc,2024-04-18,domain,main,catch,2,fix: rfc cases in the `domain` validator,
+af69a68,2024-04-02,email,main,catch,2,patch: supported extended latin in username,
+af69a68,2024-04-02,url,main,MISS,0,patch: supported extended latin in username,
+b6cfb43,2024-03-31,domain,main,MISS,0,fix: domain validation is now more consistent across rfcs,
+c0e29cf,2024-03-22,domain,main,MISS,0,fix: domain name not confirming to rfc_2782,
+5f6437c,2024-03-22,domain,main,catch,2,patch: `domain` & `url` modules,
+5f6437c,2024-03-22,url,main,catch,1,patch: `domain` & `url` modules,
+d1a5b22,2024-03-19,between,reference,MISS,0,fix: `between` and `length` validators,"API contract change; the spec is the library docstring, not an external standard"
+d1a5b22,2024-03-19,length,reference,MISS,0,fix: `between` and `length` validators,"API contract change; the spec is the library docstring, not an external standard"
+38d196a,2023-11-07,url,main,catch,1,allow pct-encoded entities in fragments,
+15984e8,2023-10-05,url,main,catch,1,fix: URL fragment check (#305),
+f7aa593,2023-09-23,between,reference,catch,2,fix: bug in `between` module,
+960b48b,2023-09-17,url,main,catch,2,fix: Valid URLs failing validation - query and fragment parts (#297),
+41f3d6d,2023-09-02,hostname,extra,MISS,0,fix: simple hostname validation regex,parent rejects single-character labels; RFC 1123 allows them
+4015e8e,2023-08-18,url,main,catch,1,fix: url validator considers urls with /#/ as valid,

@@ -1,0 +1,266 @@
+CUSIP
+A CUSIP (/ˈkjuːsɪp/) is a nine-character numeric or alphanumeric code that uniquely identifies a North
+American financial security for the purposes of facilitating clearing and settlement of trades. All CUSIP
+identifiers are fungible, which means that a unique CUSIP identifier for each individual security stays the
+same, regardless of the exchange where the shares were purchased or venue on which the shares were
+traded.[1] CUSIP was adopted as an American national standard by the Accredited Standards Committee
+X9 and is designated ANSI X9.6 (https://webstore.ansi.org/standards/ascx9/ansix92020). CUSIP was re-
+approved as an ANSI standard in December 2020. [2][3] The acronym derives from Committee on
+Uniform Security Identification Procedures.
+
+The CUSIP system is owned by the American Bankers Association (ABA) and is operated by FactSet
+Research Systems Inc.[4] The operating body, CUSIP Global Services (CGS), also serves as the national
+numbering agency (NNA) for North America, and the CUSIP serves as the National Securities
+Identification Number (NSIN) for products issued from both the United States and Canada. In its role as
+the NNA, CUSIP Global Services (CGS) also assigns all US-based International Securities Identification
+Numbers (ISINs).
+
+
+
+History
+The origins of the CUSIP system go back to 1964, when the financial markets were dealing with what
+was known as the securities settlement paper crunch on Wall Street.[5][6][7] At that time, increased trading
+volumes of equity securities, which were settled by the exchange of paper stock certificates, caused a
+backlog in clearing and settlement activities. In fact, stock markets had to close early on some days just to
+allow back-office processing to keep pace. To address the challenge, the New York Clearing House
+Association approached the ABA to develop a more efficient system for the trading, clearing, and
+settlement of securities trades by uniquely identifying all current and future securities. Their work was
+unveiled four years later, in December 1968, with the first publication of the CUSIP directory.
+
+Over the ensuing years, a growing number of market authorities and regulators came to recognize the
+value of the CUSIP system and embrace its usage. With sustained reinvestment from the operators of the
+CUSIP system, CUSIP coverage has steadily grown over the years. It now covers multiple asset classes
+including government, municipal, and international securities (through the CUSIP International
+Numbering System, or CINS); initial public offerings (IPOs); preferred stock; funds, certificates of
+deposit; syndicated loans; and US and Canadian listed options. The CGS database contains issuer and
+issue-level identifiers, plus standardized descriptive data, for more than 62 million financial instruments
+and entities.[8] CGS is also the designation numbering agency responsible for assigning the ISIN in over
+35 countries.[9]
+
+In February 2024, CUSIP Global Services assumed day-to-day administration of the industry standard
+Issuer Identification Number (IIN), also known as the Bank Identification Number (BIN), on behalf of
+the American Bankers Association (ABA).[10] The IIN is an 8-digit identifier used to uniquely identify
+card-issuing institutions, such as credit, debit, and points/rewards card issuers.
+
+CUSIP operates under the guidance of the industry-appointed CUSIP Board of Trustees (https://www.cusi
+p.com/about/leadership.html), made up of senior-level operations and data executives from major banks
+and other financial institutions.
+
+
+Antitrust review
+In November 2009, the European Commission charged S&P Capital IQ with abusing its position as the
+sole provider of ISIN codes for US securities by requiring European financial firms (in the European
+Economic Area) and data vendors to pay licensing fees for their use. The European Commission
+described the behavior as unfair pricing, noting that in cases such as clearing or regulatory compliance,
+there are no acceptable alternatives.[11]
+
+In its formal statement of objections, the European Commission alleged that S&P Capital IQ was abusing
+its position by requiring financial services companies and information service providers to pay license
+fees for the use of US ISINs. The European Commission claimed that comparable agencies elsewhere in
+the world either do not charge fees at all, or do so on the basis of distribution cost, rather than usage.
+
+While strongly disagreeing with the European Commission, CGS/S&P Capital IQ offered to create a low-
+cost, low-value feed of certain US ISINs for use by market participants in the European Economic Area.
+A formal agreement was reached on November 15, 2011.[12]
+
+
+
+Format
+A CUSIP is a nine-character alphanumeric code. The first six characters are known as the base (or
+CUSIP-6), and uniquely identify the issuer. Issuer codes are assigned alphabetically from a series that
+includes deliberately built-in gaps for future expansion. The 7th and 8th digit identify the exact issue. The
+9th digit is a checksum (some clearing bodies ignore or truncate the last digit). The last three characters
+of the issuer code can be letters, in order to provide more room for expansion.
+
+Issuer numbers 990 to 999 and 99A to 99Z in each group of 1,000 numbers are reserved for internal use.
+This permits a user to assign an issuer number to any issuer which might be relevant to his holdings but
+which does not qualify for coverage under the CUSIP numbering system. Other issuer numbers (990000
+to 999999 and 99000A to 99999Z) are also reserved for the user so that they may be assigned to non-
+security assets or to number miscellaneous internal assets.
+
+The 7th and 8th digit identify the exact issue, the format being dependent on the type of security. In
+general, numbers are used for equities and letters are used for fixed income. For discount commercial
+paper, the first issue character is generated by taking the letter code of the maturity month and the second
+issue character is the day of the maturity date, with letters used for numbers over 9. The first security
+issued by any particular issuer is numbered "10". Newer issues are numbered by adding ten to the last
+used number up to 80, at which point the next issue is "88" and then goes down by tens. The issue
+number "01" is used to label all options on equities from that issuer.
+Fixed income issues are labeled using a similar fashion, but due to there being so many of them they use
+letters instead of digits. The first issue is labeled "AA", the next "A2", then "2A" and onto "A3". To avoid
+confusion, the letters I and O are not used since they might be mistaken for the digits 1 and 0.
+
+CUSIP also reserves the special characters '*', '@' and '#' for use with private placement numbers (PPNs)
+used by the insurance industry.[13]
+
+The 9th digit is an automatically generated check digit using the "Modulus 10 Double Add Double"
+technique based on the Luhn algorithm.[13] To calculate the check digit every second digit is multiplied
+by two. Letters are converted to numbers based on their ordinal position in the alphabet, starting with A
+equal to 10.
+
+
+
+TBA CUSIP format
+There is a special assignment of CUSIP numbers for TBA Security. Working with the MBSCC, CUSIP
+Global Services (CGS) developed a specialized identification scheme for TBA (to be announced)
+mortgage-backed securities.[14]
+
+TBA CUSIPs incorporate, within the identifier itself, a security’s mortgage type (Ginnie Mae, Fannie
+Mae, Freddie Mac), coupon, maturity and settlement month.
+
+TBA algorithm:
+
+    Position 1–2: Product code (e.g., single-family mortgage, ARM, balloon, etc.)
+    Position 3: Type of mortgage (Ginnie Mae, Fannie Mae, Freddie Mac)
+    Positions 4–6: Coupon
+    Position 7: Maturity
+    Position 8: Settlement month
+    Position 9: Check digit
+    The exact values for each position are available in a spreadsheet called the TBA Grid.[15]
+
+
+Check digit lookup table
+The values below are summed for the first 8 characters, then reduced to 1 digit by
+                             :
+Character in CUSIP     Value in odd position   Value in even position
+
+0                      0                       0
+
+J, S, @                0                       1
+1, A                   1                       2
+
+T, #                   1                       3
+
+2, B, K                2                       4
+3, C, L, U             3                       6
+
+4, D, M, V             4                       8
+
+E, N, W                5                       0
+5                      5                       1
+
+O, X                   6                       2
+
+6, F                   6                       3
+Y                      7                       4
+
+7, G, P                7                       5
+
+8, H, Q, Z             8                       7
+9, I, R, *             9                       9
+
+
+
+
+Check digit pseudocode
+
+ algorithm Cusip-Check-Digit is
+   input: cusip, an 8-character CUSIP.
+
+    sum := 0
+    for 0 ≤ i < 8 do
+      c := the ith character of cusip
+      if c is a digit then
+        v := numeric value of the digit c
+      else if c is a letter then
+        p := ordinal position of c in the alphabet (A=1, B=2...)
+        v := p + 9
+      else if c = "*" then
+        v := 36
+      else if c = "@" then
+        v := 37
+      else if c = "#" then
+        v := 38
+      end if
+      if i is not even then
+        v := v × 2
+      end if
+
+      sum := sum + int(v div 10) + v mod 10
+    repeat
+
+    return (10 - (sum mod 10)) mod 10
+
+
+
+
+Examples
+    Apple Inc.: 037833100
+    Cisco Systems: 17275R102
+  Google Inc.: 38259P508
+  Microsoft Corporation: 594918104
+  Oracle Corporation: 68389X105
+  3½% Treasury Gilt 2068: EJ7125481
+
+
+See also
+  Central Index Key
+  ISO 10383
+  ISO 10962
+  Option symbol
+  SEDOL
+  Sicovam code
+  Ticker symbol
+  Unique Entity Identifier
+
+
+References
+1. "All About Fungibility: What It Means, Why It Matters" (https://www.investopedia.com/terms/f/
+   fungibility.asp).
+2. "Approved American National Standards" (https://web.archive.org/web/20210813011211/htt
+   ps://share.ansi.org/Shared%20Documents/Standards%20Activities/American%20National%
+   20Standards/Approved%20and%20Proposed%20ANS%20Lists/Approved%20ANS.pdf)
+   (PDF). Archived from the original (https://share.ansi.org/Shared%20Documents/Standards%
+   20Activities/American%20National%20Standards/Approved%20and%20Proposed%20AN
+   S%20Lists/Approved%20ANS.pdf) (PDF) on August 13, 2021.
+3. Frazier, Ambria (February 3, 2021). "CUSIP Re Approved as U.S. Standard for Securities
+   Identification" (https://x9.org/cusip-re-approved-as-u-s-standard-for-securities-identificatio
+   n/). Accredited Standards Committee X9. Retrieved March 6, 2023.
+4. "FactSet to Acquire CUSIP Global Services for $1.925 Billion | FactSet" (https://web.archive.
+   org/web/20220331065615/https://investor.factset.com/news-releases/news-release-details/f
+   actset-acquire-cusip-global-services-1925-billion). investor.factset.com. Archived from the
+   original (https://investor.factset.com/news-releases/news-release-details/factset-acquire-cusi
+   p-global-services-1925-billion/) on March 31, 2022. Retrieved March 24, 2022.
+5. "Committee on the Uniform Security Identification Procedure Numbers (CUSIP) - Explained"
+   (https://thebusinessprofessor.com/investments-trading-financial-markets/cusip-committee-o
+   n-the-uniform-security-identification-procedure-numbers). The Business Professor, LLC.
+   Retrieved July 3, 2023.
+6. "Fisher Investments MarketMinder | The Paper Crunch" (https://www.fisherinvestments.com/
+   en-us/insights/market-commentary/the-paper-crunch). www.fisherinvestments.com.
+   Retrieved July 3, 2023.
+7. "Optimizer Online | Shareholder Service Optimizer" (https://web.archive.org/web/201203072
+   32842/http://www.optimizeronline.com/files/MR_CUSIP.pdf) (PDF). Archived from the
+   original (http://www.optimizeronline.com/files/MR_CUSIP.pdf) (PDF) on March 7, 2012.
+   Retrieved July 3, 2023.
+8. "Fitch Revises FactSet's Outlook to Positive; Affirms 'BBB' IDR" (https://www.fitchratings.co
+   m/research/corporate-finance/fitch-revises-factset-outlook-to-positive-affirms-bbb-idr-28-04-
+   2023). www.fitchratings.com. Retrieved July 3, 2023.
+ 9. sharon (September 24, 2019). "CUSIP Global Services Adds ISIN to LEI Mapping for US
+    and Canadian Securities" (https://a-teaminsight.com/blog/cusip-global-services-adds-isin-to-
+    lei-mapping-for-us-and-canadian-securities/?brand=ati). A Team. Retrieved July 3, 2023.
+10. Lucas, Peter. "ABA Formalizes BIN Administration Handoff to Long-Term Partner CUSIP" (ht
+    tps://www.digitaltransactions.net/aba-formalizes-bin-administration-handoff-to-long-term-part
+    ner-cusip/). Digital Transactions. Retrieved June 13, 2025.
+11. "EU Accuses Standard & Poor's of Unfair Pricing" (http://www.finanznachrichten.de/nachrich
+    ten-2009-11/15514340-update-1-eu-accuses-standard-poor-s-of-unfair-pricing-020.htm).
+    Reuters. November 19, 2009. Retrieved March 31, 2015.
+12. "Commission Decision of 15.11.2011 Relating to a Proceeding under Article 102 of the
+    Treaty on the Functioning of the European Union and Article 54 of the EEA Agreement
+    (Case COMP/39.592 - Standard & Poor's)" (http://ec.europa.eu/competition/antitrust/cases/
+    dec_docs/39592/39592_2152_5.pdf) (PDF). European Commission. November 15, 2011.
+    Retrieved August 19, 2016.
+13. "CUSIP Global Services" (https://www.cusip.com/index.html). www.cusip.com.
+14. "Self-Regulatory Organizations; Financial Industry Regulatory Authority, Inc.; Notice of Filing
+    of Proposed Rule Change Relating to Post-Trade Transparency for Agency Pass-Through
+    Mortgage-Backed Securities Traded TBA" (https://www.sec.gov/rules/sro/finra/2012/34-6657
+    7.pdf) (PDF). SEC. p. 5. Retrieved November 30, 2012.
+15. "TBA CUSIP algorithm" (https://web.archive.org/web/20160304122740/https://www.access.c
+    usip.com/TBA_Grid-March2011.xls). Archived from the original (https://www.access.cusip.co
+    m/TBA_Grid-March2011.xls) (Excel) on March 4, 2016.
+
+
+External links
+    CUSIP Global Services website (http://www.cusip.com/)
+    TBA CUSIP generator (https://www.empirasign.com/tba-cusip/)
+
+Retrieved from "https://en.wikipedia.org/w/index.php?title=CUSIP&oldid=1355908824"
+

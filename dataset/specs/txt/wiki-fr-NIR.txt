@@ -1,0 +1,585 @@
+Numéro de sécurité sociale en France
+Le numéro de sécurité sociale en France,
+officiellement appelé numéro d'inscription au
+                                                             Numéro d'inscription au répertoire
+répertoire des personnes physiques (abrégé en
+                                                                des personnes physiques
+NIRPP ou plus simplement NIR), est un code                                     Typologie
+numérique servant à identifier de façon unique une
+                                                           Sigles             NIR, NIRPP
+personne       dans    le    répertoire    national
+d'identification des personnes physiques (RNIPP)           Couverture         France
+géré par l'INSEE, dans les conditions définies par         géographique
+                                               1
+le décret no 82-103 du 22 janvier 1982 modifié .
+
+C'est un numéro « signifiant » (c'est-à-dire non aléatoire)
+composé de 13 chiffres, suivi d'une clé de contrôle de deux
+chiffres. Il est construit à partir de l'état civil transmis par les
+mairies (sexe, année et mois de naissance, département et
+commune de naissance, numéro d'ordre du registre d'état
+civil). Il s'agit d'un « identifiant fiable et stable, conçu pour
+                                   1
+rester immuable la vie durant » .
+                                                                       Le numéro de sécurité sociale est
+                                                                                                           note 1
+Dans certains cas, le numéro de sécurité sociale et le NIR sont  notamment inscrit sur la carte Vitale ,
+deux numéros différents. Un enfant a un NIR attribué à sa        en dessous du nom et du prénom du
+naissance, cependant, jusqu'à ses 16 ans au moins, il sera       porteur.
+
+affilié à la sécurité sociale d'un ou de ses deux parents. Son
+numéro de sécurité sociale pourra donc être celui de son père ou de sa mère ou les deux. De même,
+jusqu'au 1er janvier 2016 et la création de la protection universelle maladie, il était possible pour un
+adulte d'être ayant droit d'un autre adulte (conjoint par exemple) et donc d'avoir le même numéro de
+sécurité sociale (différent de leur NIR).
+
+
+
+Historique
+L'inventeur de l'actuel numéro de Sécurité sociale est le contrôleur général des armées René Carmille,
+spécialiste de la mécanographie par cartes perforées, lors de la transformation, après l'armistice de 1940,
+des bureaux de recrutement de l'armée en "service de la Démographie". Pour aboutir à un fichier
+exploitable par des machines mécanographiques, il fallait créer un identifiant strict des individus. Il avait
+déjà mis en chantier le code officiel géographique, et choisit de se baser sur des informations liées à l'état
+civil : nom, prénom(s), date et lieu de naissance, informations restant le plus souvent identiques jusqu'au
+décès de l'individu, codage des patronymes, des noms de département et des noms de commune.
+
+À l'origine, René Carmille avait prévu un numéro matricule à 12 chiffres, appelé « numéro de
+           note 2
+Français »        :
+      deux pour l’année de naissance (ex. 32 pour 1932) ;
+                                     2
+      deux pour le mois de naissance ;
+                                             note 3
+      deux pour le département de naissance         moyennant la création d'un code
+      géographique pour les départements et les communes (Ain=01, Aisne=02, Allier=03, etc.,
+      même principe pour les communes, de 001 à 999)
+      trois pour la commune de naissance (aucun département ne comporte plus de 999
+      communes) ;
+      trois pour un numéro d’ordre dans le mois de naissance;
+Pour une personne née à l'étranger, le département est codé 99 et un code pays a été créé sur les trois
+positions occupées par le code commune des personnes nées en France.
+
+Théoriquement, ce code aurait pu contenir non seulement des chiffres (représentés par une perforation
+dans une des dix lignes de la carte) mais encore des lettres (représentées par deux perforations dans la
+même colonne). Pratiquement, le traitement d'un code alphabétique était au moins deux fois plus long
+qu'avec un code numérique. Il n'y a donc pas de lettres dans le code retenu par René Carmille. Surtout,
+comme le matricule était attribué par le personnel des bureaux de recrutement, il fallait qu'il reste simple
+et signifiant pour être codé correctement.
+
+De la même façon, les techniques de hachage consistant, via un calcul, à remplacer les 12 chiffres
+significatifs par une signature numérique n'étaient pas disponibles sur des machines dont les fonctions de
+calcul était limitées. Le fait que le numéro soit significatif date de cette contrainte originelle. C'est un
+motif constant de critique de la CNIL puisque rien n'a changé depuis les années 1930.
+
+Enfin, le « numéro de Français » que René Carmille pensait « immuable » ne l'est pas tant que cela. Des
+départements et des communes ont été créés, fusionnés, supprimés. Même la caractéristique de genre est
+aujourd'hui modifiable.
+
+Lorsque René Carmille fut nommé directeur du Service National des Statistiques, en 1941, il entreprit la
+création d'un "répertoire de tous les Français" qui contiendrait l'ensemble de la population résidant en
+France née depuis 1881.
+
+Ayant cette fois un objet civil, et non militaire, le numéro de Français devait inclure les femmes. C'est
+pourquoi fut ajouté un 13e chiffre en première colonne, pour le sexe, 1 ou 2. Le numéro d'identité n'est,
+pour René Carmille, qu'un des éléments d'un vaste système de traitement d'informations statistiques
+destinées à gérer l'ensemble des affaires économiques, civiles et militaires. L'instruction du 30 mai 1941
+      3
+donne une signification aux chiffres aujourd'hui non utilisés (3 à 9) de la première colonne, liée aux
+condition de la mobilisation en Algérie :
+
+         « la première composante est ainsi définie : 1 et 2 [selon le sexe] désignent les citoyens
+         français y compris les Juifs, 3 et 4 les « Indigènes d’Algérie et de toutes colonies sujets
+         français, à l’exception des Juifs », 5 et 6 les « Juifs indigènes sujets français », 7 et 8 les
+         « étrangers y compris les Juifs ». »
+
+À la Libération, la première composante du numéro d’identification est définitivement limitée au sexe en
+mai 1945 : 1 pour masculin, 2 pour féminin. L’armée reconstituée se donna d'autres numéros matricules
+mais donna le nom de Carmille à des centres de recrutement, de mécanographie ou de
+télécommunications.
+
+
+                                                                                                           4
+                                                                                                          4
+Le système d'information sur les individus mis en place par le SNS (dit des "dossiers individuels")
+contenait des informations contraires à la "légitimité républicaine", notamment sur la "race juive",
+supprimées à la Libération. Mais subsistait le "répertoire de tous les Français" alimenté en particulier par
+les demandes de cartes d'identité. C'est le 20 mars 1941 qu'avait été décidée l'inscription du numéro
+                                                 5
+d'identité sur la "Carte d'identité de Français" . Mais ce n'est qu'à partir d'août 1943, et ce jusqu'à la
+Libération, que furent délivrées ces cartes d'identité, à l'en-tête de l'État français et portant le numéro
+          6
+d'identité . Selon les souvenirs de Pierre Laroque, créateur avec Ambroise Croizat, de la Sécurité sociale :
+
+          « Lorsqu’a été entrepris le travail préparatoire du Plan français de Sécurité sociale, à
+          l’automne 1944, le numéro Carmille était déjà bien implanté et a été considéré tout
+          naturellement comme devant devenir le numéro de Sécurité sociale en accord avec
+          l’Insee(sic). En tout état de cause l’élaboration de la législation sur la Sécurité sociale a
+          abouti aux Ordonnances de base d’octobre 1945 et à l’entrée en application du régime
+          nouveau le 1er juillet 1946. J’ai toutes raisons de penser qu’à ces diverses dates le
+          nouveau numéro de sécurité sociale, substitué au numéro ancien des Assurances sociales,
+          était adopté sans contestation de qui que ce soit. »
+
+Le SNS a été fondu, en avril 1946, dans le nouvel Institut National de la Statistique et des Études
+Économiques (INSEE). Après discussions, il fut chargé de la continuation du répertoire devenu
+Répertoire National d'Identification des Personnes Physiques (RNIPP).
+
+Le « numéro Carmille », originellement d'usage strictement militaire a ainsi survécu dans un usage
+purement civil.
+
+
+SAFARI et la loi informatique et libertés de 1978
+                                                                                    7
+En 1971, l’Insee décida de centraliser les répertoires d’identification à Nantes . Le projet fut baptisé
+Safari (Système automatisé pour les fichiers administratifs et le répertoire des individus).
+
+Dans les années 1970, quand l'informatique se généralisa, la sécurité sociale identifia les ayants droit par
+le NIR (devenant le Numéro de sécurité sociale) plus une clé de contrôle à deux chiffres qui fut ajoutée
+pour la vérification par ordinateur : c'est le complément à 97 du reste de la division du numéro à 13
+                      note 4
+chiffres (NIR) par 97        .
+
+En 1985, Yvette Roudy, ministre des Droits de la femme, a protesté auprès du directeur de l'Insee de la
+discrimination résultant de cette codification mettant les femmes en deuxième position. Celui-ci répondit
+que ce choix correspondait à la norme ISO/CEI 5218 standardisant la représentation du genre, mais une
+réponse officieuse auprès du cabinet de la ministre proposa d'utiliser le code 0 à la place du code 2.
+                                                                                                       8
+« C'est à vous de décider si, symboliquement, le code 0 est préférable au code 2 pour le sexe féminin » .
+
+
+
+Signification des chiffres du NIR
+La signification des chiffres est la suivante :
+  Cas     Positions                        Signification                                     Valeurs possibles
+
+                          sexe : 1 pour les hommes, 2 pour les
+          1               femmes, 3, 4, 7 ou 8 pour les personnes en           de 1 à 4 ou 7 ou 8
+                                                            9, A
+                          cours d'immatriculation en France
+
+                          deux derniers chiffres de l'année de
+ Tous     2 et 3          naissance (ce qui donne l’année à un siècle          de 00 à 99
+                          près)
+                                                                               de 01 (janvier) à 12 (décembre) ou 13 pour
+          4 et 5          mois de naissance                                    certain mois de naissance inconnue ou
+                                                                                                                B
+                                                                               entre 20 et 42 ou entre 50 et 99
+
+                                                                               de 01 à 95, ou 2A ou 2B pour la Corse
+                          département de naissance métropolitain
+          6 et 7
+                          (2A ou 2B pour la Corse)
+                                                   C                           après le 1er janvier 1976, ou 96 pour des
+ A                                                                             naissances hors France métropolitaine
+
+                          code officiel de la commune de naissance                              B
+          8, 9 et 10      C, D                                                 de 001 à 999
+                                                                        C
+          6, 7 et 8       département de naissance en outre-mer                de 970 à 989
+ B                        deux chiffres du code commune de                                  B
+          9 et 10                    C, D                                      de 01 à 99
+                          naissance
+                                                          C
+          6 et 7          naissance hors de France                             99 pour des naissances à l'étranger
+ C                                                             C                                B
+          8, 9 et 10      identifiant du pays de naissance                     de 001 à 999
+          11, 12 et       numéro d’ordre de la naissance dans le
+                                                          D, E                 de 001 à 999
+          13              mois et la commune (ou le pays)
+
+                          clé de contrôle = complément à 97 du
+ Tous                     nombre formé par les 13 premiers chiffres
+                                             F
+          14 et 15        du NIR modulo 97                                     de 01 à 97
+                          (complément au NIR pour la Sécurité
+                          sociale)
+
+Un décret, pour lequel la CNIL a été saisie, permet aux personnes nées en Algérie avant le 3 juillet 1962
+de demander la modification de leur NIR, afin de remplacer le code 99 (affecté aux personnes nées à
+l'étranger) par un nouveau code (de 91 à 94 ; cf l'article 4 bis du décret no 82-103 du 22 janvier 1982
+        10
+modifié . Selon la CNIL, « seuls le caractère signifiant de ce numéro et le risque de discrimination entre
+                                                                1
+Français et étrangers pouvaient justifier une telle initiative » .
+
+A. Les codes « sexe » 7 et 8 peuvent être attribués pour des immatriculations temporaires, par exemple pour une personne qui
+trouve un emploi salarié sans être immatriculée.
+
+B. Des codes spécifiques existent pour les personnes inscrites à partir d'un acte d'état civil incomplet. Les mois de naissance
+fictifs 20 à 30 ou 50 ou plus caractérisent le NIR d'une personne inscrite sur la base d'une pièce d'état civil ne précisant pas le
+mois de naissance. Les mois de naissance dits « pseudo-fictifs », de 31 (janvier) à 42 (décembre), caractérisent le NIR d'une
+                                                                                                                        11, 12
+personne inscrite sur la base d'une pièce d'état civil incomplète, mais mentionnant toutefois un mois de naissance           . Les
+numéros de commune 990 à 999 caractérisent le NIR d'un pupille de l’État ou d'une personne inscrite sur la base d'une pièce
+                                                     13
+d'état civil ne précisant pas son lieu de naissance . Ces cas sont extrêmement rares avec les formalités de déclaration de
+naissance actuelles.
+
+C. Pour les départements d'outre-mer, on retient le numéro de département à trois chiffres, et le numéro de commune sur deux
+chiffres (depuis 1950).
+Les personnes nées à l'étranger ont un code département égal à 99 et un code commune remplacé par le code du pays de
+naissance à trois chiffres. Si avant 1964, les codes département de 91 à 96 ont été utilisés pour l'Algérie, la Tunisie et le Maroc,
+les Français nés dans les départements français d'Algérie se sont vu attribuer la possibilité de demander le code 99. La
+directive Juppé de 1994 permet théoriquement de faire procéder au rectificatif.
+
+                                                                               14
+D. Le lien entre ce numéro et le numéro d'acte de naissance n'est pas garanti .
+
+E. Dans le cas où le nombre de naissances dépasse 999 un mois donné, un code extension commune est créé dans le même
+département (ou collectivité d’outre-mer) : il ne correspond à une commune donnée que pour un mois et une année donnée. En
+pratique, cela concerne uniquement certaines des plus grosses communes d’un département, où existe un nombre important de
+places en cliniques de maternité et où les naissances enregistrées chaque mois sont particulièrement nombreuses, et certaines
+communes ont donc maintenant plusieurs codes d’extension attribués de façon permanente. Cette concentration des naissances
+sur un nombre réduit de communes s’est accentué avec la médicalisation quasi systématique des naissances en France
+métropolitaine, une grande majorité de communes n’enregistrant que de très rares naissances. D'autre part, en outre-mer, les
+communes sont souvent plus étendues (par exemple en Guyane) et moins nombreuses qu’en métropole et comptent une
+population plus nombreuse avec une natalité souvent plus importante (c’est le cas particulièrement à Mayotte), ce qui nécessite
+de tels codes d’extension de façon quasi permanente.
+
+F. Calcul de la clé de contrôle : faire la division entière (ou euclidienne) par 97 du nombre formé par les 13 premiers chiffres.
+Vous obtenez un reste que vous soustrayez de 97.
+Cette différence est la clé de contrôle.
+Pour la Corse, les lettres A et B sont remplacées par des zéros, et on soustrait du nombre à 13 chiffres ainsi obtenu 1 000 000
+pour A et 2 000 000 pour B avant d'effectuer la division. On peut aussi, plus simplement, remplacer 2A par 19 et 2B par 18.
+En langage mathématique, on dit que la clé est le complément à 97 du NIR modulo 97.
+
+
+
+Gestion des siècles
+Comme le rang d'ordre (chiffres 11 à 13) est attribué de manière croissante et sans référence au numéro
+d'acte de naissance, le fait que le NIR soit attribué à des personnes nées à plus de 100 ans d'intervalle
+n'est pas un problème : pour les personnes nées sur une commune en 1991 (première année durant
+laquelle le problème s'est posé), le rang le plus bas est le plus haut rang attribué aux personnes nées en
+1891 sur cette commune, plus un. La possibilité d'utiliser des codes communes fictifs quand le rang d'une
+                                                     14
+commune a atteint 999 laisse une marge confortable .
+
+
+
+Attribution et communication
+                     15
+La CNIL précise : « Toute personne née en France, qu’elle soit française ou étrangère, est inscrite [au
+RNIPP] dès sa naissance. Une personne née à l’étranger n’est inscrite que si son inscription est demandée
+par un utilisateur autorisé dans les conditions prévues par la loi. »
+
+Le numéro de sécurité sociale est communiqué à l'un des moments suivants :
+
+       lors du premier emploi ;
+       sur la carte d'immatriculation lycéen adressée par la Sécurité sociale aux lycéens en
+       terminale ;
+       au plus tard à 20 ans ;
+      dès la naissance depuis 2010. On retrouve ce numéro sur les attestations de la sécurité
+      sociale.
+Les ayants droit d'un assuré social ont donc tous un numéro attribué, mais celui-ci n'est tout simplement
+pas utilisé. Ceci est surtout gênant dans le cas où l'ayant droit ne vit pas avec l'assuré, notamment dans le
+cas des familles recomposées.
+
+Le NIR fait l'objet d'une attention particulière de la CNIL, en raison principalement des possibilités
+d'interconnexion de fichiers qu'il permet techniquement ainsi que des possibilités de discrimination qu'il
+                1
+rend réalisables . En effet, contrairement à la plupart des identifiants utilisés à l'étranger, la constitution
+numérique du NIR est signifiante, permettant par exemple de classer les personnes nées à l'étranger ou
+          1
+outre-mer . Refusant par conséquent l'usage du NIR en tant que numéro « universel », la CNIL a proscrit
+                                                                             1
+l'usage du terme « numéro national d'identité » au profit de son nom actuel .
+
+          « En 2001, un groupement réunissant des associations de défense des libertés (dont la
+          Ligue des droits de l'homme) et des syndicats a produit sur ce thème des dangers
+          inhérents à cet identifiant une analyse développée, intitulée « Numéro de Sécurité
+                                      16
+          sociale : quels dangers ? » . Elle insiste sur le danger d'une extension « à bas bruit » par
+          paliers : Il y a donc une logique et des intérêts très forts qui poussent à aller vers des
+          « nouveaux SAFARI ». On ne peut exclure une interconnexion des fichiers comportant le
+          NIR et des fichiers de police. Ainsi on lit en page 42 du rapport réalisé par Guy Braibant
+                   17
+          en 1998 , qu’« on peut mettre dans la catégorie des traitements relevant du domaine de
+          la loi les grands fichiers de police et de sécurité […] ou les interconnexions de fichiers
+          sociaux, fiscaux et policiers. »
+
+Il sert d'identifiant unique pour chaque individu inscrit au répertoire national d’identification des
+personnes physiques (RNIPP). Ce dernier constitue « un instrument de référence fondamental de l'état
+                                                                                    18
+civil en France, destiné en particulier à lever les doutes sur les homonymies » , de plus en plus
+nombreuses à la suite de la diminution progressive du nombre de noms de famille utilisés en France.
+
+La gestion du NIR a été confiée à l’Insee par le décret no 46-1432 du 14 juin 1946. Le NIR est
+aujourd'hui utilisé par tous les organismes liés à la sécurité sociale et à la santé, par le Pôle emploi, le fisc,
+les employeurs, etc. Le Répertoire National Commun de la Protection Sociale, institué par la loi de
+financement de la Sécurité sociale du 21 décembre 2006, devrait aussi utiliser le NIR. Ce répertoire inter-
+branches et inter-régimes recense l’ensemble des bénéficiaires des prestations et avantages de toute nature
+                                                     19
+servis par les divers régimes de protection sociale .
+
+
+Changement de NIR
+Le changement de NIR est exceptionnel.
+                                                                                  10
+En 1997 (voir l'article 4bis du décret n°82-103 du 22 janvier 1982 modifié ), les Français nés dans les
+anciens départements français d'Algérie et dont le lieu de naissance avait été codé 99, ont pu le faire
+modifier pour le numéro que leur département de naissance portait initialement (91 pour Alger, 92 pour
+Oran, 93 pour Constantine, 94 pour les Territoires du Sud). L'année de naissance, antérieure à 1963 et
+donc à la création des nouveaux départements de la région parisienne en 1968, évite toute confusion.
+                                                                 20
+Cette modification a bien sûr entraîné une modification de la clé .
+Les personnes transgenres peuvent faire modifier leur NIR une fois leur mention sexe modifiée à l'état
+     21
+civil .
+
+
+
+Usages du NIR
+En 1983, la CNIL a reconnu d'une part « que le NIR a été utilisé d'emblée comme identifiant par la
+plupart des organismes intervenant dans le secteur de la sécurité sociale, cette utilisation marquant une
+extension de la finalité du numéro, aujourd'hui enregistré dans tous les traitements automatisés
+d'informations nominatives concernant des opérations en relation avec la sécurité sociale », et d'autre part
+« que cette extension de finalité ne peut être remise en cause, sauf à entraîner de graves perturbations
+                                                            18
+dans le fonctionnement du régime de protection sociale » . Toutefois, elle s'est opposée à la « tendance à
+la généralisation de l'emploi du NIR » et a préconisé l'usage d'identifiants spécifiques aux différentes
+                                                               18
+administrations, afin de freiner l'interconnexion des fichiers . Ainsi, le ministère de l'Éducation nationale
+a finalement substitué au NIR, en 1992, le NUMEN, comme « identifiant principal dans ses fichiers de
+                   1
+gestion interne » , puis l'INE (« identifiant national étudiant »). Le fisc, qui disposait pourtant d'un
+identifiant spécifique (le SPI, « simplification des procédures d'identification »), a été autorisé à utiliser le
+                                                    1
+NIR par l'article 107 de la loi de finances de 1999 .
+           22
+Un décret a autorisé l'ensemble des organismes de protection sociale (assurance maladie, assurance
+vieillesse, allocations familiales, recouvrement des cotisations sociales) à utiliser le RNIPP et à recourir
+                           1, 23
+au NIR dans leurs fichiers      .
+
+La CNIL remarquait toutefois l'extension considérable du « domaine social ». En 1986, elle constatait :
+
+          « Le NIR se diffuse en effet, selon des filières qui partent toutes de la sécurité sociale et
+          contaminent progressivement tout le champ des rapports entre les employeurs et les
+          salariés d’une part, et celui de la santé d’autre part. En partant du secteur de la protection
+          sociale qui a été étendue à des catégories de travailleurs de plus en plus nombreuses et
+          pour gagner finalement toute la population (cotisations des employeurs), le NIR est
+          employé pour la gestion de la paie (norme simplifiée), les traitements concernant les
+          avantages sociaux annexes accordés par les employeurs (restaurant d’entreprise) puis de
+          fil en aiguille, la gestion des carrières, de la formation permanente, des horaires, puis les
+          activités du service médical des entreprises, des comités d'entreprises. De la sécurité
+          sociale au sens strict, on glisse à la gestion des malades dans les hôpitaux (admissions),
+          aux traitements de recherche épidémiologique, à la gestion des laboratoires d’analyse, à la
+          gestion des pharmacies (tiers payant). Dans tous ces secteurs, il est peu probable que l’on
+                                                                       1
+          puisse raisonnablement empêcher le NIR de se généraliser . »
+
+Le numéro de sécurité sociale est ainsi utilisé par les employeurs, les ASSEDIC, l'ANPE (réunis en 2008
+au sein de Pôle emploi), les organismes d'assurance maladie complémentaires, professionnels de santé, le
+fisc, le fichier des « cadres interdits d’exercice dans les centres de vacances » du Ministère de la Jeunesse
+                24      1, 25
+et des Sports , etc.         . L'utilisation du NIR par les professionnels et établissements de santé a été
+                                                            1
+légalisé a posteriori, par le décret du 12 septembre 1996 .
+                                                                                                    1
+Les comptables de ces établissements utilisent le NIR aux fins de recouvrement de créances . La CNIL
+s'est montrée réservée « quant à l'utilisation du NIR comme numéro identifiant du patient dans la sphère
+                                                                                               1
+médicale au motif qu'aucune justification précise et convaincante n'était apportée sur ce point . »
+Ces interconnexions, à travers l'usage d'un identifiant unique (le NIR), ont « généralement pour but de
+                                                           1
+vérifier la réalité de la situation sociale des demandes. » . Pôle Emploi et l'Unédic l'utilisent ainsi pour
+                            26, 1
+contrôler les allocataires        . La DDTEFP (Direction départementale du travail, de l'emploi et de la
+formation professionnelle) utilise depuis 2005 le fichier PRECAR IT (sic), qui intègre les 5 premiers
+                                                                        27
+chiffres du NIR, « pour contrôler la situation des demandeurs d'emploi » .
+
+La CNIL a autorisé les Caisses d'allocations familiales (CAF) à signaler aux agences locales pour
+                                                                                     note 5, 1
+l'emploi les bénéficiaires du RMI, afin que ces dernières leur proposent des emplois           . Le RMI ayant
+été transformé en RSA, ces propositions pourraient devenir obligatoires. Pôle emploi utilise ainsi le NIR
+                      28
+pour son fichier RSA .
+
+La CNIL a aussi autorisé, en 2007, les Maisons départementales des personnes handicapées à mettre en
+place un fichier, utilisant le NIR, qui sert au « suivi » des handicapés, à « certifier l’identité des personnes
+auprès du Système National de Gestion des Identifiants (SNGI) », à leur contrôle dans le cadre de
+l'attribution d'allocations sociales (y compris le contrôle des handicapés étrangers et de leur situation
+régulière ou non), et à la « production de statistiques ». Les COTOREP et les CDES, qui précédaient les
+Maisons départementales des personnes handicapées, utilisaient déjà le NIR. La CNIL s'est défendu en
+déclarant « que si un numéro unique national est nécessaire, la création d’un identifiant spécifique aux
+personnes handicapées serait susceptible de les stigmatiser. En conséquence, elle admet que le numéro de
+sécurité sociale puisse être utilisé comme identifiant des usagers des MDPH à des fins d’instruction de
+               29
+leur dossier » .
+
+Enfin, des utilisations illégales du NIR ont été recensées, telles que celle pratiquée par Acadomia, qui
+                                      30
+s'est vue avertie par la CNIL en 2010 .
+
+
+
+Répertoire statistique des individus et des logements (Résil)
+Le NIR est un numéro "signifiant", puisqu'il est formé à partir de la date et du lieu de naissance des
+                             31
+individus. Un décret de 2024 crée le « Répertoire statistique des individus et des logements » (Résil), à
+l'usage exclusif de l'INSEE et des services statistiques des ministères ; le Résil utilise un code non
+                      31
+signifiant. Un arrêté du même jour donne la liste limitative des 13 sources, dont le RNIPP, pouvant
+faire l’objet d’un appariement avec ce répertoire.
+
+
+
+Notes et références
+
+Notes
+1. Qu'il s'agisse d'une carte Vitale 1 (sans photo) ou d'une carte Vitale 2 (avec photo)
+2. Il changera plusieurs fois de nom : ce sera à la Libération le « Numéro National
+   d’Identification (NNI) de l’Insee, puis en 1978, sur instruction de la CNIL, le « Numéro
+   d’Inscription au Répertoire National des Personnes Physiques (abrégé en NIR). Mais, depuis
+   l'origine, il est connu sous le nom de « numéro de Sécurité sociale », celle-ci l’ayant retenu
+   dès l'origine pour identifier les assurés qui le reportent notamment sur les "feuilles de
+   maladie".
+3. L’utilisation du même code à deux chiffres ne sera décidée qu’en 1950 pour l’immatriculation
+   des automobiles.
+ 4. Pour obtenir la clé de contrôle, diviser par 97 le nombre formé par les 13 premiers chiffres,
+    prendre le reste de cette division, puis le complément à 97 (c'est-à-dire la différence entre 97
+    et le reste de la division).
+ 5. Avis de la CNIL du 16 octobre 1990
+
+
+Références
+ 1. « Le NIR, un numéro pas comme les autres », 20e rapport d'activité (https://www.cnil.fr/sites/
+    cnil/files/atoms/files/20171116_rapport_annuel_cnil_-_rapport_dactivite_1999_vd.pdf) de la
+    CNIL de 1999 (éd. en 2000), p. 61-91.
+ 2. Nombre supérieur à 12 si on ne connaît pas le mois de naissance exact (« Veillez à la bonne
+    identification de vos salariés (https://www.net-entreprises.fr/media/documentation/veille-ident
+    ification-salaries.pdf) » [PDF], L'Assurance retraite - Déclaration sociale nominative,
+    octobre 2014).
+ 3. Lévy 2000, p. 30.
+ 4. Claude Poulain, « SAFARI a existé de 1941 à 1944 », Revue Terminal, nos 132-133,‎2022
+    (lire en ligne (https://journals.openedition.org/terminal/8429))
+ 5. Pierre Piazza : Dans Histoire de la carte nationale d'identité (https://www.cairn.info/histoire-d
+    e-la-carte-nationale-d-identite--9782738114068-page-167.htm) (Odile Jacob, 2004), pages
+    167 à 216 (accès payant) § 54
+ 6. Pierre Piazza : Système d’enregistrement d’identité, numéro d’identification et “carte
+    d’identité de Français” durant le Régime de Vichy (France, 1940-1944) (https://journals.open
+    edition.org/criminocorpus/3649)
+ 7. Jacques Desabie, « L'Insee entreprend d'automatiser le répertoire des personnes (http://ww
+    w.persee.fr/web/revues/home/prescript/article/estat_0336-1454_1970_num_10_1_1930) »,
+    Économie et Statistique, no 10, 1970
+ 8. Gérard Lang, « Éléments pour une histoire du numéro de sécurité sociale », Statistique et
+    Société, Société française de statistique (SFdS), vol. 6, no 1,‎juin 2018, p. 46 (lire en ligne (ht
+    tps://www.persee.fr/doc/staso_2269-0271_2018_num_6_1_1066)).
+ 9. « Tout savoir sur mon numéro de Sécurité sociale (http://www.msa.fr/lfp/pratique/votre-nume
+    ro-de-securite-sociale) », sur MSA, 30 novembre 2016.
+10. Décret no 82-103 du 22 janvier 1982 relatif au répertoire national d'identification des
+    personnes physiques (https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT00
+    0000520382)
+11. « Indispensable : le numéro de sécurité sociale (https://www.ameli.fr/assure/droits-demarche
+    s/principes/numero-securite-sociale) », sur ameli.fr sur le site officiel de l'administration
+    française
+12. Normalisation du numéro INSEE des personnes physiques (http://resoo.org/docs/_docs/regl
+    es-numero-insee.pdf)
+13. « À quoi correspond le numéro de sécurité sociale ? (http://www.savigneux.fr/FR/e-formalite
+    s.php?szDemande_PM=-F16480-a-quoi-correspond-le-numero-de-securite-sociale-) », sur
+    savigneux.fr
+14. « État civil : le NIR numéro d'inscription au répertoire national d'identification des personnes
+    physiques (http://www.youscribe.com/catalogue/etudes-et-statistiques/savoirs/sciences-hum
+    aines-et-sociales/etat-civil-le-nir-numero-d-inscription-au-repertoire-national-1960433) », sur
+    YouScribe
+15. « Répertoire national d’identification des personnes physiques (https://www.cnil.fr/index.ph
+    p?id=1804) », sur CNIL, 30 janvier 2007.
+16. « Numéro de Sécurité sociale : quels dangers ? (https://www.lecreis.org/creis/wp-content/upl
+    oads/DELIS-Num%C3%A9ro-de-S%C3%A9curit%C3%A9-Sociale-quels-dangers1.pdf) »,
+    sur lecreis.org, 2001
+17. « Rapport Braibant (https://www.vie-publique.fr/sites/default/files/rapport/pdf/984000836.pd
+    f) », sur vie-publique.fr, 1998
+18. CNIL, Délibération no 83-058 du 29 novembre 1983 portant adoption d'une recommandation
+    concernant la consultation du Répertoire National d'Identification des Personnes Physiques
+    (RNIPP) et l'utilisation du numéro d'inscription au répertoire (NIR) (https://www.legifrance.go
+    uv.fr/affichCnil.do?id=CNILTEXT000017654414)
+19. Ligue des droits de l'homme, Le RNCPS, une hyper-base de données au croisement de tous
+    les fichiers de protection sociale (http://www.ldh-toulon.net/spip.php?article3150), 1er mars
+    2009
+20. « Les rapatriés d'Algérie numérotés français. Ils peuvent obtenir la modification de leur
+    numéro de Sécu, qui révèle leur naissance outre-mer (https://www.liberation.fr/vous/1997/12/
+    22/les-rapatries-d-algerie-numerotes-francais-ils-peuvent-obtenir-la-modification-de-leur-num
+    ero-de-sec_222774/) », sur liberation.fr, 22 décembre 1997
+21. Législation française du changement d'état civil (CEC) (http://www.abc-transidentite.fr/conten
+    t/législation-française-du-changement-détat-civil-cec)
+22. Décret no 85-1343 du 16 décembre 1985 instituant un système de transfert de données
+    sociales (https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000866619).
+23. Décret no 2009-1305 du 26 octobre 2009 citation (https://www.legifrance.gouv.fr/affichTexte.d
+    o?cidTexte=JORFTEXT000021204667) et Délibération de la CNIL no 2009-325 du
+    14 mai 2009 portant avis sur des traitements mis en œuvre par la Caisse nationale
+    d'assurance vieillesse des travailleurs salariés (CNAVTS) et la Caisse nationale d'assurance
+    maladie des travailleurs salariés (CNAMTS) et relatifs à une interconnexion de fichiers à des
+    fins de contrôle de la condition de résidence pour l'attribution de droits relatifs aux
+    prestations sociales (https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT0000
+    21205042)
+24. Arrêté du 22 février 1995 relatif à l'informatisation des services du ministère de la jeunesse
+    et des sports (https://www.legifrance.gouv.fr/WAspad/UnTexteDeJorf?numjo=MJSK9570028
+    A)
+25. Décret no 90-273 du 22 mars 1990 relatif à l'utilisation du numéro d'inscription au Répertoire
+    national d'identification des personnes physiques par le commissariat de la marine (https://w
+    ww.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000714854) pour le calcul des
+    allocations chômage
+26. Décret no 96-630 du 16 juillet 1996 relatif à l'utilisation du numéro d'inscription au Répertoire
+    national d'identification des personnes physiques pour les traitements nominatifs concernant
+    le contrôle des ressources des allocataires du revenu minimum d'insertion (https://www.legifr
+    ance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000173690)
+27. Arrêté du 18 février 2005 relatif au traitement informatique « PRECAR IT » pour l'utilisation,
+    par les agents de l'inspection du travail et des services de contrôle de la recherche d'emploi
+    du ministère de l'emploi, du travail et de la cohésion sociale, des relevés mensuels de
+    contrats de travail temporaire (https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFT
+    EXT000000263064)
+28. Décret n° 2011-2096 du 30 décembre 2011 portant modification et création de traitements
+    automatisés de données à caractère personnel relatifs au revenu de solidarité active et à
+    l'allocation aux adultes handicapés (https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000025
+    061238)
+29. Ligue des droits de l'homme, Le fichage des personnes handicapées (http://www.ldh-toulon.
+    net/spip.php?article3267), 2 mai 2009, avec liens vers les textes officiels.
+30. Ouverture d’une enquête judiciaire pour fichage présumé chez Acadomia (http://section-ldh-t
+    oulon.net/ouverture-d-une-enquete-judiciaire.html), Ligue des droits de l'homme, 10 juillet
+    2010
+31. JO du 7 janvier (https://www.legifrance.gouv.fr/download/pdf?id=tnAWpkqMUeZhjS3oYsMj8
+    92zup93I6QTVIOrDQLksWk=)
+
+
+Annexes
+
+Articles connexes
+      Carte Vitale
+      Code Insee
+      ISO/CEI 5218
+      Identifiant national de santé
+      Numéro de registre national (Belgique)
+      Sécurité sociale en France
+      Projet SAFARI
+      CNIL
+
+
+Liens externes
+      Fiche du RNIPP (https://www.cnil.fr/fr/rnipp-repertoire-national-didentification-des-personn
+      es-physiques-0) (Répertoire national d’identification des personnes physiques) sur le site
+      de la Cnil
+      Calcul clé de contrôle numéro de sécurité sociale (http://mon-convertisseur.fr/calculateur-c
+      le-numero-securite-sociale.php)
+
+
+Sources
+
+      Michel-Louis Lévy, « Le numéro d'identité », Population & Sociétés, Ined, no 232,‎
+      février 1989 (lire en ligne (http://www.ined.fr/fr/ressources_documentation/publications/pop_soc/bdd/public
+      ation/643/))
+      Michel-Louis Lévy, « Le numéro INSEE : de la mobilisation clandestine (1940) au projet
+      Safari (1974) », Dossiers & Recherche, Ined, no 86,‎septembre 2000, p. 23-34 (lire en ligne
+      (https://www.ined.fr/fichier/s_rubrique/19445/document_travail_86.fr.pdf))
+
+
+
+Voir aussi
+      Gérard Lang, « Élément pour une histoire du numéro de sécurité sociale », Statistique et
+      société, vol. 6, no 1,‎juin 2019, p. 45 (lire en ligne (https://statistique-et-societe.fr/index.php/stat_soc/a
+      rticle/view/678/716))
+      Dossier "Socio-histoire du numéro de Sécurité sociale" (https://journals.openedition.org/st
+      atsoc/1988), dirigé par Laurène Le Cozanet, dans Statistique et société, n° 2024-2
+Ce document provient de « https://fr.wikipedia.org/w/index.php?
+title=Numéro_de_sécurité_sociale_en_France&oldid=237636365 ».
+
