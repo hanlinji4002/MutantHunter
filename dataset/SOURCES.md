@@ -5,7 +5,6 @@ All data was retrieved on 2026-09-25.
 | Data | Source | License |
 |---|---|---|
 | python-validators source code and git history | https://github.com/python-validators/validators (commit `70de324`) | MIT |
-| humanize (generalization check) | https://github.com/python-humanize/humanize (commit `392aef7`) | MIT |
 | RFC 791, 952, 1034, 1035, 1123, 2782, 3986, 4291, 4632, 5321, 5322, 5952 | https://www.rfc-editor.org/ (official `.txt`, converted to PDF with macOS `cupsfilter`, content unchanged) | IETF Trust Legal Provisions: may be copied and distributed in full |
 | RFC 9562 | https://www.rfc-editor.org/rfc/rfc9562.pdf (official PDF) | IETF Trust Legal Provisions |
 | BIP-173, BIP-350 | https://github.com/bitcoin/bips (MediaWiki source, converted to PDF, content unchanged) | BSD-2-Clause |

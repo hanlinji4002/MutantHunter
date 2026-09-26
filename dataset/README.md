@@ -1,7 +1,5 @@
 # MutantHunter dataset
 
-> 中文说明：这是赛前准备好的数据集（比赛指南要求参赛者自带数据集）。这里只有数据，没有产品代码。它已经放在仓库根目录。
-
 Prepared on 2026-09-25, before the hackathon. The hackathon guide asks teams to bring their own datasets. This folder contains data only, no product code.
 
 ## Files
