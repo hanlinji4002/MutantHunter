@@ -1,0 +1,53 @@
+{
+  "module": "hostname",
+  "slug": "hostname",
+  "suite": "human+mh",
+  "split": "A",
+  "seed": 20260925,
+  "mutants": 6,
+  "killed": 5,
+  "survived": 1,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.833,
+  "adjusted_score": 0.833,
+  "seconds": 0.8,
+  "results": [
+    {
+      "id": "hostname:34:4:38:51:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:116:4:122:9:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:116:7:116:61:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:40:27:40:28:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:36:47:36:48:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:42:47:42:48:int_plus_one",
+      "status": "survived"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "hostname:42:47:42:48:int_plus_one",
+      "op": "int_plus_one",
+      "line": 42,
+      "function": "_port_validator",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "A"
+    }
+  ]
+}

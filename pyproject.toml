@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mutant-hunter"
+version = "0.1.0"
+description = "Mutation testing harness for MutantHunter"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+mutanthunter = "mutant_hunter.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mutant_hunter*"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = ["tests"]
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]

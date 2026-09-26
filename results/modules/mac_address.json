@@ -1,0 +1,25 @@
+{
+  "module": "mac_address",
+  "spec_documents": ["wiki-MAC_address.pdf"],
+  "rules_extracted": 17,
+  "subagents": 2,
+  "tests_generated": 88,
+  "tests_kept": 83,
+  "suspected_bugs": {
+    "logic": 1,
+    "data-staleness": 0,
+    "spec-ambiguous": 0,
+    "human-test-conflict": 0
+  },
+  "split_A": {
+    "before": 0.8,
+    "after": 0.8,
+    "before_adjusted": 1.0,
+    "after_adjusted": 1.0
+  },
+  "started_at": "2026-09-26T05:13:20Z",
+  "finished_at": "2026-09-26T05:17:49Z",
+  "minutes": 4.5,
+  "bobcoins": 2.54,
+  "notes": "Sole survivor is falsy_preserving (return_none on line 34). Suspected logic bug: dot-grouped (Cisco) notation not supported by validator regex."
+}

@@ -1,0 +1,25 @@
+{
+  "module": "url",
+  "spec_documents": ["rfc3986.pdf"],
+  "rules_extracted": 31,
+  "subagents": 3,
+  "tests_generated": 237,
+  "tests_kept": 234,
+  "suspected_bugs": {
+    "logic": 2,
+    "data-staleness": 0,
+    "spec-ambiguous": 1,
+    "human-test-conflict": 0
+  },
+  "split_A": {
+    "before": 0.531,
+    "after": 0.656,
+    "before_adjusted": 0.567,
+    "after_adjusted": 0.700
+  },
+  "started_at": "2026-09-26T04:42:39Z",
+  "finished_at": "2026-09-26T04:55:46Z",
+  "minutes": 13.2,
+  "bobcoins": 11.07,
+  "notes": "Timestamps corrected 2026-09-26: started_at is the mtime of targets/validators/tests/mh/url/__init__.py (earliest file created in the url test directory, 2026-09-26T04:42:39Z); finished_at is the mtime of results/modules/url.json (2026-09-26T04:55:46Z); minutes recomputed from those two values. Original values were invented placeholders (2025-07-14). Broad subagent: 107 tests, 0 failing. Spec subagent: 105 tests written (rfc3986), 3 failing (2 logic violations on port 0 and empty port, 1 spec-ambiguous on query pchar). Targeted subagent: 22 tests, 0 failing, 9 equivalence claims (5 equivalent, 2 Python-version-gated, 2 also equivalent). Reconcile: no broad tests needed removal (no broad test asserted current behavior for the 3 spec violations)."
+}

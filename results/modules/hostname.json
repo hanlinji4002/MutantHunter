@@ -1,0 +1,25 @@
+{
+  "module": "hostname",
+  "spec_documents": ["rfc1123.pdf", "rfc952.pdf"],
+  "rules_extracted": 19,
+  "subagents": 2,
+  "tests_generated": 171,
+  "tests_kept": 166,
+  "suspected_bugs": {
+    "logic": 1,
+    "data-staleness": 0,
+    "spec-ambiguous": 0,
+    "human-test-conflict": 0
+  },
+  "split_A": {
+    "before": 0.833,
+    "after": 0.833,
+    "before_adjusted": 0.833,
+    "after_adjusted": 0.833
+  },
+  "started_at": "2026-09-26T05:30:25Z",
+  "finished_at": "2026-09-26T05:35:26Z",
+  "minutes": 5.0,
+  "bobcoins": 3.84,
+  "notes": "Targeted step skipped (user request). One split-A survivor (hostname:42:47:42:48:int_plus_one) is equivalent: rsplit(':',1) and rsplit(':',2) are identical when count(':')==1, so the mutant is indistinguishable via public API."
+}

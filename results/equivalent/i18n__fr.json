@@ -1,0 +1,38 @@
+[
+  {
+    "id": "i18n__fr:56:8:56:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__fr:95:8:95:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__fr:98:8:98:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__fr:104:8:104:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__fr:112:8:112:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__fr:63:12:63:24:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  }
+]

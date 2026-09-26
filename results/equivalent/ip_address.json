@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ip_address:86:8:86:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "ip_address:131:8:131:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "ip_address:94:8:94:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "ip_address:139:8:139:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  }
+]

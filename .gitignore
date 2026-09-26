@@ -118,3 +118,8 @@ build/
 # DO NOT REMOVE ABOVE PATTERNS
 # Add project-specific patterns below
 # ============================================
+# MutantHunter project-specific
+.pytest_cache/
+*.egg-info/
+mutant_hunter.egg-info/
+mutant-hunter.egg-info/

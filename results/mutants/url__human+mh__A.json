@@ -1,0 +1,257 @@
+{
+  "module": "url",
+  "slug": "url",
+  "suite": "human+mh",
+  "split": "A",
+  "seed": 20260925,
+  "mutants": 32,
+  "killed": 21,
+  "survived": 11,
+  "invalid": 0,
+  "falsy_preserving": 2,
+  "score": 0.656,
+  "adjusted_score": 0.7,
+  "seconds": 2.5,
+  "results": [
+    {
+      "id": "url:45:4:65:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:75:4:76:19:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "url:101:4:102:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "url:140:4:141:60:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "url:243:4:257:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:76:8:76:19:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:80:8:80:54:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:81:7:81:22:cmp_lt_to_lte",
+      "status": "survived"
+    },
+    {
+      "id": "url:101:7:101:40:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "url:104:8:118:9:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:120:11:134:44:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "url:143:8:149:37:if_negate",
+      "status": "survived"
+    },
+    {
+      "id": "url:236:8:236:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "url:244:8:256:68:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "url:18:8:22:70:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "url:46:8:61:9:cmp_in_to_notin",
+      "status": "killed"
+    },
+    {
+      "id": "url:70:29:70:49:cmp_lt_to_lte",
+      "status": "killed"
+    },
+    {
+      "id": "url:81:21:81:22:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "url:83:43:83:44:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "url:103:26:103:27:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "url:119:41:119:42:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "url:152:8:153:37:if_negate",
+      "status": "survived"
+    },
+    {
+      "id": "url:241:8:241:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "url:18:8:20:76:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "url:70:48:70:49:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "url:152:11:152:65:bool_and_to_or",
+      "status": "survived"
+    },
+    {
+      "id": "url:85:8:85:37:cmp_notin_to_in",
+      "status": "killed"
+    },
+    {
+      "id": "url:107:19:107:77:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "url:107:64:107:77:cmp_in_to_notin",
+      "status": "killed"
+    },
+    {
+      "id": "url:108:56:108:57:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "url:123:59:123:72:cmp_in_to_notin",
+      "status": "killed"
+    },
+    {
+      "id": "url:124:51:124:52:int_plus_one",
+      "status": "survived"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "url:81:7:81:22:cmp_lt_to_lte",
+      "op": "cmp_lt_to_lte",
+      "line": 81,
+      "function": "_validate_auth_segment",
+      "original": "colon_count < 1",
+      "mutated": "colon_count <= 1",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:143:8:149:37:if_negate",
+      "op": "if_negate",
+      "line": 143,
+      "function": "_validate_optionals",
+      "original": "query and parse_qs(query, strict_parsing=strict_query, separator='&') and parse_qs(query, strict_parsing=strict_query, separator=';')",
+      "mutated": "not (query and parse_qs(query, strict_parsing=strict_query, separator='&') and parse_qs(query, strict_parsing=strict_query, separator=';'))",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:236:8:236:20:return_none",
+      "op": "return_none",
+      "line": 236,
+      "function": "url",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    },
+    {
+      "id": "url:81:21:81:22:int_plus_one",
+      "op": "int_plus_one",
+      "line": 81,
+      "function": "_validate_auth_segment",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:83:43:83:44:int_plus_one",
+      "op": "int_plus_one",
+      "line": 83,
+      "function": "_validate_auth_segment",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:119:41:119:42:int_plus_one",
+      "op": "int_plus_one",
+      "line": 119,
+      "function": "_validate_netloc",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:152:8:153:37:if_negate",
+      "op": "if_negate",
+      "line": 152,
+      "function": "_validate_optionals",
+      "original": "query and parse_qs(query, strict_parsing=strict_query)",
+      "mutated": "not (query and parse_qs(query, strict_parsing=strict_query))",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:241:8:241:20:return_none",
+      "op": "return_none",
+      "line": 241,
+      "function": "url",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    },
+    {
+      "id": "url:152:11:152:65:bool_and_to_or",
+      "op": "bool_and_to_or",
+      "line": 152,
+      "function": "_validate_optionals",
+      "original": "query and parse_qs(query, strict_parsing=strict_query)",
+      "mutated": "query or parse_qs(query, strict_parsing=strict_query)",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:108:56:108:57:int_plus_one",
+      "op": "int_plus_one",
+      "line": 108,
+      "function": "_validate_netloc",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "url:124:51:124:52:int_plus_one",
+      "op": "int_plus_one",
+      "line": 124,
+      "function": "_validate_netloc",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "A"
+    }
+  ]
+}

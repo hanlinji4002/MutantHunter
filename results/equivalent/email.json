@@ -1,0 +1,20 @@
+[
+  {
+    "id": "email:59:8:59:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "email:65:8:65:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "email:72:12:72:24:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  }
+]

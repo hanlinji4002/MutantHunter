@@ -1,0 +1,20 @@
+[
+  {
+    "id": "i18n__ru:34:8:34:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__ru:63:8:63:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__ru:61:12:61:24:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  }
+]

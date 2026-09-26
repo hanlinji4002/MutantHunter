@@ -1,0 +1,26 @@
+[
+  {
+    "id": "i18n__es:140:4:140:16:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__es:13:8:13:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__es:55:8:55:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "i18n__es:62:8:62:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  }
+]

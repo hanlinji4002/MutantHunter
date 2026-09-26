@@ -1,0 +1,8 @@
+[
+  {
+    "id": "mac_address:34:8:34:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "Mutant replaces `False` with `None`; both are falsy so no test using `assert not fn(x)` can distinguish them.",
+    "conditional_on": null
+  }
+]

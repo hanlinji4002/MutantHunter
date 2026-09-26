@@ -1,0 +1,14 @@
+[
+  {
+    "id": "hostname:114:8:114:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "hostname:42:47:42:48:int_plus_one",
+    "kind": "equivalent",
+    "reason": "rsplit(':',1) and rsplit(':',2) produce identical results when value.count(':')==1; the guard on line 40 ensures at most one colon, so maxsplit=2 is indistinguishable from maxsplit=1 via the public API",
+    "conditional_on": null
+  }
+]

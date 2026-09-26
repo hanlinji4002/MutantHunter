@@ -1,0 +1,74 @@
+[
+  {
+    "id": "url:102:8:102:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "url:236:8:236:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "url:241:8:241:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "conditional_on": null
+  },
+  {
+    "id": "url:81:7:81:22:cmp_lt_to_lte",
+    "kind": "equivalent",
+    "reason": "Password forbidden-char check (/, ?, #, @) can never fail via public API: urlsplit intercepts /?# before auth segment is seen, and @ triggers the double-@ guard at line 101. Routing colon_count==1 to the username-only path produces identical observable output.",
+    "conditional_on": null
+  },
+  {
+    "id": "url:81:21:81:22:int_plus_one",
+    "kind": "equivalent",
+    "reason": "Changes threshold from < 1 to < 2, routing colon_count==1 to username-only path. Password check that would distinguish them is unreachable via public API (same root cause as cmp_lt_to_lte).",
+    "conditional_on": null
+  },
+  {
+    "id": "url:83:43:83:44:int_plus_one",
+    "kind": "equivalent",
+    "reason": "At line 83 colon_count is always exactly 1. rsplit(':', 1) and rsplit(':', 2) on a string with exactly one colon produce identical two-element lists.",
+    "conditional_on": null
+  },
+  {
+    "id": "url:108:56:108:57:int_plus_one",
+    "kind": "equivalent",
+    "reason": "A well-formed IPv6 literal has exactly one ']'. replace(']', '', 1) and replace(']', '', 2) produce the same string; a netloc with two ']' is structurally invalid.",
+    "conditional_on": null
+  },
+  {
+    "id": "url:119:41:119:42:int_plus_one",
+    "kind": "equivalent",
+    "reason": "The count('@') > 1 guard at line 101 ensures exactly one '@' reaches line 119. rsplit('@', 1) and rsplit('@', 2) on a string with one '@' return identical results.",
+    "conditional_on": null
+  },
+  {
+    "id": "url:124:51:124:52:int_plus_one",
+    "kind": "equivalent",
+    "reason": "Same as url:108:56:108:57: single ']' in well-formed IPv6 literal; replacing 1 or 2 occurrences is identical.",
+    "conditional_on": null
+  },
+  {
+    "id": "url:143:8:149:37:if_negate",
+    "kind": "equivalent",
+    "reason": "optional_segments &= True is always a no-op (True&True=True, False&True=False). A ValueError from parse_qs strict mode propagates before any &= is reached, identically for both original and mutant.",
+    "conditional_on": null
+  },
+  {
+    "id": "url:152:8:153:37:if_negate",
+    "kind": "equivalent",
+    "reason": "The except TypeError block (Python < 3.9.2) is unreachable on Python 3.12+; the separator= kwarg is supported from 3.10 onwards. The mutant branch is never executed.",
+    "conditional_on": "Python < 3.9.2 only"
+  },
+  {
+    "id": "url:152:11:152:65:bool_and_to_or",
+    "kind": "equivalent",
+    "reason": "Same as url:152:8:153:37: the except TypeError block is platform-gated to Python < 3.9.2 and never reached on Python 3.12.",
+    "conditional_on": "Python < 3.9.2 only"
+  }
+]

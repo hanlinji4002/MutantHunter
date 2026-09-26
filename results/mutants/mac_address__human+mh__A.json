@@ -1,0 +1,49 @@
+{
+  "module": "mac_address",
+  "slug": "mac_address",
+  "suite": "human+mh",
+  "split": "A",
+  "seed": 20260925,
+  "mutants": 5,
+  "killed": 4,
+  "survived": 1,
+  "invalid": 0,
+  "falsy_preserving": 1,
+  "score": 0.8,
+  "adjusted_score": 1.0,
+  "seconds": 0.7,
+  "results": [
+    {
+      "id": "mac_address:33:4:34:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:36:4:36:92:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:33:7:33:36:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:34:8:34:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "mac_address:33:24:33:36:cmp_in_to_notin",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "mac_address:34:8:34:20:return_none",
+      "op": "return_none",
+      "line": 34,
+      "function": "mac_address",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    }
+  ]
+}
