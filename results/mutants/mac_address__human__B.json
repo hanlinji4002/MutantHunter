@@ -1,0 +1,22 @@
+{
+  "module": "mac_address",
+  "slug": "mac_address",
+  "suite": "human",
+  "split": "B",
+  "seed": 20260925,
+  "mutants": 1,
+  "killed": 1,
+  "survived": 0,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 1.0,
+  "adjusted_score": 1.0,
+  "seconds": 2.3,
+  "results": [
+    {
+      "id": "mac_address:33:7:33:19:cmp_in_to_notin",
+      "status": "killed"
+    }
+  ],
+  "survivors": []
+}

@@ -86,7 +86,9 @@ Test file names are already unique (rule 8), so no `__init__.py` is needed.
 
 ## 9. Running pytest
 
-Always set `PYTHONDONTWRITEBYTECODE=1` when running pytest directly.  
+Use `python -B -m pytest` when running pytest directly (the `-B` flag suppresses
+bytecode writing without needing an environment-variable prefix, which does not
+work in PowerShell 5.1).
 Or run tests only through `mutanthunter check`, which sets this automatically.
 
 ## 10. Do not import from the module under test in oracles

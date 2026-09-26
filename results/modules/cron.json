@@ -1,0 +1,27 @@
+{
+  "module": "cron",
+  "spec_documents": [
+    "wiki-Cron.pdf"
+  ],
+  "rules_extracted": 17,
+  "subagents": 2,
+  "tests_generated": 207,
+  "tests_kept": 207,
+  "suspected_bugs": {
+    "logic": 0,
+    "data-staleness": 0,
+    "spec-ambiguous": 0,
+    "human-test-conflict": 0
+  },
+  "split_A": {
+    "before": 0.581,
+    "after": 0.742,
+    "before_adjusted": 0.692,
+    "after_adjusted": 0.885
+  },
+  "started_at": "2026-09-26T07:28:40Z",
+  "finished_at": "2026-09-26T07:39:47Z",
+  "minutes": 11.1,
+  "bobcoins": 6.54,
+  "notes": "Targeted step skipped (Bobcoins tight). 3 non-falsy-preserving split-A survivors remain: bool_or_to_and on line 24, cmp_lte_to_lt on line 27, int_plus_one on line 20. Corrected after the run: the spec subagent stopped with an error after writing 8 spec files, and the run summary counted only test_cron_broad.py and test_cron_spec_ranges.py. All 10 files are kept; pytest collects 207 tests, all passing on the original code."
+}

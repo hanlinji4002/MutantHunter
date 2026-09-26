@@ -1,0 +1,211 @@
+{
+  "module": "hostname",
+  "slug": "hostname",
+  "suite": "human+b1",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 28,
+  "killed": 20,
+  "survived": 8,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.714,
+  "adjusted_score": 0.714,
+  "seconds": 5.4,
+  "results": [
+    {
+      "id": "hostname:54:27:54:32:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:55:27:55:32:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:56:26:56:30:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:57:25:57:29:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:58:25:58:30:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:60:21:60:26:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:61:21:61:26:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:113:7:113:16:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:29:22:29:74:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:114:15:114:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:19:8:19:55:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:20:10:20:59:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:34:19:34:23:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:36:42:36:45:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:40:19:40:22:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:42:42:42:45:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:125:68:125:73:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:127:12:127:17:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:128:12:128:17:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:38:47:38:50:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:118:75:118:80:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:120:16:120:21:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:121:16:121:21:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:127:58:127:63:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:128:58:128:63:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:38:35:38:38:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:120:65:120:70:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:121:65:121:70:bool_flip_false_to_true",
+      "status": "survived"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "hostname:58:25:58:30:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 58,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:38:47:38:50:str_surround",
+      "op": "str_surround",
+      "line": 38,
+      "function": "_port_validator",
+      "original": "']'",
+      "mutated": "\"XX\" + ']' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:118:75:118:80:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 118,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:120:16:120:21:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 120,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:121:16:121:21:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 121,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:38:35:38:38:str_surround",
+      "op": "str_surround",
+      "line": 38,
+      "function": "_port_validator",
+      "original": "'['",
+      "mutated": "\"XX\" + '[' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:120:65:120:70:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 120,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "hostname:121:65:121:70:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 121,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    }
+  ]
+}

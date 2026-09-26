@@ -26,7 +26,8 @@
   def test_dot_notation_broadcast():
       assert mac_address("FFFF.FFFF.FFFF")
   ```
-- Status: unconfirmed
+- Status: rejected
+- Review: scope choice, not a logic bug. The docstring and regex only promise colon- and hyphen-separated addresses; the spec lists the dotted form as an alternative convention, not the IEEE 802 standard format.
 
 ---
 

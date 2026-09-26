@@ -1,0 +1,223 @@
+{
+  "module": "email",
+  "slug": "email",
+  "suite": "human",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 26,
+  "killed": 16,
+  "survived": 10,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.615,
+  "adjusted_score": 0.615,
+  "seconds": 4.7,
+  "results": [
+    {
+      "id": "email:16:25:16:30:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "email:17:25:17:30:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "email:18:24:18:29:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "email:19:21:19:26:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "email:20:21:20:26:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "email:58:7:58:16:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "email:59:15:59:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "email:61:46:61:49:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:65:15:65:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "email:100:13:100:18:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "email:72:19:72:24:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "email:58:32:58:35:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:68:34:68:37:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "email:68:64:68:67:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "email:70:57:70:60:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "email:96:14:96:22:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:95:14:95:40:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:78:31:78:47:not_drop",
+      "status": "survived"
+    },
+    {
+      "id": "email:79:31:79:47:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "email:80:30:80:35:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "email:70:45:70:48:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "email:94:14:94:83:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "email:93:14:93:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:91:14:91:91:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:88:12:88:58:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "email:90:14:90:86:str_surround",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "email:19:21:19:26:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 19,
+      "function": "email",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:20:21:20:26:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 20,
+      "function": "email",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:72:19:72:24:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 72,
+      "function": "email",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:68:34:68:37:str_surround",
+      "op": "str_surround",
+      "line": 68,
+      "function": "email",
+      "original": "'['",
+      "mutated": "\"XX\" + '[' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:68:64:68:67:str_surround",
+      "op": "str_surround",
+      "line": 68,
+      "function": "email",
+      "original": "']'",
+      "mutated": "\"XX\" + ']' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:70:57:70:60:str_surround",
+      "op": "str_surround",
+      "line": 70,
+      "function": "email",
+      "original": "']'",
+      "mutated": "\"XX\" + ']' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:78:31:78:47:not_drop",
+      "op": "not_drop",
+      "line": 78,
+      "function": "email",
+      "original": "not ipv6_address",
+      "mutated": "ipv6_address",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:80:30:80:35:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 80,
+      "function": "email",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:70:45:70:48:str_surround",
+      "op": "str_surround",
+      "line": 70,
+      "function": "email",
+      "original": "'['",
+      "mutated": "\"XX\" + '[' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "email:94:14:94:83:str_surround",
+      "op": "str_surround",
+      "line": 94,
+      "function": "email",
+      "original": "'[\\\\u0100-\\\\u017F\\\\u0180-\\\\u024F\\\\u00A0-\\\\u00FF\\\\001-\\\\010\\\\013\\\\014\\\\016-\\\\037'",
+      "mutated": "\"XX\" + '[\\\\u0100-\\\\u017F\\\\u0180-\\\\u024F\\\\u00A0-\\\\u00FF\\\\001-\\\\010\\\\013\\\\014\\\\016-\\\\037' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    }
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "module": "cron",
+  "slug": "cron",
+  "suite": "human+mh",
+  "split": "B",
+  "seed": 20260925,
+  "mutants": 44,
+  "killed": 36,
+  "survived": 8,
+  "invalid": 0,
+  "falsy_preserving": 5,
+  "score": 0.818,
+  "adjusted_score": 0.923,
+  "seconds": 9.3,
+  "results": [
+    {
+      "id": "cron:8:4:9:19:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:11:4:12:51:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:14:4:20:75:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:22:4:27:89:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:29:4:33:19:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:38:4:38:16:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "cron:67:4:68:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:73:4:74:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:78:4:78:15:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "cron:9:8:9:19:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "cron:12:8:12:51:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "cron:18:8:19:23:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:24:8:25:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:27:8:27:89:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "cron:68:8:68:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "cron:72:8:72:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "cron:74:8:74:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "cron:12:15:12:51:cmp_lte_to_lt#1",
+      "status": "killed"
+    },
+    {
+      "id": "cron:12:15:12:51:cmp_lte_to_lt#2",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:11:16:75:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "cron:17:12:17:24:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "cron:19:12:19:23:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "cron:20:15:20:75:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "cron:31:12:32:28:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:11:16:26:cmp_noteq_to_eq",
+      "status": "killed"
+    },
+    {
+      "id": "cron:20:40:20:75:cmp_lte_to_lt#2",
+      "status": "survived"
+    },
+    {
+      "id": "cron:24:11:24:26:cmp_noteq_to_eq",
+      "status": "killed"
+    },
+    {
+      "id": "cron:27:15:27:42:cmp_lte_to_lt#1",
+      "status": "killed"
+    },
+    {
+      "id": "cron:27:47:27:72:cmp_lte_to_lt#1",
+      "status": "survived"
+    },
+    {
+      "id": "cron:27:77:27:89:cmp_lte_to_lt",
+      "status": "killed"
+    },
+    {
+      "id": "cron:69:43:69:44:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:69:46:69:48:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:73:47:73:49:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:75:46:75:47:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:75:49:75:50:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:25:16:26:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:74:16:75:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:24:25:24:26:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:26:31:26:32:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:26:46:26:47:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:68:16:69:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:20:61:20:62:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:40:16:41:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "cron:24:40:24:41:int_plus_one",
+      "status": "survived"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "cron:38:4:38:16:return_none",
+      "op": "return_none",
+      "line": 38,
+      "function": "_validate_cron_component",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    },
+    {
+      "id": "cron:68:8:68:20:return_none",
+      "op": "return_none",
+      "line": 68,
+      "function": "cron",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    },
+    {
+      "id": "cron:72:8:72:20:return_none",
+      "op": "return_none",
+      "line": 72,
+      "function": "cron",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    },
+    {
+      "id": "cron:74:8:74:20:return_none",
+      "op": "return_none",
+      "line": 74,
+      "function": "cron",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    },
+    {
+      "id": "cron:17:12:17:24:return_none",
+      "op": "return_none",
+      "line": 17,
+      "function": "_validate_cron_component",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    },
+    {
+      "id": "cron:20:40:20:75:cmp_lte_to_lt#2",
+      "op": "cmp_lte_to_lt#2",
+      "line": 20,
+      "function": "_validate_cron_component",
+      "original": "min_val <= int(parts[0]) <= max_val",
+      "mutated": "min_val <= int(parts[0]) < max_val",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "cron:27:47:27:72:cmp_lte_to_lt#1",
+      "op": "cmp_lte_to_lt#1",
+      "line": 27,
+      "function": "_validate_cron_component",
+      "original": "min_val <= end <= max_val",
+      "mutated": "min_val < end <= max_val",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "cron:24:40:24:41:int_plus_one",
+      "op": "int_plus_one",
+      "line": 24,
+      "function": "_validate_cron_component",
+      "original": "0",
+      "mutated": "1",
+      "falsy_preserving": false,
+      "split": "B"
+    }
+  ]
+}

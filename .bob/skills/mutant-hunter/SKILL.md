@@ -30,20 +30,20 @@ slug    = module.replace("/", "__")         # e.g. "url", "i18n__fi"
 
 ## Step 1 — Baseline mutation run (split A, human suite)
 
-```bash
-date -u +%Y-%m-%dT%H:%M:%SZ   # capture as started_at
+```
+python -c "import datetime; print(datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))"
 mutanthunter mutate <module>
 ```
 
-Run the `date` command **first** (before `mutanthunter mutate`) and save its
+Run the `python` timestamp command **first** (before `mutanthunter mutate`) and save its
 output as `started_at`.
 This writes `results/mutants/<slug>__human__A.json`.
 Record the baseline split-A score (`score` and `adjusted_score`) from that
 file. These are the **before** numbers.
 
 If the file already exists and was written in this session, skip re-running
-(but you still need a real `started_at` — use the file's mtime via
-`stat -f "%Sm" -t "%Y-%m-%dT%H:%M:%SZ" results/mutants/<slug>__human__A.json`).
+(but you still need a real `started_at` — read the file's mtime using Python:
+`python -c "import os, datetime; t=os.path.getmtime('results/mutants/<slug>__human__A.json'); print(datetime.datetime.fromtimestamp(t, datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))"`).
 
 ---
 
@@ -226,8 +226,8 @@ reconcile) for `test_<slug>_targeted.py`.
 
 Before writing `results/modules/<slug>.json`, run:
 
-```bash
-date -u +%Y-%m-%dT%H:%M:%SZ   # capture as finished_at
+```
+python -c "import datetime; print(datetime.datetime.now(datetime.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'))"
 ```
 
 Compute `minutes` as `(finished_at − started_at)` in minutes (round to one

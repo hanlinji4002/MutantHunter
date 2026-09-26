@@ -1,0 +1,183 @@
+{
+  "module": "url",
+  "slug": "url",
+  "suite": "human+mh",
+  "split": "B",
+  "seed": 20260925,
+  "mutants": 26,
+  "killed": 20,
+  "survived": 6,
+  "invalid": 0,
+  "falsy_preserving": 1,
+  "score": 0.769,
+  "adjusted_score": 0.8,
+  "seconds": 7.7,
+  "results": [
+    {
+      "id": "url:16:4:24:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:29:4:39:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:70:4:70:78:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:77:4:80:54:if_negate",
+      "status": "survived"
+    },
+    {
+      "id": "url:81:4:82:45:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "url:84:4:86:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:103:4:118:9:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "url:120:4:134:44:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:154:4:159:9:if_negate",
+      "status": "survived"
+    },
+    {
+      "id": "url:160:4:160:28:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:233:4:236:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "url:70:11:70:78:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "url:77:7:77:44:cmp_gt_to_gte",
+      "status": "survived"
+    },
+    {
+      "id": "url:82:8:82:45:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "url:84:11:86:5:bool_and_to_or",
+      "status": "survived"
+    },
+    {
+      "id": "url:102:8:102:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "url:103:7:103:27:cmp_lt_to_lte",
+      "status": "killed"
+    },
+    {
+      "id": "url:233:7:233:43:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "url:31:8:37:55:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "url:77:43:77:44:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "url:101:20:101:40:cmp_gt_to_gte",
+      "status": "killed"
+    },
+    {
+      "id": "url:144:12:147:75:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "url:31:8:35:34:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "url:101:39:101:40:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "url:31:8:33:34:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "url:123:15:123:72:bool_or_to_and",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "url:77:4:80:54:if_negate",
+      "op": "if_negate",
+      "line": 77,
+      "function": "_validate_auth_segment",
+      "original": "(colon_count := value.count(':')) > 1",
+      "mutated": "not (colon_count := value.count(':')) > 1",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "url:154:4:159:9:if_negate",
+      "op": "if_negate",
+      "line": 154,
+      "function": "_validate_optionals",
+      "original": "fragment",
+      "mutated": "not fragment",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "url:77:7:77:44:cmp_gt_to_gte",
+      "op": "cmp_gt_to_gte",
+      "line": 77,
+      "function": "_validate_auth_segment",
+      "original": "(colon_count := value.count(':')) > 1",
+      "mutated": "(colon_count := value.count(':')) >= 1",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "url:84:11:86:5:bool_and_to_or",
+      "op": "bool_and_to_or",
+      "line": 84,
+      "function": "_validate_auth_segment",
+      "original": "_username_regex().match(username) and all((char_to_avoid not in password for char_to_avoid in ('/', '?', '#', '@')))",
+      "mutated": "_username_regex().match(username) or all((char_to_avoid not in password for char_to_avoid in ('/', '?', '#', '@')))",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "url:102:8:102:20:return_none",
+      "op": "return_none",
+      "line": 102,
+      "function": "_validate_netloc",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    },
+    {
+      "id": "url:77:43:77:44:int_plus_one",
+      "op": "int_plus_one",
+      "line": 77,
+      "function": "_validate_auth_segment",
+      "original": "1",
+      "mutated": "2",
+      "falsy_preserving": false,
+      "split": "B"
+    }
+  ]
+}

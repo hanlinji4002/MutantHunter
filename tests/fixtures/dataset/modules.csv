@@ -1,0 +1,4 @@
+module,source_path,test_path,set,specs,ref_line_branch_cov,ref_mutants,ref_killed,ref_mutation_score
+url,src/validators/url.py,tests/test_url.py,main,rfc3986.pdf,91.9%,58,35,0.603
+email,src/validators/email.py,tests/test_email.py,main,rfc5322.pdf;rfc5321.pdf,73.9%,25,15,0.600
+finance,src/validators/finance.py,tests/test_finance.py,main,wiki-ISIN.pdf;wiki-CUSIP.pdf;wiki-SEDOL.pdf,89.6%,118,74,0.627

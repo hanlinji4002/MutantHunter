@@ -1,6 +1,8 @@
 {
   "module": "mac_address",
-  "spec_documents": ["wiki-MAC_address.pdf"],
+  "spec_documents": [
+    "wiki-MAC_address.pdf"
+  ],
   "rules_extracted": 17,
   "subagents": 2,
   "tests_generated": 88,

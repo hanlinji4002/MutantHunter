@@ -1,0 +1,373 @@
+{
+  "module": "finance",
+  "slug": "finance",
+  "suite": "human+mh",
+  "split": "A",
+  "seed": 20260925,
+  "mutants": 61,
+  "killed": 50,
+  "survived": 11,
+  "invalid": 0,
+  "falsy_preserving": 3,
+  "score": 0.82,
+  "adjusted_score": 0.862,
+  "seconds": 16.1,
+  "results": [
+    {
+      "id": "finance:74:4:74:53:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "finance:97:4:97:53:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "finance:120:4:121:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:139:4:139:28:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "finance:26:8:27:22:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:31:11:31:28:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "finance:39:8:46:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:48:8:49:22:if_negate",
+      "status": "survived"
+    },
+    {
+      "id": "finance:51:11:51:28:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "finance:74:11:74:53:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "finance:97:11:97:53:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "finance:127:8:128:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:9:21:9:22:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:31:12:31:22:bin_mod_to_mult",
+      "status": "killed"
+    },
+    {
+      "id": "finance:31:27:31:28:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:39:11:39:44:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "finance:51:12:51:22:bin_mod_to_mult",
+      "status": "survived"
+    },
+    {
+      "id": "finance:51:27:51:28:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:74:11:74:26:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "finance:97:11:97:27:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "finance:120:21:120:22:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:123:21:123:22:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:123:24:123:25:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:123:30:123:31:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:123:33:123:34:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:125:21:125:22:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:128:12:128:24:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "finance:133:8:136:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:12:18:12:35:bin_sub_to_add",
+      "status": "killed"
+    },
+    {
+      "id": "finance:13:13:13:34:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "finance:29:39:29:47:bin_mod_to_mult",
+      "status": "killed"
+    },
+    {
+      "id": "finance:31:20:31:22:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:39:24:39:32:cmp_lte_to_lt",
+      "status": "killed"
+    },
+    {
+      "id": "finance:74:25:74:26:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:97:25:97:27:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:136:12:136:24:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "finance:139:20:139:22:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:13:13:13:21:cmp_gte_to_gt",
+      "status": "killed"
+    },
+    {
+      "id": "finance:14:18:14:40:bin_sub_to_add",
+      "status": "killed"
+    },
+    {
+      "id": "finance:17:8:24:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:29:25:29:34:bin_floordiv_to_mult",
+      "status": "killed"
+    },
+    {
+      "id": "finance:29:45:29:47:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:39:43:39:44:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:43:13:43:34:bool_and_to_or",
+      "status": "killed"
+    },
+    {
+      "id": "finance:133:13:133:21:cmp_gte_to_gt",
+      "status": "survived"
+    },
+    {
+      "id": "finance:133:26:133:34:cmp_lte_to_lt",
+      "status": "survived"
+    },
+    {
+      "id": "finance:14:18:14:29:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "finance:15:26:15:34:cmp_lte_to_lt",
+      "status": "survived"
+    },
+    {
+      "id": "finance:17:13:17:21:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "finance:19:8:24:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:42:18:42:29:bin_add_to_sub",
+      "status": "survived"
+    },
+    {
+      "id": "finance:44:18:44:40:bin_sub_to_add",
+      "status": "survived"
+    },
+    {
+      "id": "finance:134:18:134:29:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "finance:14:18:14:20:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:16:18:16:29:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "finance:19:13:19:21:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "finance:21:8:24:24:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "finance:16:18:16:20:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "finance:24:12:24:24:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "finance:44:18:44:20:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "finance:22:18:22:20:int_plus_one",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "finance:48:8:49:22:if_negate",
+      "op": "if_negate",
+      "line": 48,
+      "function": "_isin_checksum",
+      "original": "idx & 1",
+      "mutated": "not idx & 1",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:51:12:51:22:bin_mod_to_mult",
+      "op": "bin_mod_to_mult",
+      "line": 51,
+      "function": "_isin_checksum",
+      "original": "check % 10",
+      "mutated": "check * 10",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:128:12:128:24:return_none",
+      "op": "return_none",
+      "line": 128,
+      "function": "sedol",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    },
+    {
+      "id": "finance:136:12:136:24:return_none",
+      "op": "return_none",
+      "line": 136,
+      "function": "sedol",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    },
+    {
+      "id": "finance:133:13:133:21:cmp_gte_to_gt",
+      "op": "cmp_gte_to_gt",
+      "line": 133,
+      "function": "sedol",
+      "original": "c >= 'A'",
+      "mutated": "c > 'A'",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:133:26:133:34:cmp_lte_to_lt",
+      "op": "cmp_lte_to_lt",
+      "line": 133,
+      "function": "sedol",
+      "original": "c <= 'Z'",
+      "mutated": "c < 'Z'",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:15:26:15:34:cmp_lte_to_lt",
+      "op": "cmp_lte_to_lt",
+      "line": 15,
+      "function": "_cusip_checksum",
+      "original": "c <= 'z'",
+      "mutated": "c < 'z'",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:42:18:42:29:bin_add_to_sub",
+      "op": "bin_add_to_sub",
+      "line": 42,
+      "function": "_isin_checksum",
+      "original": "10 + ord(c)",
+      "mutated": "10 - ord(c)",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:44:18:44:40:bin_sub_to_add",
+      "op": "bin_sub_to_add",
+      "line": 44,
+      "function": "_isin_checksum",
+      "original": "10 + ord(c) - ord('a')",
+      "mutated": "10 + ord(c) + ord('a')",
+      "falsy_preserving": false,
+      "split": "A"
+    },
+    {
+      "id": "finance:24:12:24:24:return_none",
+      "op": "return_none",
+      "line": 24,
+      "function": "_cusip_checksum",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    },
+    {
+      "id": "finance:44:18:44:20:int_plus_one",
+      "op": "int_plus_one",
+      "line": 44,
+      "function": "_isin_checksum",
+      "original": "10",
+      "mutated": "11",
+      "falsy_preserving": false,
+      "split": "A"
+    }
+  ]
+}

@@ -31,7 +31,12 @@ def _repo_root() -> Path:
 
 REPO_ROOT: Path = _repo_root()
 TARGET_ROOT: Path = REPO_ROOT / "targets" / "validators"
-VENV_PYTHON: Path = TARGET_ROOT / ".venv" / "bin" / "python"
+import os as _os
+VENV_PYTHON: Path = (
+    TARGET_ROOT / ".venv" / "Scripts" / "python.exe"
+    if _os.name == "nt"
+    else TARGET_ROOT / ".venv" / "bin" / "python"
+)
 
 
 # ---------------------------------------------------------------------------

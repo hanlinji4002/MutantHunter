@@ -1,0 +1,5 @@
+[
+  {"id": "url:340:8:340:22:return_none_fp", "kind": "falsy_preserving", "reason": "Original returns False; validators treats any falsy value as ValidationError.", "conditional_on": null},
+  {"id": "url:350:4:351:15:return_none_fp", "kind": "falsy_preserving", "reason": "Original returns False; validators treats any falsy value as ValidationError.", "conditional_on": null},
+  {"id": "url:270:8:270:22:return_none", "kind": "equivalent", "reason": "Outer function re-checks the same condition; returning None here has the same observable effect.", "conditional_on": null}
+]

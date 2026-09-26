@@ -1,24 +1,42 @@
 [
   {
+    "id": "cron:60:8:60:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return None is falsy and indistinguishable from return False via the public API which converts both to ValidationError.",
+    "conditional_on": null
+  },
+  {
+    "id": "cron:70:8:70:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return None is falsy and indistinguishable from return False via the public API which converts both to ValidationError.",
+    "conditional_on": null
+  },
+  {
+    "id": "cron:76:8:76:20:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return None is falsy and indistinguishable from return False via the public API which converts both to ValidationError.",
+    "conditional_on": null
+  },
+  {
+    "id": "cron:25:12:25:24:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return None in _validate_cron_component is falsy; the caller checks the return value with 'not', so None and False are equivalent.",
+    "conditional_on": null
+  },
+  {
+    "id": "cron:32:16:32:28:return_none",
+    "kind": "falsy_preserving",
+    "reason": "return None in the comma-list branch of _validate_cron_component is falsy; the for-loop test treats it identically to False.",
+    "conditional_on": null
+  },
+  {
     "id": "cron:38:4:38:16:return_none",
     "kind": "falsy_preserving",
     "reason": "return_none on return False; validators treats falsy as ValidationError",
     "conditional_on": null
   },
   {
-    "id": "cron:60:8:60:20:return_none",
-    "kind": "falsy_preserving",
-    "reason": "return_none on return False; validators treats falsy as ValidationError",
-    "conditional_on": null
-  },
-  {
     "id": "cron:68:8:68:20:return_none",
-    "kind": "falsy_preserving",
-    "reason": "return_none on return False; validators treats falsy as ValidationError",
-    "conditional_on": null
-  },
-  {
-    "id": "cron:70:8:70:20:return_none",
     "kind": "falsy_preserving",
     "reason": "return_none on return False; validators treats falsy as ValidationError",
     "conditional_on": null
@@ -36,25 +54,7 @@
     "conditional_on": null
   },
   {
-    "id": "cron:76:8:76:20:return_none",
-    "kind": "falsy_preserving",
-    "reason": "return_none on return False; validators treats falsy as ValidationError",
-    "conditional_on": null
-  },
-  {
     "id": "cron:17:12:17:24:return_none",
-    "kind": "falsy_preserving",
-    "reason": "return_none on return False; validators treats falsy as ValidationError",
-    "conditional_on": null
-  },
-  {
-    "id": "cron:25:12:25:24:return_none",
-    "kind": "falsy_preserving",
-    "reason": "return_none on return False; validators treats falsy as ValidationError",
-    "conditional_on": null
-  },
-  {
-    "id": "cron:32:16:32:28:return_none",
     "kind": "falsy_preserving",
     "reason": "return_none on return False; validators treats falsy as ValidationError",
     "conditional_on": null

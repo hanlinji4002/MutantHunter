@@ -1,0 +1,69 @@
+{
+  "module": "mac_address",
+  "slug": "mac_address",
+  "suite": "human",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 5,
+  "killed": 2,
+  "survived": 3,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.4,
+  "adjusted_score": 0.4,
+  "seconds": 2.1,
+  "results": [
+    {
+      "id": "mac_address:34:15:34:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:36:87:36:92:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "mac_address:33:7:33:10:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "mac_address:33:24:33:27:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "mac_address:36:20:36:64:str_surround",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "mac_address:36:87:36:92:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 36,
+      "function": "mac_address",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "mac_address:33:7:33:10:str_surround",
+      "op": "str_surround",
+      "line": 33,
+      "function": "mac_address",
+      "original": "':'",
+      "mutated": "\"XX\" + ':' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "mac_address:33:24:33:27:str_surround",
+      "op": "str_surround",
+      "line": 33,
+      "function": "mac_address",
+      "original": "'-'",
+      "mutated": "\"XX\" + '-' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 [
   {
-    "id": "email:59:8:59:20:return_none",
+    "id": "email:65:8:65:20:return_none",
     "kind": "falsy_preserving",
-    "reason": "return_none on return False; validators treats falsy as ValidationError",
+    "reason": "Mutant replaces `False` with `None`; both are falsy so the @validator decorator wraps both as ValidationError, making them observationally identical.",
     "conditional_on": null
   },
   {
-    "id": "email:65:8:65:20:return_none",
+    "id": "email:59:8:59:20:return_none",
     "kind": "falsy_preserving",
     "reason": "return_none on return False; validators treats falsy as ValidationError",
     "conditional_on": null

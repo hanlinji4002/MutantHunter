@@ -1,0 +1,339 @@
+{
+  "module": "url",
+  "slug": "url",
+  "suite": "human+mh",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 50,
+  "killed": 38,
+  "survived": 12,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.76,
+  "adjusted_score": 0.76,
+  "seconds": 10.2,
+  "results": [
+    {
+      "id": "url:75:7:75:16:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "url:139:24:139:28:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "url:168:27:168:32:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:169:27:169:32:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:170:26:170:30:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "url:171:24:171:29:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:172:25:172:29:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "url:173:25:173:30:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:175:21:175:26:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:176:21:176:26:bool_flip_false_to_true",
+      "status": "survived"
+    },
+    {
+      "id": "url:64:13:64:18:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:70:53:70:78:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "url:76:15:76:19:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "url:83:38:83:41:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:101:7:101:16:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "url:102:15:102:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:119:36:119:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:233:7:233:16:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "url:236:15:236:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:22:10:22:70:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:37:10:37:55:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:103:19:103:22:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:149:33:149:37:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "url:233:30:233:35:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:241:15:241:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "url:18:8:18:41:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:20:10:20:76:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:35:10:35:34:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:70:41:70:44:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:70:74:70:77:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:77:35:77:38:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:101:32:101:35:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:153:33:153:37:bool_flip_true_to_false",
+      "status": "survived"
+    },
+    {
+      "id": "url:158:25:158:59:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:31:8:31:57:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:33:10:33:34:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:108:47:108:50:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:108:52:108:54:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:124:42:124:45:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:124:47:124:49:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:146:71:146:74:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:147:71:147:74:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:85:60:85:63:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:85:65:85:68:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:85:70:85:73:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:85:75:85:78:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:107:64:107:68:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:123:59:123:63:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "url:108:34:108:37:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "url:124:29:124:32:str_surround",
+      "status": "survived"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "url:176:21:176:26:bool_flip_false_to_true",
+      "op": "bool_flip_false_to_true",
+      "line": 176,
+      "function": "url",
+      "original": "False",
+      "mutated": "True",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:20:10:20:76:str_surround",
+      "op": "str_surround",
+      "line": 20,
+      "function": "_username_regex",
+      "original": "\"|[-!#$%&'*+/=?^_`{}|~0-9a-z]+(\\\\.[-!#$%&'*+/=?^_`{}|~0-9a-z]+)*$\"",
+      "mutated": "\"XX\" + \"|[-!#$%&'*+/=?^_`{}|~0-9a-z]+(\\\\.[-!#$%&'*+/=?^_`{}|~0-9a-z]+)*$\" + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:35:10:35:34:str_surround",
+      "op": "str_surround",
+      "line": 35,
+      "function": "_path_regex",
+      "original": "'\\\\U0001F600-\\\\U0001F64F'",
+      "mutated": "\"XX\" + '\\\\U0001F600-\\\\U0001F64F' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:77:35:77:38:str_surround",
+      "op": "str_surround",
+      "line": 77,
+      "function": "_validate_auth_segment",
+      "original": "':'",
+      "mutated": "\"XX\" + ':' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:153:33:153:37:bool_flip_true_to_false",
+      "op": "bool_flip_true_to_false",
+      "line": 153,
+      "function": "_validate_optionals",
+      "original": "True",
+      "mutated": "False",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:33:10:33:34:str_surround",
+      "op": "str_surround",
+      "line": 33,
+      "function": "_path_regex",
+      "original": "'\\\\U0001F300-\\\\U0001F5FF'",
+      "mutated": "\"XX\" + '\\\\U0001F300-\\\\U0001F5FF' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:85:60:85:63:str_surround",
+      "op": "str_surround",
+      "line": 85,
+      "function": "_validate_auth_segment",
+      "original": "'/'",
+      "mutated": "\"XX\" + '/' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:85:65:85:68:str_surround",
+      "op": "str_surround",
+      "line": 85,
+      "function": "_validate_auth_segment",
+      "original": "'?'",
+      "mutated": "\"XX\" + '?' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:85:70:85:73:str_surround",
+      "op": "str_surround",
+      "line": 85,
+      "function": "_validate_auth_segment",
+      "original": "'#'",
+      "mutated": "\"XX\" + '#' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:85:75:85:78:str_surround",
+      "op": "str_surround",
+      "line": 85,
+      "function": "_validate_auth_segment",
+      "original": "'@'",
+      "mutated": "\"XX\" + '@' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:108:34:108:37:str_surround",
+      "op": "str_surround",
+      "line": 108,
+      "function": "_validate_netloc",
+      "original": "'['",
+      "mutated": "\"XX\" + '[' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "url:124:29:124:32:str_surround",
+      "op": "str_surround",
+      "line": 124,
+      "function": "_validate_netloc",
+      "original": "'['",
+      "mutated": "\"XX\" + '[' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    }
+  ]
+}

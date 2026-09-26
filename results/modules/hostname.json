@@ -1,6 +1,9 @@
 {
   "module": "hostname",
-  "spec_documents": ["rfc1123.pdf", "rfc952.pdf"],
+  "spec_documents": [
+    "rfc1123.pdf",
+    "rfc952.pdf"
+  ],
   "rules_extracted": 19,
   "subagents": 2,
   "tests_generated": 171,

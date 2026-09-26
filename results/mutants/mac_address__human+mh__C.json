@@ -1,0 +1,38 @@
+{
+  "module": "mac_address",
+  "slug": "mac_address",
+  "suite": "human+mh",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 5,
+  "killed": 5,
+  "survived": 0,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 1.0,
+  "adjusted_score": 1.0,
+  "seconds": 2.3,
+  "results": [
+    {
+      "id": "mac_address:34:15:34:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:36:87:36:92:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:33:7:33:10:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:33:24:33:27:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "mac_address:36:20:36:64:str_surround",
+      "status": "killed"
+    }
+  ],
+  "survivors": []
+}

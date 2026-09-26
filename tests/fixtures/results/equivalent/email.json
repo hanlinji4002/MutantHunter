@@ -1,0 +1,3 @@
+[
+  {"id": "email:95:8:95:20:return_none_fp", "kind": "falsy_preserving", "reason": "Original returns False; validators treats any falsy value as ValidationError.", "conditional_on": null}
+]

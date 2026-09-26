@@ -1,0 +1,111 @@
+{
+  "module": "hostname",
+  "slug": "hostname",
+  "suite": "human+b1",
+  "split": "B",
+  "seed": 20260925,
+  "mutants": 18,
+  "killed": 16,
+  "survived": 2,
+  "invalid": 0,
+  "falsy_preserving": 1,
+  "score": 0.889,
+  "adjusted_score": 0.941,
+  "seconds": 5.0,
+  "results": [
+    {
+      "id": "hostname:18:4:21:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:29:4:29:90:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:40:4:44:27:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:46:4:46:15:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:113:4:114:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:124:4:129:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:34:7:34:29:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:37:8:38:51:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:40:7:40:28:cmp_eq_to_noteq",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:43:8:44:27:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:114:8:114:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "hostname:117:8:122:9:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:125:8:128:65:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:19:8:20:59:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:34:28:34:29:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:38:12:38:51:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:44:12:44:27:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "hostname:118:12:121:72:bool_or_to_and",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "hostname:46:4:46:15:return_none",
+      "op": "return_none",
+      "line": 46,
+      "function": "_port_validator",
+      "original": "None",
+      "mutated": "None",
+      "falsy_preserving": false,
+      "split": "B"
+    },
+    {
+      "id": "hostname:114:8:114:20:return_none",
+      "op": "return_none",
+      "line": 114,
+      "function": "hostname",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "B"
+    }
+  ]
+}

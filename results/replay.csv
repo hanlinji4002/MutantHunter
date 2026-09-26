@@ -1,0 +1,64 @@
+sha,date,module,set,subject,suite,result,note
+402b351,2025-07-18,mac_address,extra,fix: reject MAC addresses with mixed separators,human,miss,parent accepts mixed ':' and '-' separators
+402b351,2025-07-18,mac_address,extra,fix: reject MAC addresses with mixed separators,mh,caught,parent accepts mixed ':' and '-' separators
+402b351,2025-07-18,mac_address,extra,fix: reject MAC addresses with mixed separators,b1,caught,parent accepts mixed ':' and '-' separators
+7c97eca,2025-04-26,i18n/es,reference,Fix: Allow Special DOI Cases Used in Public Administration Tests (#415),human,caught,
+7c97eca,2025-04-26,i18n/es,reference,Fix: Allow Special DOI Cases Used in Public Administration Tests (#415),mh,,
+7c97eca,2025-04-26,i18n/es,reference,Fix: Allow Special DOI Cases Used in Public Administration Tests (#415),b1,,
+25fcef0,2025-03-29,email,main,Fix email regex issue 140 (#411),human,caught,
+25fcef0,2025-03-29,email,main,Fix email regex issue 140 (#411),mh,caught,
+25fcef0,2025-03-29,email,main,Fix email regex issue 140 (#411),b1,caught,
+1231f6a,2024-10-06,url,main,fix(url): add hashtag to allowed fragment characters,human,miss,"spec-ambiguous: RFC 3986 forbids '#' in fragment, WHATWG/browsers allow it (issue #403)"
+1231f6a,2024-10-06,url,main,fix(url): add hashtag to allowed fragment characters,mh,miss,"spec-ambiguous: RFC 3986 forbids '#' in fragment, WHATWG/browsers allow it (issue #403)"
+1231f6a,2024-10-06,url,main,fix(url): add hashtag to allowed fragment characters,b1,miss,"spec-ambiguous: RFC 3986 forbids '#' in fragment, WHATWG/browsers allow it (issue #403)"
+0a791b6,2024-09-15,domain,main,fix(domain): accept .onion as a valid TLD,human,caught,
+0a791b6,2024-09-15,domain,main,fix(domain): accept .onion as a valid TLD,mh,,
+0a791b6,2024-09-15,domain,main,fix(domain): accept .onion as a valid TLD,b1,,
+7c0e605,2024-05-08,ip_address,main,fix(ip_address): properly handle private is false,human,caught,
+7c0e605,2024-05-08,ip_address,main,fix(ip_address): properly handle private is false,mh,,
+7c0e605,2024-05-08,ip_address,main,fix(ip_address): properly handle private is false,b1,,
+181f6dc,2024-04-18,domain,main,fix: rfc cases in the `domain` validator,human,caught,
+181f6dc,2024-04-18,domain,main,fix: rfc cases in the `domain` validator,mh,,
+181f6dc,2024-04-18,domain,main,fix: rfc cases in the `domain` validator,b1,,
+af69a68,2024-04-02,email,main,patch: supported extended latin in username,human,caught,
+af69a68,2024-04-02,email,main,patch: supported extended latin in username,mh,caught,
+af69a68,2024-04-02,email,main,patch: supported extended latin in username,b1,miss,
+af69a68,2024-04-02,url,main,patch: supported extended latin in username,human,miss,
+af69a68,2024-04-02,url,main,patch: supported extended latin in username,mh,miss,
+af69a68,2024-04-02,url,main,patch: supported extended latin in username,b1,miss,
+b6cfb43,2024-03-31,domain,main,fix: domain validation is now more consistent across rfcs,human,miss,
+b6cfb43,2024-03-31,domain,main,fix: domain validation is now more consistent across rfcs,mh,,
+b6cfb43,2024-03-31,domain,main,fix: domain validation is now more consistent across rfcs,b1,,
+c0e29cf,2024-03-22,domain,main,fix: domain name not confirming to rfc_2782,human,miss,
+c0e29cf,2024-03-22,domain,main,fix: domain name not confirming to rfc_2782,mh,,
+c0e29cf,2024-03-22,domain,main,fix: domain name not confirming to rfc_2782,b1,,
+5f6437c,2024-03-22,domain,main,patch: `domain` & `url` modules,human,caught,
+5f6437c,2024-03-22,domain,main,patch: `domain` & `url` modules,mh,,
+5f6437c,2024-03-22,domain,main,patch: `domain` & `url` modules,b1,,
+5f6437c,2024-03-22,url,main,patch: `domain` & `url` modules,human,caught,
+5f6437c,2024-03-22,url,main,patch: `domain` & `url` modules,mh,caught,
+5f6437c,2024-03-22,url,main,patch: `domain` & `url` modules,b1,caught,
+d1a5b22,2024-03-19,between,reference,fix: `between` and `length` validators,human,miss,"API contract change; the spec is the library docstring, not an external standard"
+d1a5b22,2024-03-19,between,reference,fix: `between` and `length` validators,mh,,"API contract change; the spec is the library docstring, not an external standard"
+d1a5b22,2024-03-19,between,reference,fix: `between` and `length` validators,b1,,"API contract change; the spec is the library docstring, not an external standard"
+d1a5b22,2024-03-19,length,reference,fix: `between` and `length` validators,human,miss,"API contract change; the spec is the library docstring, not an external standard"
+d1a5b22,2024-03-19,length,reference,fix: `between` and `length` validators,mh,,"API contract change; the spec is the library docstring, not an external standard"
+d1a5b22,2024-03-19,length,reference,fix: `between` and `length` validators,b1,,"API contract change; the spec is the library docstring, not an external standard"
+38d196a,2023-11-07,url,main,allow pct-encoded entities in fragments,human,caught,
+38d196a,2023-11-07,url,main,allow pct-encoded entities in fragments,mh,caught,
+38d196a,2023-11-07,url,main,allow pct-encoded entities in fragments,b1,caught,
+15984e8,2023-10-05,url,main,fix: URL fragment check (#305),human,caught,
+15984e8,2023-10-05,url,main,fix: URL fragment check (#305),mh,caught,
+15984e8,2023-10-05,url,main,fix: URL fragment check (#305),b1,miss,
+f7aa593,2023-09-23,between,reference,fix: bug in `between` module,human,caught,
+f7aa593,2023-09-23,between,reference,fix: bug in `between` module,mh,,
+f7aa593,2023-09-23,between,reference,fix: bug in `between` module,b1,,
+960b48b,2023-09-17,url,main,fix: Valid URLs failing validation - query and fragment parts (#297),human,caught,
+960b48b,2023-09-17,url,main,fix: Valid URLs failing validation - query and fragment parts (#297),mh,caught,
+960b48b,2023-09-17,url,main,fix: Valid URLs failing validation - query and fragment parts (#297),b1,caught,
+41f3d6d,2023-09-02,hostname,extra,fix: simple hostname validation regex,human,miss,parent rejects single-character labels; RFC 1123 allows them
+41f3d6d,2023-09-02,hostname,extra,fix: simple hostname validation regex,mh,caught,parent rejects single-character labels; RFC 1123 allows them
+41f3d6d,2023-09-02,hostname,extra,fix: simple hostname validation regex,b1,caught,parent rejects single-character labels; RFC 1123 allows them
+4015e8e,2023-08-18,url,main,fix: url validator considers urls with /#/ as valid,human,caught,
+4015e8e,2023-08-18,url,main,fix: url validator considers urls with /#/ as valid,mh,caught,
+4015e8e,2023-08-18,url,main,fix: url validator considers urls with /#/ as valid,b1,caught,

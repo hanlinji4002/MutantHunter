@@ -1,0 +1,83 @@
+{
+  "module": "email",
+  "slug": "email",
+  "suite": "human",
+  "split": "A",
+  "seed": 20260925,
+  "mutants": 11,
+  "killed": 9,
+  "survived": 2,
+  "invalid": 0,
+  "falsy_preserving": 1,
+  "score": 0.818,
+  "adjusted_score": 0.9,
+  "seconds": 4.5,
+  "results": [
+    {
+      "id": "email:58:4:59:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "email:63:4:65:20:if_negate",
+      "status": "killed"
+    },
+    {
+      "id": "email:74:4:101:5:return_none",
+      "status": "killed"
+    },
+    {
+      "id": "email:58:7:58:41:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "email:63:7:63:56:bool_or_to_and",
+      "status": "killed"
+    },
+    {
+      "id": "email:65:8:65:20:return_none",
+      "status": "survived"
+    },
+    {
+      "id": "email:58:40:58:41:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "email:63:28:63:30:int_plus_one",
+      "status": "killed"
+    },
+    {
+      "id": "email:63:53:63:56:int_plus_one",
+      "status": "survived"
+    },
+    {
+      "id": "email:88:12:91:91:bin_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "email:88:12:90:86:bin_add_to_sub",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "email:65:8:65:20:return_none",
+      "op": "return_none",
+      "line": 65,
+      "function": "email",
+      "original": "False",
+      "mutated": "None",
+      "falsy_preserving": true,
+      "split": "A"
+    },
+    {
+      "id": "email:63:53:63:56:int_plus_one",
+      "op": "int_plus_one",
+      "line": 63,
+      "function": "email",
+      "original": "253",
+      "mutated": "254",
+      "falsy_preserving": false,
+      "split": "A"
+    }
+  ]
+}

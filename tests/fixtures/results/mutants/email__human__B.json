@@ -1,0 +1,38 @@
+{
+  "module": "email",
+  "slug": "email",
+  "suite": "human",
+  "split": "B",
+  "seed": 20260925,
+  "mutants": 14,
+  "killed": 9,
+  "survived": 5,
+  "invalid": 0,
+  "falsy_preserving": 1,
+  "score": 0.643,
+  "adjusted_score": 0.692,
+  "seconds": 5.2,
+  "results": [
+    {"id": "email:30:4:31:20:if_negate", "status": "killed"},
+    {"id": "email:35:8:35:22:return_none", "status": "survived"},
+    {"id": "email:40:4:41:18:if_negate", "status": "killed"},
+    {"id": "email:45:8:45:22:return_none", "status": "survived"},
+    {"id": "email:50:4:51:25:if_negate", "status": "killed"},
+    {"id": "email:55:8:55:22:return_none", "status": "killed"},
+    {"id": "email:60:4:61:20:if_negate", "status": "killed"},
+    {"id": "email:65:8:65:20:return_none", "status": "survived"},
+    {"id": "email:70:4:71:18:if_negate", "status": "killed"},
+    {"id": "email:75:8:75:22:return_none", "status": "killed"},
+    {"id": "email:80:4:81:25:if_negate", "status": "survived"},
+    {"id": "email:85:8:85:20:return_none", "status": "killed"},
+    {"id": "email:90:4:91:15:if_negate", "status": "killed"},
+    {"id": "email:95:8:95:20:return_none_fp", "status": "survived"}
+  ],
+  "survivors": [
+    {"id": "email:35:8:35:22:return_none", "op": "return_none", "line": 35, "function": "email", "original": "return result", "mutated": "return None", "falsy_preserving": false, "split": "B"},
+    {"id": "email:45:8:45:22:return_none", "op": "return_none", "line": 45, "function": "email", "original": "return True", "mutated": "return None", "falsy_preserving": false, "split": "B"},
+    {"id": "email:65:8:65:20:return_none", "op": "return_none", "line": 65, "function": "email", "original": "return True", "mutated": "return None", "falsy_preserving": false, "split": "B"},
+    {"id": "email:80:4:81:25:if_negate", "op": "if_negate", "line": 80, "function": "_check_domain", "original": "if domain", "mutated": "if not (domain)", "falsy_preserving": false, "split": "B"},
+    {"id": "email:95:8:95:20:return_none_fp", "op": "return_none", "line": 95, "function": "email", "original": "return False", "mutated": "return None", "falsy_preserving": true, "split": "B"}
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "module": "cron",
+  "slug": "cron",
+  "suite": "human+mh",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 34,
+  "killed": 32,
+  "survived": 2,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.941,
+  "adjusted_score": 0.941,
+  "seconds": 6.7,
+  "results": [
+    {
+      "id": "cron:38:11:38:16:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:59:7:59:16:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:67:7:67:51:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:69:7:69:49:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:71:7:71:48:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:73:7:73:50:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:75:7:75:51:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:78:11:78:15:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "cron:8:20:8:23:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:9:15:9:19:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "cron:14:7:14:10:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:22:7:22:10:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:29:7:29:10:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:33:15:33:19:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "cron:60:15:60:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:68:15:68:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:70:15:70:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:72:15:72:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:74:15:74:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:76:15:76:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:15:32:15:35:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:16:30:16:54:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:17:19:17:24:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:18:23:18:26:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:19:19:19:23:bool_flip_true_to_false",
+      "status": "killed"
+    },
+    {
+      "id": "cron:23:32:23:35:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:24:30:24:54:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:24:58:24:82:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:25:19:25:24:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:30:36:30:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "cron:31:15:31:67:not_drop",
+      "status": "killed"
+    },
+    {
+      "id": "cron:32:23:32:28:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "cron:63:49:63:62:method_drop_strip",
+      "status": "survived"
+    },
+    {
+      "id": "cron:65:25:65:54:str_surround",
+      "status": "survived"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "cron:63:49:63:62:method_drop_strip",
+      "op": "method_drop_strip",
+      "line": 63,
+      "function": "cron",
+      "original": "value.strip()",
+      "mutated": "value",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "cron:65:25:65:54:str_surround",
+      "op": "str_surround",
+      "line": 65,
+      "function": "cron",
+      "original": "'Badly formatted cron string'",
+      "mutated": "\"XX\" + 'Badly formatted cron string' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    }
+  ]
+}

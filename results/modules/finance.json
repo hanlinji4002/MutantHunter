@@ -1,0 +1,29 @@
+{
+  "module": "finance",
+  "spec_documents": [
+    "wiki-ISIN.pdf",
+    "wiki-CUSIP.pdf",
+    "wiki-SEDOL.pdf"
+  ],
+  "rules_extracted": 33,
+  "subagents": 2,
+  "tests_generated": 126,
+  "tests_kept": 120,
+  "suspected_bugs": {
+    "logic": 4,
+    "data-staleness": 0,
+    "spec-ambiguous": 0,
+    "human-test-conflict": 0
+  },
+  "split_A": {
+    "before": 0.689,
+    "after": 0.82,
+    "before_adjusted": 0.724,
+    "after_adjusted": 0.862
+  },
+  "started_at": "2026-09-26T07:01:17Z",
+  "finished_at": "2026-09-26T07:11:06Z",
+  "minutes": 9.8,
+  "bobcoins": 5.61,
+  "notes": "Targeted step skipped (user request). Four suspected logic bugs found in _isin_checksum: the check accumulator is never updated in the loop, so the function always returns True for any 12-char structurally-valid string regardless of its Luhn check digit."
+}

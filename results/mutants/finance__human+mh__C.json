@@ -1,0 +1,243 @@
+{
+  "module": "finance",
+  "slug": "finance",
+  "suite": "human+mh",
+  "split": "C",
+  "seed": 20260925,
+  "mutants": 36,
+  "killed": 28,
+  "survived": 8,
+  "invalid": 0,
+  "falsy_preserving": 0,
+  "score": 0.778,
+  "adjusted_score": 0.778,
+  "seconds": 6.4,
+  "results": [
+    {
+      "id": "finance:137:8:137:35:augassign_add_to_sub",
+      "status": "survived"
+    },
+    {
+      "id": "finance:27:12:27:22:augassign_add_to_sub",
+      "status": "killed"
+    },
+    {
+      "id": "finance:49:12:49:22:augassign_add_to_sub",
+      "status": "survived"
+    },
+    {
+      "id": "finance:121:15:121:20:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "finance:127:16:127:23:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "finance:128:19:128:24:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "finance:11:16:11:19:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:11:29:11:32:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:39:16:39:19:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:39:29:39:32:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "finance:131:16:131:19:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:131:29:131:32:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:136:19:136:24:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "finance:12:31:12:34:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:13:18:13:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:13:31:13:34:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "finance:40:31:40:34:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:41:18:41:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:41:31:41:34:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:46:19:46:24:bool_flip_false_to_true",
+      "status": "killed"
+    },
+    {
+      "id": "finance:132:31:132:34:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:133:18:133:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:133:31:133:34:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "finance:14:36:14:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:15:18:15:21:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "finance:15:31:15:34:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:17:18:17:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:42:36:42:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:43:18:43:21:str_surround",
+      "status": "survived"
+    },
+    {
+      "id": "finance:43:31:43:34:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:134:36:134:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:16:36:16:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:19:18:19:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:44:36:44:39:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:21:18:21:21:str_surround",
+      "status": "killed"
+    },
+    {
+      "id": "finance:24:19:24:24:bool_flip_false_to_true",
+      "status": "killed"
+    }
+  ],
+  "survivors": [
+    {
+      "id": "finance:137:8:137:35:augassign_add_to_sub",
+      "op": "augassign_add_to_sub",
+      "line": 137,
+      "function": "sedol",
+      "original": "check += val * weights[idx]",
+      "mutated": "check -= val * weights[idx]",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:49:12:49:22:augassign_add_to_sub",
+      "op": "augassign_add_to_sub",
+      "line": 49,
+      "function": "_isin_checksum",
+      "original": "val += val",
+      "mutated": "val -= val",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:127:16:127:23:str_surround",
+      "op": "str_surround",
+      "line": 127,
+      "function": "sedol",
+      "original": "'AEIOU'",
+      "mutated": "\"XX\" + 'AEIOU' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:39:29:39:32:str_surround",
+      "op": "str_surround",
+      "line": 39,
+      "function": "_isin_checksum",
+      "original": "'9'",
+      "mutated": "\"XX\" + '9' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:13:31:13:34:str_surround",
+      "op": "str_surround",
+      "line": 13,
+      "function": "_cusip_checksum",
+      "original": "'Z'",
+      "mutated": "\"XX\" + 'Z' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:133:31:133:34:str_surround",
+      "op": "str_surround",
+      "line": 133,
+      "function": "sedol",
+      "original": "'Z'",
+      "mutated": "\"XX\" + 'Z' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:15:18:15:21:str_surround",
+      "op": "str_surround",
+      "line": 15,
+      "function": "_cusip_checksum",
+      "original": "'a'",
+      "mutated": "\"XX\" + 'a' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    },
+    {
+      "id": "finance:43:18:43:21:str_surround",
+      "op": "str_surround",
+      "line": 43,
+      "function": "_isin_checksum",
+      "original": "'a'",
+      "mutated": "\"XX\" + 'a' + \"XX\"",
+      "falsy_preserving": false,
+      "split": "C"
+    }
+  ]
+}

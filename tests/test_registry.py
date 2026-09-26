@@ -29,7 +29,12 @@ class TestRepoRoot:
         assert TARGET_ROOT == REPO_ROOT / "targets" / "validators"
 
     def test_venv_python_path(self):
-        assert VENV_PYTHON == TARGET_ROOT / ".venv" / "bin" / "python"
+        import os
+        if os.name == "nt":
+            expected = TARGET_ROOT / ".venv" / "Scripts" / "python.exe"
+        else:
+            expected = TARGET_ROOT / ".venv" / "bin" / "python"
+        assert VENV_PYTHON == expected
         assert VENV_PYTHON.exists(), f"venv python not found at {VENV_PYTHON}"
 
     def test_repo_root_independent_of_cwd(self, tmp_path, monkeypatch):
@@ -117,17 +122,28 @@ class TestSuiteTestPaths:
         assert paths[0].is_absolute()
         assert paths[0].name == "test_url.py"
 
-    def test_human_mh_missing_warns(self):
+    def test_human_mh_missing_warns(self, tmp_path):
         """human+mh should warn if mh dir is missing but still return human path."""
         m = get_module("url")
+        # Use a tmp target root where the mh sub-directory does not exist
+        fake_root = tmp_path / "validators"
+        fake_tests = fake_root / "tests"
+        fake_test_url = fake_tests / "test_url.py"
+        fake_test_url.parent.mkdir(parents=True)
+        fake_test_url.write_text("# fake", encoding="utf-8")
         with pytest.warns(UserWarning, match="missing or empty"):
-            paths = suite_test_paths(m, "human+mh")
+            paths = suite_test_paths(m, "human+mh", target_root=fake_root)
         assert len(paths) == 1  # falls back to human only
 
-    def test_human_b1_missing_warns(self):
+    def test_human_b1_missing_warns(self, tmp_path):
         m = get_module("url")
+        fake_root = tmp_path / "validators"
+        fake_tests = fake_root / "tests"
+        fake_test_url = fake_tests / "test_url.py"
+        fake_test_url.parent.mkdir(parents=True)
+        fake_test_url.write_text("# fake", encoding="utf-8")
         with pytest.warns(UserWarning, match="missing or empty"):
-            paths = suite_test_paths(m, "human+b1")
+            paths = suite_test_paths(m, "human+b1", target_root=fake_root)
         assert len(paths) == 1
 
     def test_unknown_suite_raises(self):

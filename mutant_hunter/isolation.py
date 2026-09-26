@@ -236,11 +236,13 @@ def check_isolation(workspace: Workspace, module: Module) -> None:
             f"{proc.stderr.strip()}"
         )
     imported_path = proc.stdout.strip()
-    ws_src = str(workspace.path / "src")
-    if not imported_path.startswith(ws_src):
+    ws_src = workspace.path / "src"
+    try:
+        Path(imported_path).relative_to(ws_src)
+    except ValueError:
         raise IsolationError(
             f"Editable-install guard failed: validators imported from "
-            f"{imported_path!r} which is not inside workspace {ws_src!r}. "
+            f"{imported_path!r} which is not inside workspace {str(ws_src)!r}. "
             "Ensure PYTHONPATH is set to <workspace>/src."
         )
 
