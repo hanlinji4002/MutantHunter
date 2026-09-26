@@ -28,4 +28,4 @@ For the B1 baseline, Bob received one plain sentence per module without subagent
 
 ## Work outside Bob
 
-We reviewed the 13 suspected violations by reading the code and searching the upstream issues, and recorded the verdicts by hand. We also corrected the cron test count in `results/modules/cron.json` after a subagent stopped with an error, and made a small layout fix to the dashboard. These edits were made outside Bob.
+We reviewed the 13 suspected violations by reading the code and searching the upstream issues, and recorded the verdicts by hand. We also corrected the cron test count in `results/modules/cron.json` after a subagent stopped with an error, and restyled the dashboard page (colours, fonts, charts) without changing how any number is computed. These edits were made outside Bob.

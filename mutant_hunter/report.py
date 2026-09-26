@@ -19,6 +19,7 @@ Writes:
 
 from __future__ import annotations
 
+import base64
 import csv
 import glob as _glob
 import json
@@ -449,28 +450,134 @@ def _pct(v: float | None) -> str:
     return f"{v * 100:.1f}%"
 
 
-def _score_bar_svg(b0: float | None, b1: float | None, mh: float | None, width: int = 200, height: int = 20) -> str:
-    """Inline SVG grouped-bar for one module."""
-    vals = [b0, b1, mh]
-    colours = ["#6b7280", "#3b82d4", "#7c5cd8"]
-    bw = width // 3 - 4
-    bars = []
-    for i, (v, col) in enumerate(zip(vals, colours)):
-        x = i * (width // 3) + 2
-        if v is not None:
-            bh = max(2, int(v * height))
-            y = height - bh
-            bars.append(
-                f'<rect x="{x}" y="{y}" width="{bw}" height="{bh}" fill="{col}" />'
+_ASSETS = Path(__file__).parent / "assets" / "fonts"
+_FONT_FILES = [
+    ("Source Serif 4", "SourceSerif4-latin.woff2", "200 900", "normal"),
+    ("IBM Plex Sans", "IBMPlexSans-latin.woff2", "100 700", "normal"),
+    ("IBM Plex Mono", "IBMPlexMono-latin.woff2", "400", "normal"),
+]
+_SERIES = [("human", "b0", "B0", "human tests"), ("human+b1", "b1", "B1", "plain prompt"), ("human+mh", "mh", "MH", "MutantHunter")]
+
+
+def _font_face_css() -> str:
+    """Inline the bundled fonts so the dashboard works offline; fall back silently."""
+    rules = []
+    for family, fname, weight, style in _FONT_FILES:
+        p = _ASSETS / fname
+        if not p.exists():
+            continue
+        data = base64.b64encode(p.read_bytes()).decode("ascii")
+        rules.append(
+            f"@font-face{{font-family:'{family}';font-style:{style};font-weight:{weight};"
+            f"font-display:swap;src:url(data:font/woff2;base64,{data}) format('woff2');}}"
+        )
+    return "\n".join(rules)
+
+
+def _inline_md(s: str) -> str:
+    """Escape text and turn `code` spans into <code>."""
+    parts = s.split("`")
+    return "".join(f"<code>{_esc(p)}</code>" if i % 2 else _esc(p) for i, p in enumerate(parts))
+
+
+def _parse_violations(results_dir: Path, registry: dict) -> list[dict]:
+    """Parse results/suspected_bugs/*.md into entries with their fields."""
+    slug_to_module = {_slug(m): m for m in registry}
+    entries = []
+    for p in sorted((results_dir / "suspected_bugs").glob("*.md")):
+        module = slug_to_module.get(p.stem, p.stem)
+        text = p.read_text(encoding="utf-8")
+        for block in re.split(r"\n(?=## )", text):
+            block = block.strip()
+            if not block.startswith("## "):
+                continue
+            fields: dict[str, str] = {}
+            for line in block.splitlines():
+                m = re.match(r"^- ([A-Za-z][A-Za-z -]*):\s*(.*)$", line)
+                if m and m.group(1) not in fields:
+                    fields[m.group(1)] = m.group(2).strip()
+            title = re.sub(r"^SV-\d+:\s*", "", block.split("\n", 1)[0][3:].strip())
+            entries.append({"module": module, "title": title, "fields": fields, "raw": block})
+    return entries
+
+
+def _column_chart_svg(pool: dict[str, Any], split_name: str) -> str:
+    """Pooled score per suite as columns with 95% CI whiskers."""
+    W, H, left, right, top, bottom = 360, 250, 46, 10, 30, 46
+    pw, ph = W - left - right, H - top - bottom
+    y = lambda v: top + ph * (1 - v)
+    out = [f'<svg class="chart" viewBox="0 0 {W} {H}" role="img" aria-label="Pooled {split_name} score by suite">']
+    for g in (0, 0.25, 0.5, 0.75, 1.0):
+        out.append(f'<line class="grid" x1="{left}" x2="{W - right}" y1="{y(g):.1f}" y2="{y(g):.1f}"/>')
+        out.append(f'<text class="tick" x="{left - 8}" y="{y(g) + 4:.1f}" text-anchor="end">{int(g * 100)}%</text>')
+    bw = 44
+    for i, (suite, cls, short, desc) in enumerate(_SERIES):
+        d = pool[suite]
+        cx = left + pw * (i + 0.5) / 3
+        x0 = cx - bw / 2
+        out.append(f'<text class="xlab" x="{cx:.1f}" y="{H - 24}" text-anchor="middle">{short}</text>')
+        out.append(f'<text class="xsub" x="{cx:.1f}" y="{H - 8}" text-anchor="middle">{desc}</text>')
+        if not d["n"]:
+            out.append(f'<text class="val" x="{cx:.1f}" y="{y(0) - 8:.1f}" text-anchor="middle">—</text>')
+            continue
+        yt, yb, r = y(d["p"]), y(0), 4
+        tip = f'{short} ({desc}): {d["k"]}/{d["n"]} killed, {d["p"] * 100:.1f}% (95% CI {d["lo"] * 100:.1f}–{d["hi"] * 100:.1f}%)'
+        out.append(
+            f'<g class="mark"><title>{_esc(tip)}</title>'
+            f'<path class="s-{cls}" d="M{x0:.1f},{yb:.1f} L{x0:.1f},{yt + r:.1f} Q{x0:.1f},{yt:.1f} {x0 + r:.1f},{yt:.1f} '
+            f'L{x0 + bw - r:.1f},{yt:.1f} Q{x0 + bw:.1f},{yt:.1f} {x0 + bw:.1f},{yt + r:.1f} L{x0 + bw:.1f},{yb:.1f} Z"/>'
+            f'<line class="ci" x1="{cx:.1f}" x2="{cx:.1f}" y1="{y(d["lo"]):.1f}" y2="{y(d["hi"]):.1f}"/>'
+            f'<line class="ci" x1="{cx - 6:.1f}" x2="{cx + 6:.1f}" y1="{y(d["lo"]):.1f}" y2="{y(d["lo"]):.1f}"/>'
+            f'<line class="ci" x1="{cx - 6:.1f}" x2="{cx + 6:.1f}" y1="{y(d["hi"]):.1f}" y2="{y(d["hi"]):.1f}"/>'
+            f'<rect class="hit" x="{x0 - 8:.1f}" y="{top:.1f}" width="{bw + 16}" height="{ph:.1f}"/></g>'
+        )
+        out.append(f'<text class="val" x="{cx:.1f}" y="{y(d["hi"]) - 8:.1f}" text-anchor="middle">{d["p"] * 100:.1f}%</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def _module_chart_svg(rows: list[dict], split: str) -> str:
+    """Grouped horizontal bars per module: B0 / B1 / MH, value label on MH."""
+    W, label_w, right, top = 440, 118, 52, 26
+    bar_h, gap, group_gap = 8, 2, 16
+    group_h = 3 * bar_h + 2 * gap
+    H = top + len(rows) * (group_h + group_gap) + 4
+    pw = W - label_w - right
+    x = lambda v: label_w + pw * v
+    out = [f'<svg class="chart" viewBox="0 0 {W} {H}" role="img" aria-label="Split {split} score by module">']
+    for g in (0, 0.5, 1.0):
+        out.append(f'<line class="grid" x1="{x(g):.1f}" x2="{x(g):.1f}" y1="{top - 6}" y2="{H - 4}"/>')
+        out.append(f'<text class="tick" x="{x(g):.1f}" y="{top - 12}" text-anchor="middle">{int(g * 100)}%</text>')
+    for j, row in enumerate(rows):
+        gy = top + j * (group_h + group_gap)
+        out.append(f'<text class="rowlab" x="{label_w - 12}" y="{gy + group_h / 2 + 1:.1f}" text-anchor="end">{_esc(row["module"])}</text>')
+        if row["set"] == "extra":
+            out.append(f'<text class="rowsub" x="{label_w - 12}" y="{gy + group_h / 2 + 14:.1f}" text-anchor="end">extra</text>')
+        for i, (suite, cls, short, desc) in enumerate(_SERIES):
+            k, n = row[split].get(suite, (None, None))
+            by = gy + i * (bar_h + gap)
+            if not n:
+                continue
+            v = k / n
+            x0, x1, r = x(0), max(x(v), x(0) + 2), 3
+            tip = f'{row["module"]} · {short} ({desc}): {k}/{n} killed, {v * 100:.1f}%'
+            out.append(
+                f'<g class="mark"><title>{_esc(tip)}</title>'
+                f'<path class="s-{cls}" d="M{x0:.1f},{by:.1f} L{x1 - r:.1f},{by:.1f} Q{x1:.1f},{by:.1f} {x1:.1f},{by + r:.1f} '
+                f'L{x1:.1f},{by + bar_h - r:.1f} Q{x1:.1f},{by + bar_h:.1f} {x1 - r:.1f},{by + bar_h:.1f} L{x0:.1f},{by + bar_h:.1f} Z"/>'
+                f'<rect class="hit" x="{x0:.1f}" y="{by - 1:.1f}" width="{pw:.1f}" height="{bar_h + 2}"/></g>'
             )
-        else:
-            bars.append(
-                f'<rect x="{x}" y="{height-2}" width="{bw}" height="2" fill="#e5e7eb" />'
-            )
-    return (
-        f'<svg width="{width}" height="{height}" xmlns="http://www.w3.org/2000/svg">'
-        + "".join(bars) + "</svg>"
+            if cls == "mh":
+                out.append(f'<text class="val sm" x="{x1 + 6:.1f}" y="{by + bar_h:.1f}">{v * 100:.1f}%</text>')
+    out.append("</svg>")
+    return "".join(out)
+
+
+def _legend_html() -> str:
+    items = "".join(
+        f'<span class="key"><i class="sw s-{cls}"></i><b>{short}</b> {desc}</span>' for _, cls, short, desc in _SERIES
     )
+    return f'<div class="legend">{items}</div>'
 
 
 def _write_index_html(
@@ -485,213 +592,152 @@ def _write_index_html(
     run_mods = [m for m in mods if m["run"]]
     not_run = [m for m in mods if not m["run"]]
 
-    # Pooled main split-B
     pool_b = _pooled_stats(registry, results_dir, mutant_files, "main", "B")
-    # Pooled main exam-C
     pool_c = _pooled_stats(registry, results_dir, mutant_files, "main", "C")
+    b_only_b, c_only_b, p_b = _mcnemar_b1_vs_mh(registry, results_dir, mutant_files, "main", "B")
+    b_only_c, c_only_c, p_c = _mcnemar_b1_vs_mh(registry, results_dir, mutant_files, "main", "C")
 
-    # Hero numbers
-    def hero_row(pool: dict[str, Any], label: str) -> str:
-        parts = []
-        for suite in _SUITES:
-            d = pool[suite]
-            if d["n"] == 0:
-                parts.append(f"<span class='metric'><span class='lbl'>{_SUITE_LABELS[suite]}</span><span class='val'>—</span></span>")
-            else:
-                ci = f"{d['lo']*100:.1f}–{d['hi']*100:.1f}%"
-                parts.append(
-                    f"<span class='metric'>"
-                    f"<span class='lbl'>{_SUITE_LABELS[suite]}</span>"
-                    f"<span class='val'>{d['p']*100:.1f}%</span>"
-                    f"<span class='ci'>{ci}</span>"
-                    f"</span>"
-                )
-        return f"<div class='hero-row'><span class='hero-label'>{label}</span>{''.join(parts)}</div>"
-
-    # Suspected violation totals
     cat_totals: dict[str, int] = {"logic": 0, "data-staleness": 0, "spec-ambiguous": 0, "human-test-conflict": 0}
     for m in run_mods:
-        bugs = m.get("bugs", {})
         for cat in cat_totals:
-            cat_totals[cat] += bugs.get(cat, 0)
+            cat_totals[cat] += m.get("bugs", {}).get(cat, 0)
 
-    # Extra kills (MH over B1) on split B and exam C
-    mh_extra_b = 0
-    b1_extra_b = 0
-    mh_extra_c = 0
-    b1_extra_c = 0
-    for module, reg_row in registry.items():
-        if reg_row.get("set") != "main":
-            continue
-        slug = _slug(module)
-        for split, mh_ref, b1_ref in [
-            ("B", "mh_extra_b", "b1_extra_b"),
-            ("C", "mh_extra_c", "b1_extra_c"),
-        ]:
-            key_b1 = (slug, "human+b1", split)
-            key_mh = (slug, "human+mh", split)
-            if key_b1 in mutant_files and key_mh in mutant_files:
-                d_b1 = _load_mutant_file(mutant_files[key_b1])
-                d_mh = _load_mutant_file(mutant_files[key_mh])
-                ids_b1 = {r["id"] for r in d_b1.get("results", []) if r["status"] == "killed"}
-                ids_mh = {r["id"] for r in d_mh.get("results", []) if r["status"] == "killed"}
-                if split == "B":
-                    mh_extra_b += len(ids_mh - ids_b1)
-                    b1_extra_b += len(ids_b1 - ids_mh)
-                else:
-                    mh_extra_c += len(ids_mh - ids_b1)
-                    b1_extra_c += len(ids_b1 - ids_mh)
+    # Per-module kill counts for the charts and the table view
+    set_order = {"main": 0, "extra": 1}
+    chart_rows = []
+    for m in sorted(run_mods, key=lambda m: (set_order.get(m["set"], 2), m["module"])):
+        row = {"module": m["module"], "set": m["set"], "m": m, "B": {}, "C": {}}
+        for split in ("B", "C"):
+            for suite, *_ in _SERIES:
+                key = (m["slug"], suite, split)
+                if key in mutant_files:
+                    d = _load_mutant_file(mutant_files[key])
+                    row[split][suite] = (d.get("killed", 0), d.get("mutants", 0))
+        chart_rows.append(row)
 
-    # Per-module table rows (split B + exam C columns)
-    def _score_for(m: dict, suite_key: str, split: str) -> float | None:
-        """Get score for a given suite/split combo from mutant_files."""
-        slug = m["slug"]
-        key = (slug, suite_key, split)
-        if key in mutant_files:
-            data = _load_mutant_file(mutant_files[key])
-            return data.get("score")
-        return None
+    def pct_cell(row: dict, split: str, suite: str, strong: bool = False) -> str:
+        k, n = row[split].get(suite, (None, None))
+        if not n:
+            return "<td class='num'>—</td>"
+        v = f"{k / n * 100:.1f}%"
+        return f"<td class='num' title='{k}/{n} killed'>{'<b>' + v + '</b>' if strong else v}</td>"
 
-    def mod_row(m: dict) -> str:
-        # Split B
-        b0_b = _score_for(m, "human", "B")
-        b1_b = _score_for(m, "human+b1", "B")
-        mh_b = _score_for(m, "human+mh", "B")
-        # Exam C
-        b0_c = _score_for(m, "human", "C")
-        b1_c = _score_for(m, "human+b1", "C")
-        mh_c = _score_for(m, "human+mh", "C")
-        # Fall back to split-A when split-B missing
-        b0_disp = b0_b if b0_b is not None else m.get("b0_before")
-        mh_disp = mh_b if mh_b is not None else m.get("mh_after")
-        b1_disp = b1_b
-        bugs = m.get("bugs", {})
-        total_bugs = sum(bugs.values()) if isinstance(bugs, dict) else 0
-        tooltip = f"Split-B: B0={_pct(b0_disp)} B1={_pct(b1_disp)} MH={_pct(mh_disp)} | Exam-C: B0={_pct(b0_c)} B1={_pct(b1_c)} MH={_pct(mh_c)}"
-        bar = _score_bar_svg(b0_disp, b1_disp, mh_disp, width=120)
-        return (
-            f"<tr title='{_esc(tooltip)}'>"
-            f"<td>{_esc(m['module'])}</td>"
-            f"<td>{_esc(m['set'])}</td>"
-            f"<td class='col-bars'>{bar}</td>"
-            f"<td>{_pct(b0_disp)}</td>"
-            f"<td>{_pct(b1_disp)}</td>"
-            f"<td><strong>{_pct(mh_disp)}</strong></td>"
-            f"<td>{_pct(b0_c)}</td>"
-            f"<td>{_pct(b1_c)}</td>"
-            f"<td><strong>{_pct(mh_c)}</strong></td>"
-            f"<td>{m.get('tests_kept','—')}</td>"
-            f"<td>{total_bugs}</td>"
-            f"<td>{m.get('minutes','—')}</td>"
-            f"</tr>"
+    table_rows = []
+    for row in chart_rows:
+        m = row["m"]
+        coins = m.get("bobcoins")
+        table_rows.append(
+            "<tr>"
+            f"<td>{_esc(row['module'])}</td><td>{_esc(row['set'])}</td>"
+            + pct_cell(row, "B", "human") + pct_cell(row, "B", "human+b1") + pct_cell(row, "B", "human+mh", True)
+            + pct_cell(row, "C", "human") + pct_cell(row, "C", "human+b1") + pct_cell(row, "C", "human+mh", True)
+            + f"<td class='num'>{m.get('tests_kept', '—')}</td>"
+            + f"<td class='num'>{sum(m.get('bugs', {}).values())}</td>"
+            + f"<td class='num'>{m.get('minutes', '—')}</td>"
+            + f"<td class='num'>{coins if coins is not None else '—'}</td>"
+            "</tr>"
         )
 
-    # Suspected violations detail
-    def violation_section() -> str:
-        sections = []
-        for module, reg_row in sorted(registry.items()):
-            slug = _slug(module)
-            mod_result = _load_module_result(results_dir, slug)
-            if mod_result is None:
-                continue
-            bugs = mod_result.get("suspected_bugs", {})
-            if not any(bugs.values()):
-                continue
-            # Read md files
-            for p in sorted((results_dir / "suspected_bugs").glob(f"{slug}*.md")):
-                text = p.read_text(encoding="utf-8")
-                # Extract ## entries
-                entries = re.split(r"\n(?=## )", text)
-                for entry in entries:
-                    entry = entry.strip()
-                    if not entry or not entry.startswith("## "):
-                        continue
-                    # Determine category
-                    cat_match = re.search(r"- Category:\s*(.+)", entry)
-                    cat = cat_match.group(1).strip() if cat_match else "unknown"
-                    is_datastale = cat == "data-staleness"
-                    title_line = entry.split("\n", 1)[0][3:]  # drop "## "
-                    body_html = "<pre class='vbody'>" + _esc(entry) + "</pre>"
-                    cls = "violation-datastale" if is_datastale else "violation"
-                    sections.append(f"<details class='{cls}'><summary>{_esc(module)}: {_esc(title_line)} <span class='cat'>[{_esc(cat)}]</span></summary>{body_html}</details>")
-        return "\n".join(sections) if sections else "<p>No suspected violations recorded yet.</p>"
+    # Suspected violations: confirmed bugs grouped by their Bug key
+    entries = _parse_violations(results_dir, registry)
+    groups: dict[str, list[dict]] = {}
+    for e in entries:
+        if e["fields"].get("Status", "").lower().startswith("confirmed"):
+            groups.setdefault(e["fields"].get("Bug") or e["title"], []).append(e)
+    rejected = [e for e in entries if e["fields"].get("Status", "").lower().startswith("rejected")]
+    unconfirmed = [e for e in entries if e not in rejected and not e["fields"].get("Status", "").lower().startswith("confirmed")]
 
-    # Replay table — pivot: one row per (sha, module), columns: human / MH / B1
-    # Order: extra first, then main, then reference
+    cards, n_new = [], 0
+    for key, group in groups.items():
+        first = group[0]
+        f = next((g["fields"] for g in group if "Code" in g["fields"]), first["fields"])
+        upstream = f.get("Upstream", "")
+        known = "known" in upstream.lower()
+        n_new += 0 if known else 1
+        tag = "<span class='tag tag-gray'>known upstream</span>" if known else "<span class='tag tag-blue'>new</span>"
+        inputs = [g["fields"].get("Input", "") for g in group if g["fields"].get("Input")]
+        cards.append(
+            "<article class='bug'>"
+            f"<div class='bug-meta'><span class='tag tag-module'>{_esc(first['module'])}</span>{tag}"
+            f"<span class='muted'>{len(group)} test entr{'y' if len(group) == 1 else 'ies'}</span></div>"
+            f"<h3>{_inline_md(first['title'])}</h3>"
+            + (f"<p><span class='k'>Input</span> {_inline_md(inputs[0])}</p>" if inputs else "")
+            + (f"<p><span class='k'>Code</span> {_inline_md(f['Code'])}</p>" if f.get("Code") else "")
+            + (f"<p><span class='k'>Upstream</span> {_inline_md(upstream)}</p>" if upstream else "")
+            + "</article>"
+        )
+    rejected_items = "".join(
+        f"<li><b>{_esc(e['module'])}</b>: {_inline_md(e['title'])}. <span class='muted'>{_inline_md(e['fields'].get('Review', ''))}</span></li>"
+        for e in rejected
+    )
+    raw_items = "".join(
+        f"<details class='{'violation-datastale' if e['fields'].get('Category') == 'data-staleness' else 'violation'}'>"
+        f"<summary>{_esc(e['module'])}: {_inline_md(e['title'])} <span class='cat'>{_esc(e['fields'].get('Category', ''))} · {_esc(e['fields'].get('Status', 'unconfirmed'))}</span></summary>"
+        f"<pre class='vbody'>{_esc(e['raw'])}</pre></details>"
+        for e in entries
+    )
+
+    # Historical replay: extra-set bugs that the human tests still miss
+    extra_rows = [r for r in replay_rows if r.get("set") == "extra"]
+    extra_keys = {(r.get("sha") or r.get("commit", ""), r.get("module", "")) for r in extra_rows}
+    mh_caught_extra = {(r.get("sha") or r.get("commit", ""), r.get("module", "")) for r in extra_rows if r.get("suite") == "mh" and r.get("result") == "caught"}
+    human_caught_extra = {(r.get("sha") or r.get("commit", ""), r.get("module", "")) for r in extra_rows if r.get("suite") == "human" and r.get("result") == "caught"}
+
     def replay_table() -> str:
         if not replay_rows:
-            return "<p>No replay data yet (<code>results/replay.csv</code> missing).</p>"
-
-        # Build a lookup: (sha, module) -> {suite: result, ...} + metadata
-        from collections import OrderedDict
-        pivot: dict[tuple[str, str], dict] = OrderedDict()
-        set_order = {"extra": 0, "main": 1, "reference": 2}
+            return "<p class='muted'>No replay data yet (<code>results/replay.csv</code> missing).</p>"
+        pivot: dict[tuple[str, str], dict] = {}
         for row in replay_rows:
             sha = row.get("sha") or row.get("commit", "")
             key = (sha, row.get("module", ""))
-            if key not in pivot:
-                pivot[key] = {
-                    "sha": sha,
-                    "date": row.get("date", ""),
-                    "module": row.get("module", ""),
-                    "set": row.get("set", ""),
-                    "subject": row.get("subject", ""),
-                    "note": row.get("note", ""),
-                    "human": "",
-                    "mh": "",
-                    "b1": "",
-                }
-            suite = row.get("suite", "")
-            result = row.get("result", "")
-            if suite in ("human", "mh", "b1"):
-                pivot[key][suite] = result
+            d = pivot.setdefault(key, {"sha": sha, "date": row.get("date", ""), "module": row.get("module", ""),
+                                       "set": row.get("set", ""), "subject": row.get("subject", ""),
+                                       "note": row.get("note", ""), "human": "", "mh": "", "b1": ""})
+            if row.get("suite") in ("human", "mh", "b1"):
+                d[row["suite"]] = row.get("result", "")
+        order = {"extra": 0, "main": 1, "reference": 2}
+        rows = sorted(pivot.values(), key=lambda r: (order.get(r["set"], 9), r["date"], r["module"]))
 
-        # Sort by set order, then date descending, then module
-        sorted_rows = sorted(
-            pivot.values(),
-            key=lambda r: (set_order.get(r["set"], 9), r["date"], r["module"])
+        def cell(v: str) -> str:
+            if v == "caught":
+                return "<td><span class='tag tag-green'>caught</span></td>"
+            if v == "miss":
+                return "<td><span class='tag tag-red'>miss</span></td>"
+            return "<td class='muted'>—</td>"
+
+        body = "".join(
+            f"<tr class='{'row-extra' if r['set'] == 'extra' else ''}'>"
+            f"<td><code>{_esc(r['sha'][:7])}</code></td><td class='col-date'>{_esc(r['date'])}</td>"
+            f"<td>{_esc(r['module'])}</td><td>{_esc(r['set'])}</td>"
+            f"<td class='subject col-subject'>{_esc(r['subject'])}</td>"
+            + cell(r["human"]) + cell(r["mh"]) + cell(r["b1"])
+            + f"<td class='note'>{_esc(r['note'])}</td></tr>"
+            for r in rows
         )
+        head = ("<tr><th>SHA</th><th class='col-date'>Date</th><th>Module</th><th>Set</th>"
+                "<th class='col-subject'>Subject</th><th>Human</th><th>MH</th><th>B1</th><th>Note</th></tr>")
+        return f"<table class='data-table replay-table'>{head}{body}</table>"
 
-        def _result_cell(val: str) -> str:
-            if val == "caught":
-                return "<td class='caught'>caught</td>"
-            elif val == "miss":
-                return "<td class='miss'>miss</td>"
-            else:
-                return "<td class='blank'>—</td>"
-
-        hdr = (
-            "<tr>"
-            "<th>SHA</th><th class='col-date'>Date</th><th>Module</th><th>Set</th>"
-            "<th class='col-subject'>Subject</th>"
-            "<th>Human</th><th>MH</th><th>B1</th>"
-            "<th>Note</th>"
-            "</tr>"
+    def score_card(pool: dict[str, Any], name: str, sub: str, b: int, c: int, p: float) -> str:
+        b0, b1, mh = pool["human"], pool["human+b1"], pool["human+mh"]
+        if not mh["n"]:
+            return (f"<div class='card'><div class='card-head'><h3>{name}</h3><p class='muted'>{sub}</p></div>"
+                    f"<p class='muted'>Not scored yet.</p>{_column_chart_svg(pool, name)}</div>")
+        return (
+            f"<div class='card'><div class='card-head'><h3>{name}</h3><p class='muted'>{sub}</p></div>"
+            f"<div class='figure'><span class='from'>{b0['p'] * 100:.1f}%</span><span class='arrow'>→</span>"
+            f"<span class='to'>{mh['p'] * 100:.1f}%</span></div>"
+            f"<p class='figure-note'>Human tests → with MutantHunter · plain prompt (B1) {b1['p'] * 100:.1f}% · "
+            f"{mh['n']} mutants · McNemar B1 vs MH: {b} only B1, {c} only MH, p = {p:.3f}</p>"
+            f"{_column_chart_svg(pool, name)}</div>"
         )
-        body = ""
-        for r in sorted_rows:
-            sha_short = r["sha"][:7]
-            note_html = _esc(r["note"]) if r["note"] else ""
-            body += (
-                f"<tr>"
-                f"<td><code>{_esc(sha_short)}</code></td>"
-                f"<td class='col-date'>{_esc(r['date'])}</td>"
-                f"<td>{_esc(r['module'])}</td>"
-                f"<td>{_esc(r['set'])}</td>"
-                f"<td class='subject col-subject'>{_esc(r['subject'])}</td>"
-                + _result_cell(r["human"])
-                + _result_cell(r["mh"])
-                + _result_cell(r["b1"])
-                + f"<td class='note'>{note_html}</td>"
-                f"</tr>"
-            )
-        return f"<table class='data-table replay-table'>{hdr}{body}</table>"
 
     not_run_html = ""
     if not_run:
         items = ", ".join(_esc(m["module"]) for m in not_run)
-        not_run_html = f"<p class='muted'>Not yet run: {items}</p>"
+        not_run_html = f"<p class='muted small'>Not run in this study: {items}</p>"
 
+    kpi_hist = (f"{len(mh_caught_extra)}/{len(extra_keys)}" if extra_keys else "—")
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -699,178 +745,184 @@ def _write_index_html(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MutantHunter Dashboard</title>
 <style>
+{_font_face_css()}
 :root {{
-  --bg:#ffffff; --surface:#f7f8fa; --border:#e5e7eb;
-  --text:#1f2328; --muted:#57606a; --accent:#3b82d4; --purple:#7c5cd8;
-  --font:-apple-system,"Segoe UI",system-ui,sans-serif;
-  --caught:#166534; --caught-bg:#dcfce7; --miss:#7f1d1d; --miss-bg:#fee2e2;
+  --bg:#ffffff; --layer:#f4f4f4; --layer-2:#e8e8e8; --border:#e0e0e0; --border-strong:#c6c6c6;
+  --text:#161616; --text-2:#525252; --text-3:#6f6f6f; --link:#0f62fe; --accent:#0f62fe;
+  --b0:#b28600; --b1:#ee538b; --mh:#0f62fe;
+  --grid:#e0e0e0; --ci:#161616;
+  --green-bg:#a7f0ba; --green-fg:#0e6027; --red-bg:#ffd7d9; --red-fg:#a2191f;
+  --blue-bg:#d0e2ff; --blue-fg:#0043ce; --gray-bg:#e0e0e0; --gray-fg:#393939;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',Menlo,Consolas,monospace;
 }}
-@media(prefers-color-scheme:dark){{
-  :root{{
-    --bg:#0d1117;--surface:#161b22;--border:#30363d;
-    --text:#c9d1d9;--muted:#8b949e;
-    --caught:#86efac;--caught-bg:#14532d;
-    --miss:#fca5a5;--miss-bg:#450a0a;
+@media (prefers-color-scheme: dark) {{
+  :root {{
+    --bg:#161616; --layer:#262626; --layer-2:#393939; --border:#393939; --border-strong:#6f6f6f;
+    --text:#f4f4f4; --text-2:#c6c6c6; --text-3:#a8a8a8; --link:#78a9ff; --accent:#4589ff;
+    --b0:#b28600; --b1:#ee538b; --mh:#4589ff;
+    --grid:#393939; --ci:#f4f4f4;
+    --green-bg:#044317; --green-fg:#6fdc8c; --red-bg:#750e13; --red-fg:#ffb3b8;
+    --blue-bg:#002d9c; --blue-fg:#a6c8ff; --gray-bg:#393939; --gray-fg:#e0e0e0;
   }}
 }}
 *{{box-sizing:border-box;margin:0;padding:0;}}
-body{{font-family:var(--font);font-size:14px;line-height:1.6;background:var(--bg);color:var(--text);padding:16px;}}
-.wrap{{max-width:960px;margin:0 auto;}}
-h1{{font-size:1.4em;margin:0 0 4px;}}
-h2{{font-size:1.1em;margin:24px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px;}}
-h3{{font-size:0.95em;margin:16px 0 6px;color:var(--muted);}}
-.muted{{color:var(--muted);font-size:0.85em;}}
-.hero{{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:16px;margin:16px 0;}}
-.hero-row{{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0;}}
-.hero-label{{min-width:100px;color:var(--muted);font-size:0.85em;}}
-.metric{{display:flex;flex-direction:column;align-items:center;min-width:80px;background:var(--bg);border:1px solid var(--border);border-radius:4px;padding:6px 8px;}}
-.lbl{{font-size:0.75em;color:var(--muted);}}
-.val{{font-size:1.1em;font-weight:600;color:var(--accent);}}
-.ci{{font-size:0.68em;color:var(--muted);}}
-.tiles{{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0;}}
-.tile-group{{flex:1 1 200px;border:1px solid var(--border);border-radius:6px;padding:10px;background:var(--surface);}}
-.tile-group-label{{font-size:0.75em;color:var(--muted);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:6px;}}
-.tile-row{{display:flex;gap:8px;}}
-.tile{{flex:1 1 80px;background:var(--bg);border:1px solid var(--border);border-radius:5px;padding:8px 6px;text-align:center;}}
-.tile .big{{font-size:1.6em;font-weight:700;color:var(--purple);}}
-.tile .label{{font-size:0.75em;color:var(--muted);margin-top:1px;}}
-.tile-misc{{flex:1 1 120px;background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:10px;text-align:center;}}
-.tile-misc .big{{font-size:1.8em;font-weight:700;color:var(--purple);}}
-.tile-misc .label{{font-size:0.78em;color:var(--muted);margin-top:2px;}}
-table.data-table{{width:100%;border-collapse:collapse;font-size:0.82em;margin:8px 0;}}
-.data-table th,.data-table td{{border:1px solid var(--border);padding:3px 6px;text-align:left;}}
-.data-table th{{background:var(--surface);font-weight:600;white-space:nowrap;}}
-.data-table tr:hover{{background:var(--surface);}}
-.col-group-b{{border-left:2px solid var(--accent);}}
-.col-group-c{{border-left:2px solid var(--purple);}}
-details.violation{{margin:4px 0;border:1px solid var(--border);border-radius:4px;}}
-details.violation-datastale{{margin:4px 0;border:1px dashed var(--border);border-radius:4px;opacity:0.7;}}
-details summary{{padding:6px 10px;cursor:pointer;font-size:0.85em;}}
-.cat{{color:var(--muted);font-size:0.8em;}}
-pre.vbody{{font-size:0.75em;padding:8px;background:var(--bg);overflow-x:auto;white-space:pre-wrap;word-break:break-word;}}
-.section-note{{font-size:0.8em;color:var(--muted);margin-bottom:8px;}}
-.legend{{display:flex;flex-wrap:wrap;gap:10px;font-size:0.8em;color:var(--muted);margin:4px 0 8px;}}
-.legend span::before{{content:"■ ";}}
-.legend .b0::before{{color:#6b7280;}}
-.legend .b1::before{{color:#3b82d4;}}
-.legend .mh::before{{color:#7c5cd8;}}
-.replay-table td.caught{{color:var(--caught);background:var(--caught-bg);font-weight:600;}}
-.replay-table td.miss{{color:var(--miss);background:var(--miss-bg);font-weight:600;}}
-.replay-table td.blank{{color:var(--muted);}}
-.replay-table td.subject{{font-size:0.8em;max-width:200px;word-break:break-word;}}
-.replay-table td.note{{font-size:0.75em;color:var(--muted);max-width:160px;word-break:break-word;}}
-@media(max-width:700px){{.col-bars,.col-date,.col-subject{{display:none;}}}}
-footer{{margin-top:32px;padding-top:12px;border-top:1px solid var(--border);text-align:center;font-size:0.75em;color:var(--muted);}}
+html{{-webkit-text-size-adjust:100%;}}
+body{{background:var(--bg);color:var(--text);font-family:var(--serif);font-size:17px;line-height:1.6;}}
+a{{color:var(--link);text-decoration:none;}} a:hover{{text-decoration:underline;}}
+code{{font-family:var(--mono);font-size:0.82em;background:var(--layer);padding:1px 4px;}}
+.shell{{position:sticky;top:0;z-index:5;background:#161616;color:#f4f4f4;border-bottom:1px solid #393939;
+  font-family:var(--sans);font-size:14px;height:48px;display:flex;align-items:center;gap:16px;padding:0 16px;}}
+.shell .brand{{white-space:nowrap;}} .shell .brand b{{font-weight:600;}}
+.shell .div{{width:1px;height:20px;background:#525252;}}
+.shell nav{{margin-left:auto;display:flex;gap:18px;overflow-x:auto;}}
+.shell nav a{{color:#c6c6c6;white-space:nowrap;}} .shell nav a:hover{{color:#fff;text-decoration:none;}}
+.wrap{{max-width:1120px;margin:0 auto;padding:0 16px 48px;}}
+.intro{{padding:48px 0 32px;border-bottom:1px solid var(--border);}}
+.eyebrow{{font-family:var(--sans);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}}
+h1{{font-weight:600;font-size:clamp(34px,6vw,52px);line-height:1.1;letter-spacing:-.01em;}}
+.lede{{max-width:760px;font-size:19px;color:var(--text-2);margin-top:14px;}}
+section{{padding:40px 0 8px;}}
+h2{{font-weight:600;font-size:28px;line-height:1.25;margin-bottom:8px;}}
+h3{{font-weight:600;font-size:19px;line-height:1.35;}}
+.section-note{{color:var(--text-2);max-width:820px;margin-bottom:18px;font-size:16px;}}
+.muted{{color:var(--text-3);}} .small{{font-size:14px;margin-top:10px;}}
+.grid-2{{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}}
+.card{{background:var(--layer);padding:20px 20px 12px;border-top:4px solid var(--accent);}}
+.card-head{{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px 12px;}}
+.card-head p{{font-family:var(--sans);font-size:13px;}}
+.figure{{font-family:var(--sans);display:flex;align-items:baseline;gap:10px;margin:10px 0 2px;}}
+.figure .from{{font-size:26px;color:var(--text-3);}}
+.figure .arrow{{font-size:22px;color:var(--text-3);}}
+.figure .to{{font-size:48px;font-weight:600;line-height:1;color:var(--text);}}
+.figure-note{{font-family:var(--sans);font-size:13px;color:var(--text-2);margin-bottom:6px;}}
+.legend{{font-family:var(--sans);font-size:14px;color:var(--text-2);display:flex;flex-wrap:wrap;gap:6px 20px;margin:0 0 14px;}}
+.legend .key{{display:inline-flex;align-items:center;gap:6px;}} .legend b{{color:var(--text);font-weight:600;}}
+.sw{{display:inline-block;width:12px;height:12px;border-radius:2px;}}
+.s-b0{{fill:var(--b0);background:var(--b0);}} .s-b1{{fill:var(--b1);background:var(--b1);}} .s-mh{{fill:var(--mh);background:var(--mh);}}
+svg.chart{{width:100%;height:auto;display:block;font-family:var(--sans);}}
+.chart .grid{{stroke:var(--grid);stroke-width:1;}}
+.chart .tick{{fill:var(--text-3);font-size:11px;}}
+.chart .xlab{{fill:var(--text);font-size:14px;font-weight:600;}}
+.chart .xsub{{fill:var(--text-3);font-size:11px;}}
+.chart .val{{fill:var(--text);font-size:14px;font-weight:600;}} .chart .val.sm{{font-size:11px;}}
+.chart .rowlab{{fill:var(--text);font-size:13px;}} .chart .rowsub{{fill:var(--text-3);font-size:10px;}}
+.chart .ci{{stroke:var(--ci);stroke-width:1.5;opacity:.75;}}
+.chart .hit{{fill:transparent;}}
+.chart .mark:hover path{{opacity:.8;}}
+.kpis{{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;padding-top:24px;}}
+.kpi{{background:var(--layer);padding:18px 20px;}}
+.kpi .label{{font-family:var(--sans);font-size:13px;color:var(--text-2);}}
+.kpi .value{{font-family:var(--sans);font-size:36px;font-weight:600;line-height:1.15;margin-top:6px;}}
+.kpi .sub{{font-family:var(--sans);font-size:13px;color:var(--text-3);margin-top:4px;}}
+.table-wrap{{overflow-x:auto;margin-top:16px;}}
+table.data-table{{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:14px;}}
+.data-table th{{text-align:left;font-weight:600;background:var(--layer-2);padding:10px 12px;white-space:nowrap;}}
+.data-table td{{padding:9px 12px;border-bottom:1px solid var(--border);vertical-align:top;}}
+.data-table td.num{{text-align:right;font-variant-numeric:tabular-nums;}}
+.data-table tr:hover td{{background:var(--layer);}}
+.data-table th.grp{{text-align:center;border-left:2px solid var(--bg);}}
+.data-table th.num{{text-align:right;}}
+.replay-table td.subject{{max-width:260px;color:var(--text-2);}}
+.replay-table td.note{{max-width:220px;color:var(--text-3);font-size:12px;}}
+.replay-table tr.row-extra td{{background:var(--layer);}}
+.tag{{display:inline-block;font-family:var(--sans);font-size:12px;line-height:18px;padding:1px 8px;border-radius:12px;white-space:nowrap;}}
+.tag-green{{background:var(--green-bg);color:var(--green-fg);}} .tag-red{{background:var(--red-bg);color:var(--red-fg);}}
+.tag-blue{{background:var(--blue-bg);color:var(--blue-fg);}} .tag-gray{{background:var(--gray-bg);color:var(--gray-fg);}}
+.tag-module{{background:transparent;border:1px solid var(--border-strong);color:var(--text);}}
+.bugs{{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;}}
+.bug{{background:var(--layer);padding:18px 20px;border-left:4px solid var(--accent);}}
+.bug-meta{{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px;font-family:var(--sans);font-size:12px;}}
+.bug h3{{margin-bottom:8px;}}
+.bug p{{font-size:15px;color:var(--text-2);margin-top:6px;overflow-wrap:anywhere;}}
+.bug .k{{font-family:var(--sans);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin-right:6px;}}
+details{{margin-top:14px;}}
+details>summary{{cursor:pointer;font-family:var(--sans);font-size:15px;color:var(--link);}}
+details ul{{margin:10px 0 0 20px;font-size:15px;}} details li{{margin:6px 0;}}
+details.violation,details.violation-datastale{{margin:6px 0;background:var(--layer);padding:8px 12px;}}
+details.violation>summary,details.violation-datastale>summary{{color:var(--text);font-size:14px;}}
+details.violation-datastale{{opacity:.75;}}
+.cat{{color:var(--text-3);font-size:12px;margin-left:6px;}}
+pre.vbody{{font-family:var(--mono);font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:8px;color:var(--text-2);}}
+.method ul{{margin-left:20px;max-width:880px;}} .method li{{margin:6px 0;}}
+footer{{border-top:1px solid var(--border);margin-top:40px;padding:20px 16px;text-align:center;font-family:var(--sans);font-size:13px;color:var(--text-3);}}
+@media (max-width:700px){{ .col-date,.col-subject{{display:none;}} body{{font-size:16px;}} .shell nav{{display:none;}} }}
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>MutantHunter Dashboard</h1>
-<p class="muted">Mutation testing results for the <em>validators</em> package. Generated by <code>mutanthunter report</code>.</p>
-
-<div class="hero">
-<h2 style="border:none;margin-top:0;">Pooled Hold-out Score — main modules</h2>
-{hero_row(pool_b, "Split B")}
-{hero_row(pool_c, "Exam C")}
+<header class="shell"><span class="brand">IBM <b>Bob</b> Hackathon</span><span class="div"></span><span>MutantHunter</span>
+<nav><a href="#results">Results</a><a href="#modules">Modules</a><a href="#bugs">Bugs</a><a href="#replay">Replay</a><a href="#method">Method</a></nav></header>
+<main class="wrap">
+<div class="intro">
+  <p class="eyebrow">Mutation testing · specification-derived tests · python-validators</p>
+  <h1>MutantHunter</h1>
+  <p class="lede">Finds the bugs a test suite misses, writes tests that catch them, and proves the gain on mutants the agents never saw. Generated by <code>mutanthunter report</code> from the files in <code>results/</code>.</p>
 </div>
 
-<div class="tiles">
-  <div class="tile-group">
-    <div class="tile-group-label">Extra kills — Split B</div>
-    <div class="tile-row">
-      <div class="tile" title="Split-B mutants killed by MH but not by B1">
-        <div class="big">{mh_extra_b if mh_extra_b else "—"}</div>
-        <div class="label">MH over B1</div>
-      </div>
-      <div class="tile" title="Split-B mutants killed by B1 but not by MH">
-        <div class="big">{b1_extra_b if b1_extra_b else "—"}</div>
-        <div class="label">B1 over MH</div>
-      </div>
-    </div>
-  </div>
-  <div class="tile-group">
-    <div class="tile-group-label">Extra kills — Exam C</div>
-    <div class="tile-row">
-      <div class="tile" title="Exam-C mutants killed by MH but not by B1">
-        <div class="big">{mh_extra_c if mh_extra_c else "—"}</div>
-        <div class="label">MH over B1</div>
-      </div>
-      <div class="tile" title="Exam-C mutants killed by B1 but not by MH">
-        <div class="big">{b1_extra_c if b1_extra_c else "—"}</div>
-        <div class="label">B1 over MH</div>
-      </div>
-    </div>
-  </div>
-  <div class="tile-misc" title="Suspected logic violations found">
-    <div class="big">{cat_totals['logic']}</div>
-    <div class="label">Logic violations suspected</div>
-  </div>
-  <div class="tile-misc" title="Total suspected violations (all categories)">
-    <div class="big">{sum(cat_totals.values())}</div>
-    <div class="label">Total suspected violations</div>
-  </div>
+<section id="results">
+<h2>Pooled Hold-out Score — main modules</h2>
+<p class="section-note">Share of mutants killed, pooled over the main modules. Split B is the hidden half of the mutants; exam C uses mutant operators that did not exist while the tests were written. Whiskers are 95% Wilson intervals.</p>
+{_legend_html()}
+<div class="grid-2">
+{score_card(pool_b, "Split B", "hold-out half", b_only_b, c_only_b, p_b)}
+{score_card(pool_c, "Exam C", "unseen operators", b_only_c, c_only_c, p_c)}
+</div>
+</section>
+
+<div class="kpis">
+  <div class="kpi" title="Mutants killed by MH but not by B1 (and the reverse), main modules"><div class="label">Extra kills over the plain prompt</div><div class="value">+{c_only_c} / −{b_only_c}</div><div class="sub">exam C · split B: +{c_only_b} / −{b_only_b}</div></div>
+  <div class="kpi" title="Distinct bugs confirmed by reading the code"><div class="label">Bugs confirmed</div><div class="value">{len(groups)}</div><div class="sub">{n_new} not reported upstream · {len(entries)} suspected, {cat_totals['logic']} logic</div></div>
+  <div class="kpi" title="Historical bugs that today's human tests still miss"><div class="label">Missed historical bugs caught</div><div class="value">{kpi_hist}</div><div class="sub">by the MH tests · human tests {len(human_caught_extra)}/{len(extra_keys)}</div></div>
 </div>
 
+<section id="modules">
 <h2>Per-module scores</h2>
-<p class="section-note">Split B = hold-out half; Exam C = out-of-distribution operators. B0 = human; B1 = human+B1; MH = human+MH. Bars show split-B (falls back to split-A).</p>
-<div class="legend">
-  <span class="b0">B0</span><span class="b1">B1</span><span class="mh">MH</span>
+<p class="section-note">Each module on the hidden split B and on exam C. Hover a bar for the counts; the table below holds every value.</p>
+{_legend_html()}
+<div class="grid-2">
+<div class="card"><div class="card-head"><h3>Split B</h3><p class="muted">hold-out half</p></div>{_module_chart_svg(chart_rows, "B")}</div>
+<div class="card"><div class="card-head"><h3>Exam C</h3><p class="muted">unseen operators</p></div>{_module_chart_svg(chart_rows, "C")}</div>
 </div>
-<div style="overflow-x:auto;">
+<div class="table-wrap">
 <table class="data-table">
 <thead>
-  <tr>
-    <th rowspan="2">Module</th>
-    <th rowspan="2">Set</th>
-    <th rowspan="2" class="col-bars">Bars</th>
-    <th colspan="3" class="col-group-b" style="text-align:center;">Split B</th>
-    <th colspan="3" class="col-group-c" style="text-align:center;">Exam C</th>
-    <th rowspan="2">Tests</th>
-    <th rowspan="2">Bugs</th>
-    <th rowspan="2">Min</th>
-  </tr>
-  <tr>
-    <th class="col-group-b">B0</th><th>B1</th><th>MH</th>
-    <th class="col-group-c">B0</th><th>B1</th><th>MH</th>
-  </tr>
+<tr><th rowspan="2">Module</th><th rowspan="2">Set</th><th colspan="3" class="grp">Split B</th><th colspan="3" class="grp">Exam C</th><th rowspan="2" class="num">Tests</th><th rowspan="2" class="num">Suspected</th><th rowspan="2" class="num">Min</th><th rowspan="2" class="num">Bobcoins</th></tr>
+<tr><th class="num">B0</th><th class="num">B1</th><th class="num">MH</th><th class="num">B0</th><th class="num">B1</th><th class="num">MH</th></tr>
 </thead>
-<tbody>
-{"".join(mod_row(m) for m in mods if m["run"])}
-</tbody>
+<tbody>{"".join(table_rows)}</tbody>
 </table>
 </div>
 {not_run_html}
+</section>
 
-<h2>Suspected violations</h2>
-<p class="section-note">Logic and human-test-conflict first; data-staleness entries are collapsed.</p>
-{violation_section()}
+<section id="bugs">
+<h2>Bugs found</h2>
+<p class="section-note">The spec subagents turn every test that fails on the current code into a suspected violation. Each one was reviewed by reading the code and searching the upstream issues.</p>
+<div class="bugs">{"".join(cards) if cards else "<p class='muted'>No confirmed bugs yet.</p>"}</div>
+{f"<details><summary>Rejected after review ({len(rejected)})</summary><ul>{rejected_items}</ul></details>" if rejected else ""}
+{f"<p class='muted small'>{len(unconfirmed)} suspected violations not reviewed yet.</p>" if unconfirmed else ""}
+<details><summary>All suspected violations ({len(entries)}), raw entries</summary>{raw_items}</details>
+</section>
 
+<section id="replay">
 <h2>Historical bug replay</h2>
-<p class="section-note">
-  Caught = at least one test fails on the pre-fix commit and passes on the fix commit.
-  <strong>Reading notes (spec §7.4):</strong>
-  Tests written today encode today's fixed behavior — any test that pins current behavior "catches"
-  a reverted fix, so B1 and the human tests look good here for reasons unrelated to finding bugs
-  before release. Report B1 replay as context only, never as a comparison with MH.
-  The meaningful result is the <em>extra</em> set (mac_address, hostname): bugs the human tests
-  still miss at HEAD. Row <code>1231f6a</code> is spec-ambiguous (RFC 3986 vs WHATWG); reported
-  but not counted.
-</p>
-<div style="overflow-x:auto;">
-{replay_table()}
-</div>
+<p class="section-note">Caught = at least one test fails on the pre-fix commit and passes on the fix. <b>Reading notes (spec §7.4):</b> tests written today encode today's fixed behaviour, so any test that pins current behaviour "catches" a reverted fix. The meaningful rows are the <em>extra</em> set (highlighted): bugs the human tests still miss. Report B1 as context only. Row <code>1231f6a</code> is spec-ambiguous (RFC 3986 vs WHATWG) and not counted.</p>
+<div class="table-wrap">{replay_table()}</div>
+</section>
 
+<section id="method" class="method">
 <h2>Method and limits</h2>
 <ul>
   <li>Mutant operators: comparison flips, boolean swaps, if-negate, return-none, int±1, binary-op changes.</li>
-  <li>Split B is a fixed held-out half (seed 20260925); never used during test generation.</li>
-  <li>Exam C uses independent operator types (boolean flip, drop-not, string-wrap, drop-case-methods, ±= swap); scored after generation is final.</li>
-  <li>Suspected violations are unconfirmed until a human reads the code and the spec.</li>
-  <li>95% confidence intervals are Wilson score intervals. McNemar test is exact two-sided.</li>
-  <li>data-staleness violations (country/currency tables) are reported separately and excluded from the headline count.</li>
+  <li>Split B is a fixed hidden half (seed 20260925), never shown during test generation and scored once after generation was frozen.</li>
+  <li>Exam C uses independent operators (boolean flip, drop-not, string-wrap, drop-case-methods, ±= swap), written and scored after the freeze.</li>
+  <li>95% confidence intervals are Wilson score intervals; McNemar tests are exact and two-sided, four in total, without correction.</li>
+  <li>Suspected violations are unconfirmed until a human reads the code and the spec; data-staleness entries are excluded from the headline count.</li>
 </ul>
-</div>
-<footer>Made with IBM Bob</footer>
+</section>
+</main>
+<footer>Made with IBM Bob · MutantHunter · every number on this page comes from <code>results/</code></footer>
 </body>
 </html>"""
 

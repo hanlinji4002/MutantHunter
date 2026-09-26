@@ -13,6 +13,7 @@
   assert email('" "@example.com')
   ```
 - Status: confirmed
+- Bug: email-quoted-local-part
 - Code: `src/validators/email.py:93-95` — the quoted-string character class `[... !#-\[\]-\177]` omits 0x20 (space), which RFC 5321 qtextSMTP (`%d32-33`) allows.
 - Upstream: no existing issue found (searched python-validators/validators issues on 2026-09-26); still present on master.
 - Same root cause as SV-4 (quoted-string handling); counted once.
@@ -47,6 +48,7 @@
   assert email("user@[IPv6:2001:0db8:85a3:0000:0000:8a2e:0370:7334]", ipv6_address=True)
   ```
 - Status: confirmed
+- Bug: email-ipv6-literal
 - Code: `src/validators/email.py:70` — `domain_part.lstrip("[").rstrip("]")` keeps the `IPv6:` tag, so the RFC 5321 form `[IPv6:::1]` is rejected while the non-standard `[::1]` is accepted.
 - Upstream: no existing issue found (searched 2026-09-26); still present on master.
 
@@ -64,6 +66,7 @@
   assert email('"user@name"@example.com')
   ```
 - Status: confirmed
+- Bug: email-quoted-local-part
 - Code: `src/validators/email.py:58` — `value.count("@") != 1` rejects any `@` inside a quoted local part before the quoted-string regex runs; spaces fail at `email.py:93-95` (see SV-1).
 - Upstream: no existing issue found (searched 2026-09-26); still present on master.
 - Same root cause as SV-1; counted once together with SV-1.

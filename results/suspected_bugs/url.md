@@ -32,6 +32,7 @@
       assert url("http://example.com:")
   ```
 - Status: confirmed
+- Bug: url-empty-port
 - Code: `src/validators/hostname.py:18-21` — the port regex requires at least one digit, but RFC 3986 section 3.2.3 defines `port = *DIGIT` and the WHATWG URL standard also accepts `http://example.com:`. Minor severity.
 - Upstream: no existing issue found (searched 2026-09-26); still present on master.
 

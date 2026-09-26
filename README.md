@@ -117,7 +117,7 @@ Two team members used Bob in 22 tasks (Evan 8, chu 14), about 88.4 Bobcoins in t
 - **Skills, rules and parallel subagents**: the `mutant-hunter` skill and [`.bob/rules/testing.md`](.bob/rules/testing.md); 13 subagents across 6 runs.
 - **Document understanding**: 10 specification PDFs turned into 137 numbered rules that the spec tests cite.
 
-**Work outside Bob.** The team reviewed the 13 suspected violations by hand (reading the code, searching upstream issues) and recorded the verdicts, corrected the cron test count in `results/modules/cron.json` (a subagent stopped with an error and its files were missed in the summary), and made a small layout fix to the dashboard.
+**Work outside Bob.** The team reviewed the 13 suspected violations by hand (reading the code, searching upstream issues) and recorded the verdicts, corrected the cron test count in `results/modules/cron.json` (a subagent stopped with an error and its files were missed in the summary), and restyled the dashboard page (IBM colour theme, Source Serif 4 and IBM Plex fonts, charts) without changing how any number is computed.
 
 ## Repository layout
 

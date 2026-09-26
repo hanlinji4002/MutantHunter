@@ -21,5 +21,6 @@
   ```
 - Broad-test removed: `test_simple_62_chars_invalid` — asserted current behavior (62-char label invalid)
 - Status: confirmed
+- Bug: hostname-63-characters
 - Code: `src/validators/hostname.py:27-29` — `[a-z0-9-]{0,59}` between the first and last character caps a single-label hostname at 61 characters; RFC 1123 section 2.1 requires up to 63. Labels inside a dotted name are checked by `domain()` and are not affected.
 - Upstream: no issue for this cap (related feature request #433 on RFC 1123 support); still present on master.

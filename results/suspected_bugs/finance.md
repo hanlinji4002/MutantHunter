@@ -16,6 +16,7 @@
       assert not isin("US0378331006")
   ```
 - Status: confirmed
+- Bug: isin-check-digit
 - Code: `src/validators/finance.py:34-51` — `_isin_checksum` computes `val` but never adds it to `check`, so `return (check % 10) == 0` is always True and any check digit is accepted.
 - Upstream: known bug, issue #440 (open) with open fix PRs #464, #468 and #473; still present on master. MutantHunter rediscovered it from the spec, it is not new.
 - The other three ISIN entries below have the same root cause; the four entries count as one bug.
@@ -37,6 +38,7 @@
       assert not isin("US037833100A")
   ```
 - Status: confirmed
+- Bug: isin-check-digit
 - Review: same root cause as the first ISIN entry (#440); counted once.
 - Broad-test removed: `test_isin_12_letter_string_passes_due_to_bug` — asserted current behavior
 
@@ -56,6 +58,7 @@
       assert not isin("AU0000XVGZA4")
   ```
 - Status: confirmed
+- Bug: isin-check-digit
 - Review: same root cause as the first ISIN entry (#440); counted once.
 
 ## ISIN checksum never accumulates — wrong check digit for BAE Systems
@@ -74,4 +77,5 @@
       assert not isin("GB0002634947")
   ```
 - Status: confirmed
+- Bug: isin-check-digit
 - Review: same root cause as the first ISIN entry (#440); counted once.
